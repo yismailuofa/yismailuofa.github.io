@@ -1,115 +1,123 @@
-<!DOCTYPE HTML>
-<!--
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	bg photo by Philipp Deus https://unsplash.com/photos/uO95dylxdUM
--->
-<html>
-	<head>
-		<title>Youssef Ismail</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	    <!-- favi -->
-		<link rel="apple-touch-icon" sizes="180x180" href="static/favicon_io/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="static/favicon_io/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="static/favicon_io/favicon-16x16.png">
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html style="font-size: 40px">
+  <head>
+    <title>Youssef Ismail</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <!-- favi -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="static/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="static/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="static/favicon_io/favicon-16x16.png"
+    />
+  </head>
+  <body
+    style="
+      margin: 0;
+      font-family: 'Helvetica', 'Arial', sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.05rem;
+      color: white;
+      background-color: #0093e9;
+      background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+    "
+  >
+    <div
+      class="container"
+      style="
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: top;
+      "
+    >
+      <h1 style="width: 100%; text-align: center">Hello! I'm Youssef.</h1>
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          align-items: left;
+          justify-content: space-evenly;
+          height: 50%;
+        "
+      >
+        <a
+          href="https://www.linkedin.com/in/youssefismailuofa"
+          alt="LinkedIn"
+          style="text-decoration: none; color: white"
+          target="_blank"
+        >
+          <img
+            src="./static/linkedin-brands.svg"
+            alt="LinkedIn"
+            height="40px"
+            width="40px"
+            style="display: inline; vertical-align: text-top; margin-right: 5px"
+          />LinkedIn</a
+        >
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+        <a
+          href="https://github.com/yismailuofa/"
+          alt="Github"
+          style="text-decoration: none; color: white"
+          target="_blank"
+        >
+          <img
+            src="./static/github-square-brands.svg"
+            alt="Github"
+            height="40px"
+            width="40px"
+            style="display: inline; vertical-align: text-top; margin-right: 5px"
+          />Github</a
+        >
 
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							<!-- <span class="icon fa-file-code"></span> -->
-							<span><img id="imgLogo" src="/static//laptop.png" alt=""></span>
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>Youssef Ismail</h1>
-								<p> I'm a driven Software Engineering student on a mission to develop meaningful software.</p>
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="#projects">Projects</a></li>
-								<li><a href="#about">About</a></li>
-								<li><a href="#contact">Contact</a></li>
-								<!-- <li><a href="/static/youssefIsmailWebResume.pdf">Resume</a></li> -->
-							</ul>
-						</nav>
-					</header>
+        <a
+          href="mailto:yismail@ualberta.ca"
+          alt="Email"
+          style="text-decoration: none; color: white"
+          target="_blank"
+        >
+          <img
+            src="./static/envelope-square-solid.svg"
+            alt="Email"
+            height="40px"
+            width="40px"
+            style="display: inline; vertical-align: text-top; margin-right: 5px"
+          />Email</a
+        >
 
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Projects -->
-							<article id="projects">
-								<h2 class="major">Projects</h2>
-								<h3>Calcucoach</h3>
-								<span class="image main"><img src="images/calcucoach.png" alt="" /></span>
-								<p> <a href="https://calcu.coach/">Calcucoach</a> is a web app that generates free workouts for users in just 10 seconds. 
-									It does this by matching the users with a workout style and schedule that fits their needs.
-									The site was developed with React and all the UI work was done using pure CSS styling. Several other technologies were implemented such as
-									React Transition Group, React Lottie Animations, and React Hooks.
-								</p>
-								<h3>EdmReads</h3>
-								<span class="image main"><img src="images/edmreads.png" alt="" /></span>
-								<p> Edmonton Reads is a free website that facilitates reading for the citizens of Edmonton. 
-									Featured by the City of Edmonton, this website showcases the top 10 most popular book each week.
-									The backend was developed using Django, Python, and received information from Google and City of Edmonton APIs. The frontend was developed using Bootstrap, HTML, and CSS 
-									along with Javascript to query reading lists.
-								</p>
-								<h3>YegEvents</h3>
-								<span class="image main"><img src="images/yegevents.jpg" alt="" /></span>
-								<p> YegEvents is an iOS app mockup built using Swift that showcases nearby events happening in the City of Edmonton. 
-									Featured by Harvard University's CS50, this pre-production app shows local events on a map and gives you a description and directions with just a tap.
-									This app was developed in Xcode using UIKit, MapKit, as well as the City of Edmonton API to access JSON event data. 
-								</p>
-							</article>
-
-						<!-- About -->
-							<article id="about">
-								<h2 class="major">About</h2>
-								<p>Hi ! I'm Youssef.</p>
-								<p>I'm an engineer. I'm a developer. I'm a designer. I'm a producer. I'm an athlete. I'm a thinker. I'm a dreamer. I'm ready to make a difference in your team.</p>
-								<p>I'm studying Computer Software Engineering in the Co-op program at the University of Alberta and I'm always on the hunt to learn something new. </p>
-							</article>
-
-						<!-- Contact -->
-							<article id="contact">
-								<h2 class="major">Contact</h2>
-								<p> Feel free to reach out, my inbox is always open!</p>
-								<ul class="icons">
-									<li><a href="http://www.linkedin.com/in/youssefismailuofa" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://github.com/yismailuofa/" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="mailto:yismail@ualberta.ca" class="icon fa-envelope"> <span class="label">Mail</span></a></li>
-									<li><a href="tel:+17807292513" class="icon solid fa-phone"> <span class="label">Phone</span></a></li>
-
-
-								</ul>
-							</article>
-					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<!-- fill if wanted -->
-					</footer>
-
-			</div>
-
-		<!-- BG -->
-			<div id="bg"></div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+        <a
+          href="tel:+17807292513"
+          alt="Phone"
+          style="text-decoration: none; color: white"
+          target="_blank"
+        >
+          <img
+            src="./static/phone-square-solid.svg"
+            alt="Phone"
+            height="40px"
+            width="40px"
+            style="display: inline; vertical-align: text-top; margin-right: 5px"
+          />Phone</a
+        >
+      </div>
+    </div>
+  </body>
 </html>
