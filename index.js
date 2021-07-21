@@ -1,13 +1,20 @@
-let prev = -1;
-let index = -2;
-setInterval(() => {
-  do {
-    index = Math.floor(Math.random() * 4);
-  } while (index === prev);
-  prev = index;
-  const curr = document.querySelectorAll("a")[index]
-  curr.style.animationName = "pulse"
-  curr.addEventListener("animationend",() => {
-    curr.style.animationName = ""
+var prev = -1;
+var index = -2;
+
+window.addEventListener('DOMContentLoaded', () => {
+  const anchors = document.querySelectorAll("a")
+  anchors.forEach(a => {
+    a.addEventListener("animationend", () => {
+      a.style.animationName = ""
+    })
   })
-}, 3000);
+  setInterval(() => {
+    do {
+      index = Math.floor(Math.random() * 4);
+    } while (index === prev);
+    prev = index;
+    anchors[index].style.animationName = "pulse";
+  }, 3000);
+});
+
+
