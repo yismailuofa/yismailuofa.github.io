@@ -25,6 +25,26 @@
       sizes="16x16"
       href="static/favicon_io/favicon-16x16.png"
     />
+    <script src="./index.js"></script>
+    <style>
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        20% {
+          transform: scale(1.2);
+        }
+        40% {
+          transform: scale(1);
+        }
+      }
+      .highlight {
+        animation-name: pulse;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-play-state: paused;
+      }
+    </style>
   </head>
   <body
     style="
@@ -63,6 +83,7 @@
           alt="LinkedIn"
           style="text-decoration: none; color: white"
           target="_blank"
+          class="highlight"
         >
           <img
             src="./static/linkedin-brands.svg"
@@ -78,6 +99,7 @@
           alt="Github"
           style="text-decoration: none; color: white"
           target="_blank"
+          class="highlight"
         >
           <img
             src="./static/github-square-brands.svg"
@@ -93,6 +115,7 @@
           alt="Email"
           style="text-decoration: none; color: white"
           target="_blank"
+          class="highlight"
         >
           <img
             src="./static/envelope-square-solid.svg"
@@ -108,6 +131,7 @@
           alt="Phone"
           style="text-decoration: none; color: white"
           target="_blank"
+          class="highlight"
         >
           <img
             src="./static/phone-square-solid.svg"
