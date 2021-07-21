@@ -5,10 +5,9 @@ setInterval(() => {
     index = Math.floor(Math.random() * 4);
   } while (index === prev);
   prev = index;
-  const links = document.querySelectorAll("a");
-  const curr = links[index];
-  curr.style.animationPlayState = "running";
-  setTimeout(() => {
-    curr.style.animationPlayState = "paused";
-  }, 3000);
+  const curr = document.querySelectorAll("a")[index]
+  curr.style.animationName = "pulse"
+  curr.addEventListener("animationend",() => {
+    curr.style.animationName = ""
+  })
 }, 3000);
