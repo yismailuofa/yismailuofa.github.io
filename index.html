@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="font-size: 40px; height: 100%; width: 100%;">
+<html style="font-size: 40px; height: 100%; width: 100%">
   <head>
     <title>Youssef Ismail</title>
     <meta charset="utf-8" />
@@ -25,116 +25,46 @@
       sizes="16x16"
       href="static/favicon_io/favicon-16x16.png"
     />
-    <script src="./index.js"></script>
-    <style>
-      @keyframes pulse {
-        0% {
-          transform: scale(1);
-        }
-        20% {
-          transform: scale(1.2);
-        }
-        40% {
-          transform: scale(1);
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body
-    style="
-      margin: 0;
-      font-family: 'Helvetica', 'Arial', sans-serif;
-      font-weight: 700;
-      letter-spacing: -0.05rem;
-      color: white;
-      background-color: #0093e9;
-      background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
-      height: 100%;
-      width: 100%;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-    "
-  >
-    <div
-      class="container"
-      style="
-        display: flex;
-        width: 100vw;
-        height: 100vh;
-        flex-direction: column;
-        align-items: center;
-        justify-content: top;
-      "
-    >
-      <h1 style="width: 100%; text-align: center">Hello! I'm Youssef.</h1>
-      <div
-        style="
-          display: flex;
-          flex-direction: column;
-          align-items: left;
-          justify-content: space-evenly;
-          height: 50%;
-        "
-      >
-        <a
-          href="https://www.linkedin.com/in/youssefismailuofa"
-          alt="LinkedIn"
-          style="text-decoration: none; color: white; animation-duration: 3s;"
-          target="_blank"
-        >
-          <img
-            src="./static/linkedin-brands.svg"
+  <body>
+    <div id="container">
+      <div id="name">youssef ismail</div>
+      <div id="cardHolder">
+        <div class="card">
+          <a
+            href="https://www.linkedin.com/in/youssefismailuofa"
             alt="LinkedIn"
-            height="40px"
-            width="40px"
-            style="display: inline; vertical-align: text-top; margin-right: 5px"
-          />LinkedIn</a
-        >
-
-        <a
-          href="https://github.com/yismailuofa/"
-          alt="Github"
-          style="text-decoration: none; color: white; animation-duration: 3s;"
-          target="_blank"
-        >
-          <img
-            src="./static/github-square-brands.svg"
+            target="_blank"
+          >
+            <img src="./static/linkedin-brands.svg" alt="LinkedIn"
+          /></a>
+        </div>
+        <div class="card">
+          <a
+            href="https://github.com/yismailuofa/"
             alt="Github"
-            height="40px"
-            width="40px"
-            style="display: inline; vertical-align: text-top; margin-right: 5px"
-          />Github</a
-        >
-
-        <a
-          href="mailto:yismail@ualberta.ca"
-          alt="Email"
-          style="text-decoration: none; color: white; animation-duration: 3s;"
-          target="_blank"
-        >
-          <img
-            src="./static/envelope-square-solid.svg"
-            alt="Email"
-            height="40px"
-            width="40px"
-            style="display: inline; vertical-align: text-top; margin-right: 5px"
-          />Email</a
-        >
-
-        <a
-          href="tel:+17807292513"
-          alt="Phone"
-          style="text-decoration: none; color: white; animation-duration: 3s;"
-          target="_blank"
-        >
-          <img
-            src="./static/phone-square-solid.svg"
-            alt="Phone"
-            height="40px"
-            width="40px"
-            style="display: inline; vertical-align: text-top; margin-right: 5px"
-          />Phone</a
-        >
+            target="_blank"
+          >
+            <img src="./static/github-square-brands.svg" alt="Github"
+          /></a>
+        </div>
+        <div class="card">
+          <a href="mailto:yismail@ualberta.ca" alt="Email" target="_blank">
+            <img src="./static/envelope-square-solid.svg" alt="Email"
+          /></a>
+        </div>
+        <div class="card">
+          <a href="tel:+17807292513" alt="Phone" target="_blank">
+            <img src="./static/phone-square-solid.svg" alt="Phone"
+          /></a>
+        </div>
       </div>
     </div>
   </body>
