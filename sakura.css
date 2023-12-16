@@ -82,9 +82,9 @@ a {
   text-decoration: none;
   color: #1d7484;
 }
-a:visited {
+/* a:visited {
   color: #144f5a;
-}
+} */
 a:hover {
   color: #982c61;
   border-bottom: 2px solid #4a4a4a;
@@ -223,4 +223,22 @@ label, legend, fieldset {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 600;
+}
+
+
+/* My additions */
+
+section {
+  animation: slideIn 1s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
