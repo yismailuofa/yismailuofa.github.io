@@ -19,6 +19,10 @@ const toRead = [
     "Machine Learning Engineering Open Book",
     "https://github.com/stas00/ml-engineering",
   ],
+  [
+    "Engineering MLOps",
+    "https://www.oreilly.com/library/view/engineering-mlops/9781800562882/",
+  ],
 ];
 
 const toWatch = [
