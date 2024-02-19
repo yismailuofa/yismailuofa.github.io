@@ -23,6 +23,10 @@ const toRead = [
     "Engineering MLOps",
     "https://www.oreilly.com/library/view/engineering-mlops/9781800562882/",
   ],
+  [
+    "Professional Programming",
+    "https://github.com/charlax/professional-programming",
+  ],
 ];
 
 const toWatch = [
