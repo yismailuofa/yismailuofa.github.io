@@ -41,7 +41,7 @@ const links = {
       author: "Eugene Yan",
     },
     {
-      title: "Explaining The Posgres Meme",
+      title: "Explaining The Postgres Meme",
       url: "https://avestura.dev/blog/explaining-the-postgres-meme",
       author: "Aryan Ebrahimpour",
     },
