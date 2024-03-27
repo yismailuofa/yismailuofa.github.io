@@ -3,7 +3,7 @@ const links = {
     {
       title: "Introduction to Information Retrieval",
       url: "https://nlp.stanford.edu/IR-book/pdf/irbookonlinereading.pdf",
-      author: "Stanford NLP",
+      author: "Christopher Manning, Prabhakar Raghavan, Hinrich Schütze",
     },
     {
       title: "Designing Data-Intensive Applications",
@@ -33,7 +33,7 @@ const links = {
     {
       title: "Professional Programming",
       url: "https://github.com/charlax/professional-programming",
-      author: "Charlax",
+      author: "Charles-Axel Dein",
     },
     {
       title: "Eugene Yan: ML Ops",
@@ -80,15 +80,20 @@ const links = {
   ],
 };
 
+const dce = document.createElement.bind(document);
 const root = document.getElementById("content");
 
-const createRows = (items) => {
-  const tbody = document.createElement("tbody");
+Object.entries(links).forEach(([name, items]) => {
+  createTable(name, items);
+});
+
+function createRows(items) {
+  const tbody = dce("tbody");
 
   items.forEach(({ title, url, author }) => {
-    const tr = document.createElement("tr");
-    const tdTitle = document.createElement("td");
-    const tdAuthor = document.createElement("td");
+    const tr = dce("tr");
+    const tdTitle = dce("td");
+    const tdAuthor = dce("td");
 
     tdTitle.innerHTML = `<a href="${url}" target="_blank">${title}</a>`;
     tdAuthor.innerText = author;
@@ -100,13 +105,13 @@ const createRows = (items) => {
   });
 
   return tbody;
-};
+}
 
-const createHeader = () => {
-  const thead = document.createElement("thead");
-  const tr = document.createElement("tr");
-  const thTitle = document.createElement("th");
-  const thAuthor = document.createElement("th");
+function createHeader() {
+  const thead = dce("thead");
+  const tr = dce("tr");
+  const thTitle = dce("th");
+  const thAuthor = dce("th");
 
   thTitle.innerText = "Title";
   thTitle.style.width = "70%";
@@ -118,11 +123,11 @@ const createHeader = () => {
   thead.appendChild(tr);
 
   return thead;
-};
+}
 
-const createTable = (name, items) => {
-  const table = document.createElement("table");
-  const caption = document.createElement("caption");
+function createTable(name, items) {
+  const table = dce("table");
+  const caption = dce("caption");
   const thead = createHeader();
   const tbody = createRows(items);
 
@@ -133,8 +138,4 @@ const createTable = (name, items) => {
   table.appendChild(tbody);
 
   root.appendChild(table);
-};
-
-Object.entries(links).forEach(([name, items]) => {
-  createTable(name, items);
-});
+}

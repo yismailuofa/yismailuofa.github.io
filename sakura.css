@@ -150,9 +150,10 @@ pre > code {
 
 /* Tables */
 table {
-  text-align: justify;
+  text-align: center;
   width: 100%;
   border-collapse: collapse;
+  margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
