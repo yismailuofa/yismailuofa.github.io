@@ -24,8 +24,13 @@ const toRead = [
     "https://www.oreilly.com/library/view/engineering-mlops/9781800562882/",
   ],
   [
-    "Professional Programming",
+    "Professional Programming: A collection of resources for programmers",
     "https://github.com/charlax/professional-programming",
+  ],
+  ["Eugene Yan: ML Ops", "https://eugeneyan.com/start-here/"],
+  [
+    "Explaining The Posgres Meme",
+    "https://avestura.dev/blog/explaining-the-postgres-meme",
   ],
 ];
 
