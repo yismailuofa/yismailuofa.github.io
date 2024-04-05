@@ -77,6 +77,11 @@ const links = {
       url: "https://course.fast.ai/",
       author: "Jeremy Howard",
     },
+    {
+      title: "The Complete History & Strategy of Visa",
+      url: "https://www.acquired.fm/episodes/visa",
+      author: "Ben Gilbert and David Rosenthal",
+    },
   ],
 };
 
