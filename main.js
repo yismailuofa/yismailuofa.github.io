@@ -77,6 +77,11 @@ const links = {
       url: "https://course.fast.ai/",
       author: "Jeremy Howard",
     },
+    {
+      title: "Production Prolog",
+      url: "https://www.youtube.com/watch?v=G_eYTctGZw8",
+      author: "Michael Hendricks",
+    },
   ],
 };
 
