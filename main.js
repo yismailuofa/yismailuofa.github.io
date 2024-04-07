@@ -78,6 +78,11 @@ const links = {
       author: "Jeremy Howard",
     },
     {
+      title: "The Complete History & Strategy of Visa",
+      url: "https://www.acquired.fm/episodes/visa",
+      author: "Ben Gilbert and David Rosenthal",
+    },
+    {
       title: "Production Prolog",
       url: "https://www.youtube.com/watch?v=G_eYTctGZw8",
       author: "Michael Hendricks",
