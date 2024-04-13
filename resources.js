@@ -79,7 +79,7 @@ export const RESOURCES = [
   },
   {
     name: "Building Secure and Reliable Systems",
-    type: "Video",
+    type: "Book",
     link: "https://google.github.io/building-secure-and-reliable-systems/raw/toc.html",
     author: "Google",
   },
@@ -100,5 +100,11 @@ export const RESOURCES = [
     type: "Video",
     link: "https://www.youtube.com/watch?v=G_eYTctGZw8",
     author: "Michael Hendricks",
+  },
+  {
+    name: "The Best Books to Learn Apache Kafka",
+    type: "Blog Post",
+    link: "https://1900jwatson.medium.com/the-best-books-to-learn-apache-kafka-b808f9be43d9",
+    author: "John L. Watson",
   },
 ];
