@@ -2,19 +2,25 @@ import { RESOURCES } from "./resources.js";
 
 const tbody = document.getElementById("link-tdbody");
 
-RESOURCES.forEach(({ name, link, author, type }) => {
+RESOURCES.forEach(({ name, link, author, type }, i) => {
   const tr = document.createElement("tr");
-  const tdTitle = document.createElement("td");
-  const tdAuthor = document.createElement("td");
-  const tdType = document.createElement("td");
-
-  tdTitle.innerHTML = `<a href="${link}" target="_blank">${name}</a>`;
-  tdAuthor.innerText = author;
-  tdType.innerText = type;
-
-  tr.appendChild(tdTitle);
-  tr.appendChild(tdType);
-  tr.appendChild(tdAuthor);
+  const cbID = `cb-${i}`;
+  tr.innerHTML = `
+    <td><input type="checkbox" id="${cbID}" /></td>
+    <td><a href="${link}" target="_blank">${name}</a></td>
+    <td>${type}</td>
+    <td>${author}</td>
+  `;
 
   tbody.appendChild(tr);
+
+  const checkbox = document.getElementById(cbID);
+  const savedState = localStorage.getItem(cbID) || false;
+
+  checkbox.checked = savedState;
+  checkbox.addEventListener("change", function () {
+    this.checked
+      ? localStorage.setItem(cbID, true)
+      : localStorage.removeItem(cbID);
+  });
 });
