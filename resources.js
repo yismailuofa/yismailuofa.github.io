@@ -107,4 +107,10 @@ export const RESOURCES = [
     link: "https://1900jwatson.medium.com/the-best-books-to-learn-apache-kafka-b808f9be43d9",
     author: "John L. Watson",
   },
+  {
+    name: "Coding Adventures",
+    type: "Playlist",
+    link: "https://www.youtube.com/playlist?list=PLFt_AvWsXl0ehjAfLFsp1PGaatzAwo0uK",
+    author: "Sebastian Lague",
+  },
 ];
