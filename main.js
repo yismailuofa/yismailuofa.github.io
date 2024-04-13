@@ -1,9 +1,9 @@
 const RESOURCES = "resources.json";
 
 fetch(RESOURCES)
-  .then((response) => response.json())
-  .then((data) => createRows(data))
-  .catch((error) => alert(error));
+  .then((r) => r.json())
+  .then(createRows)
+  .catch(console.error);
 
 function createRows(items) {
   const tbody = document.getElementById("link-tdbody");
