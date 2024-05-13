@@ -6,8 +6,7 @@
 /* Body */
 html {
   font-size: 62.5%;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  font-family: Garamond, serif;
 }
 
 body {
@@ -37,8 +36,7 @@ h4,
 h5,
 h6 {
   line-height: 1.1;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  font-family: Garamond, serif;
   font-weight: 700;
   margin-top: 3rem;
   margin-bottom: 1.5rem;
@@ -84,18 +82,18 @@ sup {
 }
 
 hr {
-  border-color: #1d7484;
+  border-color: #5e5954;
 }
 
 a {
   text-decoration: none;
-  color: #1d7484;
+  color: #5e5954;
 }
 /* a:visited {
   color: #144f5a;
 } */
 a:hover {
-  color: #982c61;
+  color: #4a4a4a;
   border-bottom: 2px solid #4a4a4a;
 }
 
@@ -116,7 +114,7 @@ blockquote {
   padding-top: 0.8em;
   padding-bottom: 0.8em;
   padding-right: 0.8em;
-  border-left: 5px solid #1d7484;
+  border-left: 5px solid #5e5954;
   margin-bottom: 2.5rem;
   background-color: #f1f1f1;
 }
@@ -191,7 +189,7 @@ textarea {
 }
 input:focus,
 textarea:focus {
-  border: 1px solid #1d7484;
+  border: 1px solid #5e5954;
 }
 
 textarea {
@@ -209,10 +207,10 @@ input[type="file"]::file-selector-button {
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
-  background-color: #1d7484;
+  background-color: #5e5954;
   color: #f9f9f9;
   border-radius: 1px;
-  border: 1px solid #1d7484;
+  border: 1px solid #5e5954;
   cursor: pointer;
   box-sizing: border-box;
 }
@@ -260,16 +258,16 @@ input {
 textarea:focus,
 select:focus,
 input:focus {
-  border: 1px solid #1d7484;
+  border: 1px solid #5e5954;
   outline: 0;
 }
 
 input[type="checkbox"]:focus {
-  outline: 1px dotted #1d7484;
+  outline: 1px dotted #5e5954;
 }
 
 input[type="checkbox"] {
-  accent-color: #1d7484;
+  accent-color: #5e5954;
 }
 
 label,
@@ -278,4 +276,46 @@ fieldset {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 600;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gr_custom_container_1715584813 {
+  color: #5e5954;
+  width: 500px;
+}
+.gr_custom_header_1715584813 {
+  /* customize your Goodreads header here*/
+  border-bottom: 1px solid gray;
+  padding-bottom: 5px;
+  width: 100%;
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 130%;
+}
+.gr_custom_each_container_1715584813 {
+  /* customize each individual book container here */
+  width: 100%;
+  clear: both;
+  /* margin-bottom: 10px; */
+  overflow: auto;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  border-bottom: 1px solid #aaa;
+}
+.gr_custom_book_container_1715584813 {
+  /* customize your book covers here */
+  overflow: hidden;
+  height: 60px;
+  float: left;
+  margin-right: 4px;
+  width: 39px;
+}
+.gr_custom_author_1715584813 {
+  /* customize your author names here */
+  font-size: 10px;
 }
