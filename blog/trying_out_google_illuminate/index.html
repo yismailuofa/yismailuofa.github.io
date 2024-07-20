@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Trying Out Google's Illuminate AI: From Paper to Podcast</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/theme.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧪</text></svg>"
+    />
+    <meta charset="utf-8" />
+  </head>
+  <body class="container">
+    <code
+      >Trying Out Google's Illuminate AI: From Paper to Podcast - July 20,
+      2024</code
+    >
+    <hr />
+
+    <h3>Background</h3>
+    <p>
+      I recently got into the beta for Google's new AI tool,
+      <a href="https://illuminate.withgoogle.com/" target="_blank">Illuminate</a
+      >. It's a tool that takes a paper (currently only supports arXiv) and
+      turns it into an 5-ish minute audio file in the style of a podcast. Now I
+      wouldn't consider myself an avid paper reader, but I do enjoy listening to
+      podcasts. So I thought I'd give it a try.
+    </p>
+    <figure>
+      <img
+        src="home.png"
+        alt="Google's Illuminate AI"
+        onclick="window.open(this.src)"
+      />
+      <figcaption>Google's Illuminate AI Home Page</figcaption>
+    </figure>
+
+    <h3>Experience</h3>
+    <p>
+      The home page already has a moderate selection of pre-generated podcasts
+      mostly comprised of papers on machine learning and AI with a few books
+      like The Great Gatsby and Alice's Adventures in Wonderland.
+    </p>
+    <p>
+      Nonetheless, I wanted to try my own selections out, which you can do
+      through the <i>Generate</i> tab.
+    </p>
+    <p>
+      Generating is a pretty simple process, you give Illuminate your PDF's url,
+      and after a couple of minutes, your audio file is ready. Additionally, you
+      get 5 submissions a day which was fine for me just trying it out.
+    </p>
+    <figure>
+      <img
+        src="generate.png"
+        alt="Google's Illuminate AI"
+        onclick="window.open(this.src)"
+      />
+      <figcaption>Google's Illuminate AI Generate Page</figcaption>
+    </figure>
+
+    <h3>Results</h3>
+    <h4>Paper 1: Computer Science Paper</h4>
+    <a href="https://arxiv.org/pdf/2309.04259" target="_blank">
+      C++ design patterns for low-latency applications including high-frequency
+      trading
+    </a>
+    <figure>
+      <audio controls>
+        <source src="paper1.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+      <figcaption>Generated audio file for Paper 1</figcaption>
+    </figure>
+    <h4>Paper 2: Biology Paper</h4>
+    <a href="https://arxiv.org/pdf/2309.00311" target="_blank">
+      BRCA Gene Mutations in dbSNP:A Visual Exploration of Genetic Variants
+    </a>
+    <figure>
+      <audio controls>
+        <source src="paper2.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+      <figcaption>Generated audio file for Paper 2</figcaption>
+    </figure>
+    <h4>Paper 3: Physics Paper</h4>
+    <a href="https://arxiv.org/pdf/quant-ph/9507006" target="_blank">
+      Attaching Theories of Consciousness to Bohmian Quantum Mechanics
+    </a>
+    <figure>
+      <audio controls>
+        <source src="paper3.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+      <figcaption>Generated audio file for Paper 3</figcaption>
+    </figure>
+
+    <h3>Thoughts</h3>
+    <h5>Audio Style</h5>
+    <p>
+      I really enjoyed the podcast style Google chose for these summaries. The
+      way the two hosts go back and forth and explain concepts to each other is
+      quite engaging. It almost feels as if you are the one being explained to
+      and this property is also part of the reason why I enjoy listening to
+      (human) podcasts so much.
+    </p>
+    <p>
+      However, there are sometimes weird pauses, pronunciations (like Cplus in
+      Paper 1), and vocal inflections that are a bit off. But I think these are
+      minor issues that don't really impact the listening experience or detract
+      from the content.
+    </p>
+    <h5>Content</h5>
+    <p>
+      The content of the summaries was pretty good and I felt they covered the
+      main points of the papers while trying to explain them in a way that was
+      easy to understand. This would probably be great tool for people who want
+      to stay up to date with the latest research but don't have the time to
+      read papers daily. In this way it feels reminiscent of products like
+      Headway and Blinkist, but on demand.
+    </p>
+    <p>
+      Also, the summaries are quite high level and don't go into quite as much
+      detail as the papers themselves. This is to be expected given the time
+      constraints, but I think it would be nice to have a bit more depth in the
+      summaries.
+    </p>
+    <h5>User Experience</h5>
+    <p>
+      Generating the audio is pretty straightforward so no complaints there. My
+      main feedback here would be that I wish you could upload your own PDFs
+      instead of having to provide an arXiv link. Not all the papers I read are
+      on arXiv and limiting it to only papers means books, blog posts, etc.
+      can't be summarized. I think this is a pretty simple thing to implement
+      given they already have the examples of books on the home page.
+    </p>
+    <p>
+      Another element that would be nice to have control over is the length of
+      the output. 5 minutes is quite short, especially for longer papers. I
+      think having the ability to choose the length would allow for more
+      detailed discussions; but I'm also not sure how this would work given
+      context lengths and how they implemented the summarization.
+    </p>
+    <h5>Future Work</h5>
+    <p>
+      Seeing how natural the voices are makes me want this level of quality in
+      interactions with current LLMs. I think it would be really cool to have a
+      conversational AI that could explain any concept to you in a podcast
+      style. Current LLMs seem to ramble on too much, or explain things in a way
+      that's suited for text output, not a conversation. As the processing power
+      and inference speed of these models increase, I think this is a very real
+      possibility.
+    </p>
+    <p>
+      Similarly, I think it would be cool to have a feature where you could ask
+      questions about the paper and have the AI answer them. Maybe this could be
+      text prompts which generate new audio files with the answer included. Or
+      maybe it could be a live chat feature where you can ask questions and hear
+      them live. Regardless of the means, this would make it far better as a
+      learning tool rather than an afternoon pastime.
+    </p>
+
+    <p>
+      Overall, I think this tool is a really cool beta and I'm excited to see if
+      Google takes it further.
+      <a href="https://killedbygoogle.com/" target="_blank">or doesn't :(</a>
+    </p>
+  </body>
+</html>
