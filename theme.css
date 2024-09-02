@@ -85,3 +85,7 @@ a {
 details {
   margin-top: 0.5em;
 }
+
+details summary {
+  cursor: pointer;
+}
