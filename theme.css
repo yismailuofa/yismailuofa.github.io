@@ -81,3 +81,7 @@ a {
   margin: 0 auto;
   padding: 1em;
 }
+
+details {
+  margin-top: 0.5em;
+}
