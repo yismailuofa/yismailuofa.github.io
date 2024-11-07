@@ -26,10 +26,14 @@ a {
   padding: 1em;
 }
 
-details {
-  margin-top: 0.5em;
+h4 {
+  font-size: 1em;
+  margin-bottom: 0.5em;
 }
 
-details summary {
-  cursor: pointer;
+.author {
+  font-style: italic;
+  display: block;
+  font-size: 0.8em;
+  margin-left: 1em;
 }
