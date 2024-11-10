@@ -10,11 +10,6 @@ body {
   color: var(--gray-12);
   background-color: var(--gray-1);
 }
-
-ul {
-  margin-bottom: 1em;
-}
-
 a {
   color: var(--accent-a1);
 }
@@ -30,6 +25,7 @@ a {
   margin-bottom: 0.2em;
   text-decoration: underline;
   text-underline-offset: 0.2em;
+  margin-top: 0.5em;
 }
 
 .dignified {
@@ -47,4 +43,21 @@ a {
   display: block;
   font-size: 0.8em;
   margin-left: 1em;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(200%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+ul > * {
+  animation: slide-in 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
