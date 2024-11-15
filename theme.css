@@ -15,6 +15,27 @@ a {
   color: var(--accent-a1);
 }
 
+ul {
+  margin-block-start: 0;
+}
+
+ul > * {
+  animation: slide-in 0.9s cubic-bezier(0.25, 1, 0.5, 1); /* https://easings.net/#easeOutQuart */
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(200%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .container {
   max-width: 800px;
   margin: 0 auto;
@@ -46,23 +67,14 @@ a {
   margin-left: 1em;
 }
 
-@keyframes slide-in {
-  from {
-    transform: translateY(200%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+#nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.2em;
 }
 
-ul {
-  margin-block-start: 0;
-}
-
-ul > * {
-  animation: slide-in 0.9s cubic-bezier(0.25, 1, 0.5, 1); /* https://easings.net/#easeOutQuart */
-  animation-fill-mode: forwards;
-  opacity: 0;
+#last-modified {
+  /* push to right */
+  margin-left: auto;
 }
