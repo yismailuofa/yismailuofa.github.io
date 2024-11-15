@@ -17,15 +17,26 @@
           item.style.animationDelay = `${index * 0.1}s`;
         });
       });
+      fetch("https://api.github.com/repos/yismailuofa/yismailuofa.github.io")
+        .then((response) => response.json())
+        .then(({ updated_at }) => {
+          const lastModified = new Date(updated_at)
+            .toDateString()
+            .toLocaleLowerCase();
+          document.getElementById(
+            "last-modified"
+          ).textContent = `last updated: ${lastModified}`;
+        });
     </script>
   </head>
   <body>
     <div class="container">
-      <div>
+      <div id="nav">
         youssef ismail -
         <a href="mailto:yusufismailhassan+website@gmail.com">email</a>
         -
         <a href="https://github.com/yismailuofa" target="_blank">github</a>
+        <span id="last-modified"></span>
       </div>
       <hr />
       <ul>
