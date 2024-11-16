@@ -25,18 +25,19 @@
             .toLocaleLowerCase();
           document.getElementById(
             "last-modified"
-          ).textContent = `last updated: ${lastModified}`;
+          ).textContent = `updated ${lastModified}`;
         });
     </script>
   </head>
   <body>
     <div class="container">
       <div id="nav">
-        youssef ismail -
+        <span>youssef ismail</span>
+        <span>-</span>
         <a href="mailto:yusufismailhassan+website@gmail.com">email</a>
-        -
+        <span>-</span>
         <a href="https://github.com/yismailuofa" target="_blank">github</a>
-        <span id="last-modified"></span>
+        <span id="last-modified" class="badge">updated ???</span>
       </div>
       <hr />
       <ul>
