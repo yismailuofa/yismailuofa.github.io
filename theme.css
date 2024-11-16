@@ -71,11 +71,10 @@ ul > * {
 .badge {
   display: inline-block;
   padding: 0.2em 0.4em;
-  background-color: transparent;
+  background-color: rgba(117, 161, 161, 0.1);
   color: var(--accent-a1);
-  border: 1px solid var(--accent-a1);
   border-radius: 0.2em;
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
 
 #nav {
@@ -83,7 +82,6 @@ ul > * {
   justify-content: space-between;
   align-items: center;
   gap: 0.2em;
-  font-size: clamp(0.5em, 3vw, 1em);
 }
 
 #last-modified {

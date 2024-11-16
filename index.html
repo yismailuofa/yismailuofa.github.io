@@ -17,15 +17,13 @@
           item.style.animationDelay = `${index * 0.1}s`;
         });
       });
-      fetch("https://api.github.com/repos/yismailuofa/yismailuofa.github.io")
+      fetch(
+        "https://api.github.com/repos/yismailuofa/yismailuofa.github.io/commits"
+      )
         .then((response) => response.json())
-        .then(({ updated_at }) => {
-          const lastModified = new Date(updated_at)
-            .toDateString()
-            .toLocaleLowerCase();
-          document.getElementById(
-            "last-modified"
-          ).textContent = `updated ${lastModified}`;
+        .then(([latestCommit]) => {
+          document.getElementById("last-modified").textContent =
+            latestCommit.sha.slice(0, 7);
         });
     </script>
   </head>
@@ -37,7 +35,7 @@
         <a href="mailto:yusufismailhassan+website@gmail.com">email</a>
         <span>-</span>
         <a href="https://github.com/yismailuofa" target="_blank">github</a>
-        <span id="last-modified" class="badge">updated ???</span>
+        <span id="last-modified" class="badge"></span>
       </div>
       <hr />
       <ul>
