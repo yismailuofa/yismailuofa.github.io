@@ -21,7 +21,7 @@ ul {
 }
 
 ul > * {
-  animation: slide-in 0.9s cubic-bezier(0.25, 1, 0.5, 1); /* https://easings.net/#easeOutQuart */
+  animation: slide-in 1.25s cubic-bezier(0.25, 1, 0.5, 1); /* https://easings.net/#easeOutQuart */
   animation-fill-mode: forwards;
   opacity: 0;
 }
