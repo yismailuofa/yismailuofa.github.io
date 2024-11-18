@@ -1,0 +1,138 @@
+{
+  "readingList": [
+    {
+      "title": "Acquired Podcast",
+      "author": "Ben Gilbert and David Rosenthal",
+      "entries": ["Meta"]
+    },
+    {
+      "title": "Sahih Al-Bukhari",
+      "author": "Imam Bukhari"
+    },
+    {
+      "title": "The Stormlight Archive Series",
+      "author": "Brandon Sanderson",
+      "entries": [
+        "The Way of Kings",
+        "Words of Radiance",
+        "Oathbringer",
+        "Rhythm of War",
+        "Wind and Truth"
+      ]
+    },
+    {
+      "title": "Red Rising Saga",
+      "author": "Pierce Brown",
+      "entries": [
+        "Red Rising",
+        "Golden Son",
+        "Morning Star",
+        "Iron Gold",
+        "Dark Age",
+        "Light Bringer"
+      ]
+    }
+  ],
+  "completed": [
+    {
+      "title": "The Murder of Roger Ackroyd",
+      "author": "Agatha Christie"
+    },
+    {
+      "title": "The Song of the Cell: An Exploration of Medicine and the New Human",
+      "author": "Siddhartha Mukherjee"
+    },
+    {
+      "title": "Site Reliability Engineering: How Google Runs Production Systems",
+      "author": "Betsy Beyer, Chris Jones, Jennifer Petoff and Niall Richard Murphy"
+    },
+    {
+      "title": "Crooked House",
+      "author": "Agatha Christie"
+    },
+    {
+      "title": "And Then There Were None",
+      "author": "Agatha Christie"
+    },
+    {
+      "title": "Lord of the Flies",
+      "author": "William Golding"
+    },
+    {
+      "title": "The Emperor of All Maladies: A Biography of Cancer",
+      "author": "Siddhartha Mukherjee"
+    },
+    {
+      "title": "Remembrance of Earth's Past Series",
+      "author": "Liu Cixin",
+      "entries": ["The Three-Body Problem", "The Dark Forest", "Death's End"]
+    },
+    {
+      "title": "The Gene: An Intimate History",
+      "author": "Siddhartha Mukherjee"
+    },
+    {
+      "title": "The Stranger",
+      "author": "Albert Camus"
+    },
+    {
+      "title": "The Death of Ivan Ilyich",
+      "author": "Leo Tolstoy"
+    },
+    {
+      "title": "Dr. Jekyll and Mr. Hyde",
+      "author": "Robert Louis Stevenson"
+    },
+    {
+      "title": "Animal Farm",
+      "author": "George Orwell"
+    },
+    {
+      "title": "When We Cease to Understand the World",
+      "author": "Benjamin Labatut"
+    },
+    {
+      "title": "Effective Kafka",
+      "author": "Emil Koutanov"
+    },
+    {
+      "title": "Dune",
+      "author": "Frank Herbert"
+    },
+    {
+      "title": "Acquired Podcast",
+      "author": "Ben Gilbert and David Rosenthal",
+      "entries": [
+        "Microsoft (I/II)",
+        "Renaissance Technologies",
+        "Visa",
+        "Nvidia (I/II/III)",
+        "Amazon Web Services"
+      ]
+    },
+    {
+      "title": "Designing Data-Intensive Applications",
+      "author": "Martin Kleppmann"
+    },
+    {
+      "title": "The Disease & The Cure",
+      "author": "Ibn Al-Qayyim"
+    },
+    {
+      "title": "Muhammad: His Life Based on the Earliest Sources",
+      "author": "Martin Lings"
+    },
+    {
+      "title": "Fahrenheit 451",
+      "author": "Ray Bradbury"
+    },
+    {
+      "title": "1984",
+      "author": "George Orwell"
+    },
+    {
+      "title": "Quran",
+      "author": "Allah"
+    }
+  ]
+}

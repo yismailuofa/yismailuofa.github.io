@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Youssef Ismail</title>
+    <title>youssef ismail</title>
     <meta name="description" content="Youssef Ismail's personal web page" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="theme.css" />
@@ -10,21 +10,35 @@
       href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>"
     />
     <meta charset="utf-8" />
+    <script src="jquery.min.js"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const listItems = document.querySelectorAll("ul > *");
-        listItems.forEach((item, index) => {
-          item.style.animationDelay = `${index * 0.1}s`;
-        });
-      });
       fetch(
         "https://api.github.com/repos/yismailuofa/yismailuofa.github.io/commits"
       )
         .then((response) => response.json())
         .then(([latestCommit]) => {
-          document.getElementById("last-modified").textContent =
-            latestCommit.sha.slice(0, 7);
+          $("#last-modified").text(latestCommit.sha.slice(0, 7));
         });
+      $.getJSON("books.json", ({ readingList, completed }) => {
+        const createEntry = (title, author, entries) =>
+          $("<li>")
+            .text(title)
+            .append($("<span>", { class: "author" }).text(author))
+            .append(
+              entries &&
+                $("<ul>").append(entries.map((entry) => $("<li>").text(entry)))
+            );
+        readingList.reverse().forEach(({ title, author, entries }) => {
+          $("#reading-list").after(createEntry(title, author, entries));
+        });
+        completed.reverse().forEach(({ title, author }) => {
+          $("#completed").after(createEntry(title, author));
+        });
+      }).then(() => {
+        $("ul > *").each((index, element) => {
+          $(element).css("animation-delay", `${index * 0.1}s`);
+        });
+      });
     </script>
   </head>
   <body>
@@ -39,125 +53,13 @@
       </div>
       <hr />
       <ul>
-        <span class="heading">
+        <span class="heading" id="reading-list">
           <span class="dignified">reading</span>
           <span class="dignified">list</span>
         </span>
-        <li>
-          Acquired Podcast
-          <span class="author">Ben Gilbert and David Rosenthal</span>
-          <ul>
-            <li>Meta</li>
-          </ul>
-        </li>
-        <li>Sahih Al-Bukhari<span class="author">Imam Bukhari</span></li>
-        <li>
-          The Stormlight Archive Series
-          <span class="author">Brandon Sanderson</span>
-          <ul>
-            <li>The Way of Kings</li>
-            <li>Words of Radiance</li>
-            <li>Oathbringer</li>
-            <li>Rhythm of War</li>
-            <li>Wind and Truth</li>
-          </ul>
-        </li>
-        <li>
-          Red Rising Saga
-          <span class="author">Pierce Brown</span>
-          <ul>
-            <li>Red Rising</li>
-            <li>Golden Son</li>
-            <li>Morning Star</li>
-            <li>Iron Gold</li>
-            <li>Dark Age</li>
-            <li>Light Bringer</li>
-          </ul>
-        </li>
-        <span class="heading">
+        <span class="heading" id="completed">
           <span class="dignified">completed</span>
         </span>
-        <li>
-          The Murder of Roger Ackroyd
-          <span class="author">Agatha Christie</span>
-        </li>
-        <li>
-          The Song of the Cell: An Exploration of Medicine and the New Human
-          <span class="author">Siddhartha Mukherjee</span>
-        </li>
-        <li>
-          Site Reliability Engineering: How Google Runs Production Systems
-          <span class="author"
-            >Betsy Beyer, Chris Jones, Jennifer Petoff and Niall Richard
-            Murphy</span
-          >
-        </li>
-        <li>
-          Crooked House
-          <span class="author">Agatha Christie</span>
-        </li>
-        <li>
-          And Then There Were None
-          <span class="author">Agatha Christie</span>
-        </li>
-        <li>Lord of the Flies <span class="author">William Golding</span></li>
-        <li>
-          The Emperor of All Maladies: A Biography of Cancer
-          <span class="author">Siddhartha Mukherjee</span>
-        </li>
-        <li>
-          Remembrance of Earth's Past Series
-          <span class="author">Liu Cixin</span>
-          <ul>
-            <li>The Three-Body Problem</li>
-            <li>The Dark Forest</li>
-            <li>Death's End</li>
-          </ul>
-        </li>
-        <li>
-          The Gene: An Intimate History
-          <span class="author">Siddhartha Mukherjee</span>
-        </li>
-        <li>The Stranger <span class="author">Albert Camus</span></li>
-        <li>
-          The Death of Ivan Ilyich <span class="author">Leo Tolstoy</span>
-        </li>
-        <li>
-          Dr. Jekyll and Mr. Hyde
-          <span class="author">Robert Louis Stevenson</span>
-        </li>
-        <li>Animal Farm <span class="author">George Orwell</span></li>
-        <li>
-          When We Cease to Understand the World
-          <span class="author">Benjamin Labatut</span>
-        </li>
-        <li>Effective Kafka <span class="author">Emil Koutanov</span></li>
-        <li>Dune <span class="author">Frank Herbert</span></li>
-        <li>
-          Acquired Podcast
-          <span class="author">Ben Gilbert and David Rosenthal</span>
-          <ul>
-            <li>Microsoft (I/II)</li>
-            <li>Renaissance Technologies</li>
-            <li>Visa</li>
-            <li>Nvidia (I/II/III)</li>
-            <li>Amazon Web Services</li>
-          </ul>
-        </li>
-        <li>
-          Designing Data-Intensive Applications
-          <span class="author">Martin Kleppmann</span>
-        </li>
-        <li>
-          The Disease & The Cure <span class="author">Ibn Al-Qayyim</span>
-        </li>
-        <li>
-          Muhammad: His Life Based on the Earliest Sources
-          <span class="author">Martin Lings</span>
-        </li>
-        <li>Fahrenheit 451 <span class="author">Ray Bradbury</span></li>
-        <li>1984 <span class="author">George Orwell</span></li>
-        <li>Quran<span class="author">Allah</span></li>
       </ul>
     </div>
   </body>
