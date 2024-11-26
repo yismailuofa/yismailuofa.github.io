@@ -31,8 +31,8 @@
         readingList.reverse().forEach(({ title, author, entries }) => {
           $("#reading-list").after(createEntry(title, author, entries));
         });
-        completed.reverse().forEach(({ title, author }) => {
-          $("#completed").after(createEntry(title, author));
+        completed.reverse().forEach(({ title, author, entries }) => {
+          $("#completed").after(createEntry(title, author, entries));
         });
       }).then(() => {
         $("ul > *").each((index, element) => {

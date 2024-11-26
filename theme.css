@@ -21,18 +21,16 @@ ul {
 }
 
 ul > * {
-  animation: slide-in 1.25s cubic-bezier(0.25, 1, 0.5, 1); /* https://easings.net/#easeOutQuart */
+  animation: fade-in 0.8s ease-out;
   animation-fill-mode: forwards;
   opacity: 0;
 }
 
-@keyframes slide-in {
+@keyframes fade-in {
   from {
-    transform: translateY(200%);
     opacity: 0;
   }
   to {
-    transform: translateY(0);
     opacity: 1;
   }
 }
