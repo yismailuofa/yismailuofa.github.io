@@ -28,7 +28,6 @@
       "title": "Red Rising Saga",
       "author": "Pierce Brown",
       "entries": [
-        "Red Rising",
         "Golden Son",
         "Morning Star",
         "Iron Gold",
@@ -38,6 +37,11 @@
     }
   ],
   "completed": [
+    {
+      "title": "Red Rising Saga",
+      "author": "Pierce Brown",
+      "entries": ["Red Rising"]
+    },
     {
       "title": "Small Things Like These",
       "author": "Claire Keegan"
