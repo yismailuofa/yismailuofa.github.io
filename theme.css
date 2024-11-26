@@ -73,6 +73,7 @@ ul > * {
   color: var(--accent-a1);
   border-radius: 0.2em;
   font-size: 0.9em;
+  text-decoration: none;
 }
 
 #nav {
