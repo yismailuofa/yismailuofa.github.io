@@ -18,6 +18,7 @@
         .then((response) => response.json())
         .then(([latestCommit]) => {
           $("#last-modified").text(latestCommit.sha.slice(0, 7));
+          $("#last-modified").attr("href", latestCommit.html_url);
         });
       $.getJSON("books.json", ({ readingList, completed }) => {
         const createEntry = (title, author, entries) =>
@@ -49,7 +50,9 @@
         <a href="mailto:yusufismailhassan+website@gmail.com">email</a>
         <span>-</span>
         <a href="https://github.com/yismailuofa" target="_blank">github</a>
-        <span id="last-modified" class="badge">6d148b8</span>
+        <a id="last-modified" class="badge" href="foo.com" target="_blank"
+          >6d148b8</a
+        >
       </div>
       <hr />
       <ul>
