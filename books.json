@@ -1,13 +1,17 @@
 {
   "readingList": [
     {
+      "title": "Guns, Germs, and Steel",
+      "author": "Jared Diamond"
+    },
+    {
       "title": "Cloud Atlas",
       "author": "David Mitchell"
     },
     {
       "title": "Acquired Podcast",
       "author": "Ben Gilbert and David Rosenthal",
-      "entries": ["Meta"]
+      "entries": ["Meta", "Ikea"]
     },
     {
       "title": "Sahih Al-Bukhari",
