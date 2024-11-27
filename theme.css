@@ -21,7 +21,7 @@ ul {
 }
 
 ul > * {
-  animation: fade-in 1s ease-out;
+  animation: fade-in 1s linear;
   animation-fill-mode: forwards;
   opacity: 0;
 }
