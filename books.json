@@ -31,20 +31,14 @@
     {
       "title": "Red Rising Saga",
       "author": "Pierce Brown",
-      "entries": [
-        "Golden Son",
-        "Morning Star",
-        "Iron Gold",
-        "Dark Age",
-        "Light Bringer"
-      ]
+      "entries": ["Morning Star", "Iron Gold", "Dark Age", "Light Bringer"]
     }
   ],
   "completed": [
     {
       "title": "Red Rising Saga",
       "author": "Pierce Brown",
-      "entries": ["Red Rising"]
+      "entries": ["Red Rising", "Golden Son"]
     },
     {
       "title": "Small Things Like These",
