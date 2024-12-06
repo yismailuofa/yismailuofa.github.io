@@ -11,11 +11,14 @@
   }
 }
 
+html {
+  color: var(--gray-12);
+  background-color: var(--gray-1);
+}
+
 body {
   font-family: Georgia, serif;
   line-height: 1.5;
-  color: var(--gray-12);
-  background-color: var(--gray-1);
 }
 
 a {
