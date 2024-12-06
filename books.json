@@ -13,11 +13,6 @@
       "author": "David Mitchell"
     },
     {
-      "title": "Acquired Podcast",
-      "author": "Ben Gilbert and David Rosenthal",
-      "entries": ["Ikea"]
-    },
-    {
       "title": "Sahih Al-Bukhari",
       "author": "Imam Bukhari"
     },
@@ -117,6 +112,7 @@
       "title": "Acquired Podcast",
       "author": "Ben Gilbert and David Rosenthal",
       "entries": [
+        "Ikea",
         "Meta",
         "Microsoft (I/II)",
         "Renaissance Technologies",

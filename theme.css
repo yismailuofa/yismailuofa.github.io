@@ -1,7 +1,8 @@
 :root {
-  --accent-a1: #75a1a1;
-  --gray-1: #fefdf9;
-  --gray-12: #374a4a;
+  --accent-a1: #7b5037;
+  --accent-a1-50: #7b50371a;
+  --gray-1: #f8f5ed;
+  --gray-12: #4f493f;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,6 +31,10 @@ ul > * {
   animation: fade-in 1s linear;
   animation-fill-mode: forwards;
   opacity: 0;
+}
+
+hr {
+  border-color: var(--gray-12);
 }
 
 @keyframes fade-in {
@@ -75,7 +80,7 @@ ul > * {
 .badge {
   display: inline-block;
   padding: 0.2em 0.4em;
-  background-color: rgba(117, 161, 161, 0.1);
+  background-color: var(--accent-a1-50);
   color: var(--accent-a1);
   border-radius: 0.2em;
   font-size: 0.9em;
