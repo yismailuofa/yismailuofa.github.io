@@ -1,6 +1,10 @@
 {
   "readingList": [
     {
+      "title": "Web Browser Engineering",
+      "author": "Pavel Panchekha & Chris Harrelson"
+    },
+    {
       "title": "The Remains of the Day",
       "author": "Kazuo Ishiguro"
     },
@@ -57,7 +61,7 @@
     },
     {
       "title": "Site Reliability Engineering: How Google Runs Production Systems",
-      "author": "Betsy Beyer, Chris Jones, Jennifer Petoff and Niall Richard Murphy"
+      "author": "Betsy Beyer, Chris Jones, Jennifer Petoff & Niall Richard Murphy"
     },
     {
       "title": "Crooked House",
