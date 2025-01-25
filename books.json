@@ -1,8 +1,8 @@
 {
   "readingList": [
     {
-      "title": "Web Browser Engineering",
-      "author": "Pavel Panchekha & Chris Harrelson"
+      "title": "The Elegant Universe: Superstrings, Hidden Dimensions, and the Quest for the Ultimate Theory",
+      "author": "Brian Greene"
     },
     {
       "title": "The Remains of the Day",
@@ -11,10 +11,6 @@
     {
       "title": "The Will of the Many",
       "author": "James Islington"
-    },
-    {
-      "title": "Guns, Germs, and Steel",
-      "author": "Jared Diamond"
     },
     {
       "title": "Cloud Atlas",
@@ -42,6 +38,10 @@
     }
   ],
   "completed": [
+    {
+      "title": "Guns, Germs, and Steel",
+      "author": "Jared Diamond"
+    },
     {
       "title": "Red Rising Saga",
       "author": "Pierce Brown",
