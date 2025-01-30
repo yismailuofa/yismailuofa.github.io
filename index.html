@@ -18,33 +18,49 @@
     <meta charset="utf-8" />
     <script src="jquery.min.js"></script>
     <script>
-      fetch(
-        "https://api.github.com/repos/yismailuofa/yismailuofa.github.io/commits"
-      )
-        .then((response) => response.json())
-        .then(([latestCommit]) => {
-          $("#last-modified").text(latestCommit.sha.slice(0, 7));
-          $("#last-modified").attr("href", latestCommit.html_url);
+      $(document).ready(() => {
+        fetch(
+          "https://api.github.com/repos/yismailuofa/yismailuofa.github.io/commits"
+        )
+          .then((response) => response.json())
+          .then(([latestCommit]) => {
+            $("#last-modified").text(latestCommit.sha.slice(0, 7));
+            $("#last-modified").attr("href", latestCommit.html_url);
+          });
+
+        $.getJSON("books.json", ({ readingList, completed }) => {
+          const createEntry = (title, author, entries) =>
+            $("<li>")
+              .text(title)
+              .append($("<span>", { class: "author" }).text(author))
+              .append(
+                entries &&
+                  $("<ul>").append(
+                    entries.map((entry) => $("<li>").text(entry))
+                  )
+              );
+          readingList.reverse().forEach(({ title, author, entries }) => {
+            $("#reading-list").after(createEntry(title, author, entries));
+          });
+          completed.reverse().forEach(({ title, author, entries }) => {
+            $("#completed").after(createEntry(title, author, entries));
+          });
+        }).then(() => {
+          $("ul > *").each((index, element) => {
+            $(element).css("animation-delay", `${index * 0.1}s`);
+          });
         });
-      $.getJSON("books.json", ({ readingList, completed }) => {
-        const createEntry = (title, author, entries) =>
-          $("<li>")
-            .text(title)
-            .append($("<span>", { class: "author" }).text(author))
-            .append(
-              entries &&
-                $("<ul>").append(entries.map((entry) => $("<li>").text(entry)))
-            );
-        readingList.reverse().forEach(({ title, author, entries }) => {
-          $("#reading-list").after(createEntry(title, author, entries));
-        });
-        completed.reverse().forEach(({ title, author, entries }) => {
-          $("#completed").after(createEntry(title, author, entries));
-        });
-      }).then(() => {
-        $("ul > *").each((index, element) => {
-          $(element).css("animation-delay", `${index * 0.1}s`);
-        });
+
+        const date = new Date();
+        const day =
+          (Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) -
+            Date.UTC(date.getFullYear(), 0, 0)) /
+          24 /
+          60 /
+          60 /
+          1000;
+
+        $("#day").text(`day ${day}`);
       });
     </script>
   </head>
@@ -56,6 +72,8 @@
         <a href="mailto:yusufismailhassan+website@gmail.com">email</a>
         <span>-</span>
         <a href="https://github.com/yismailuofa" target="_blank">github</a>
+
+        <span id="day" class="badge">day 1</span>
         <a
           id="last-modified"
           class="badge"

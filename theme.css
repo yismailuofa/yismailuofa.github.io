@@ -97,7 +97,7 @@ hr {
   gap: 0.2em;
 }
 
-#last-modified {
+#day {
   margin-left: auto;
-  text-align: right;
+  margin-right: 0.2em;
 }
