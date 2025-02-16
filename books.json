@@ -3,9 +3,7 @@
     {
       "title": "Acquired Podcast",
       "author": "Ben Gilbert and David Rosenthal",
-      "entries": [
-        "TSMC"
-      ]
+      "entries": ["TSMC"]
     },
     {
       "title": "The Elegant Universe: Superstrings, Hidden Dimensions, and the Quest for the Ultimate Theory",
@@ -22,13 +20,7 @@
     {
       "title": "The Stormlight Archive Series",
       "author": "Brandon Sanderson",
-      "entries": [
-        "The Way of Kings",
-        "Words of Radiance",
-        "Oathbringer",
-        "Rhythm of War",
-        "Wind and Truth"
-      ]
+      "entries": ["The Way of Kings"]
     },
     {
       "title": "Red Rising Saga",
