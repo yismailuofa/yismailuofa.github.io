@@ -1,10 +1,6 @@
 {
   "readingList": [
     {
-      "title": "Islamic Declaration",
-      "author": "Alija Izetbegović"
-    },
-    {
       "title": "Acquired Podcast",
       "author": "Ben Gilbert and David Rosenthal",
       "entries": ["TSMC"]
@@ -33,6 +29,10 @@
     }
   ],
   "completed": [
+    {
+      "title": "Islamic Declaration",
+      "author": "Alija Izetbegović"
+    },
     {
       "title": "Guns, Germs, and Steel",
       "author": "Jared Diamond"
