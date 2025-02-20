@@ -1,11 +1,6 @@
 {
   "readingList": [
     {
-      "title": "Acquired Podcast",
-      "author": "Ben Gilbert and David Rosenthal",
-      "entries": ["TSMC"]
-    },
-    {
       "title": "The Elegant Universe: Superstrings, Hidden Dimensions, and the Quest for the Ultimate Theory",
       "author": "Brian Greene"
     },
@@ -29,6 +24,20 @@
     }
   ],
   "completed": [
+    {
+      "title": "Acquired Podcast",
+      "author": "Ben Gilbert and David Rosenthal",
+      "entries": [
+        "TSMC",
+        "Ikea",
+        "Meta",
+        "Microsoft (I/II)",
+        "Renaissance Technologies",
+        "Visa",
+        "Nvidia (I/II/III)",
+        "Amazon Web Services"
+      ]
+    },
     {
       "title": "Islamic Declaration",
       "author": "Alija Izetbegović"
@@ -110,19 +119,6 @@
     {
       "title": "Dune",
       "author": "Frank Herbert"
-    },
-    {
-      "title": "Acquired Podcast",
-      "author": "Ben Gilbert and David Rosenthal",
-      "entries": [
-        "Ikea",
-        "Meta",
-        "Microsoft (I/II)",
-        "Renaissance Technologies",
-        "Visa",
-        "Nvidia (I/II/III)",
-        "Amazon Web Services"
-      ]
     },
     {
       "title": "Designing Data-Intensive Applications",
