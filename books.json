@@ -1,10 +1,6 @@
 {
   "readingList": [
     {
-      "title": "The Elegant Universe: Superstrings, Hidden Dimensions, and the Quest for the Ultimate Theory",
-      "author": "Brian Greene"
-    },
-    {
       "title": "Cloud Atlas",
       "author": "David Mitchell"
     },
@@ -24,6 +20,10 @@
     }
   ],
   "completed": [
+    {
+      "title": "The Elegant Universe: Superstrings, Hidden Dimensions, and the Quest for the Ultimate Theory",
+      "author": "Brian Greene"
+    },
     {
       "title": "Acquired Podcast",
       "author": "Ben Gilbert and David Rosenthal",
