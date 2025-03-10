@@ -55,17 +55,6 @@
             $(element).css("animation-delay", `${index * 0.1}s`);
           });
         });
-
-        const date = new Date();
-        const day =
-          (Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) -
-            Date.UTC(date.getFullYear(), 0, 0)) /
-          24 /
-          60 /
-          60 /
-          1000;
-
-        $("#day").text(`day ${day}`);
       });
     </script>
   </head>
@@ -77,8 +66,6 @@
         <a href="mailto:yusufismailhassan+website@gmail.com">email</a>
         <span>-</span>
         <a href="https://github.com/yismailuofa" target="_blank">github</a>
-
-        <span id="day" class="badge">day 1</span>
         <a
           id="last-modified"
           class="badge"
