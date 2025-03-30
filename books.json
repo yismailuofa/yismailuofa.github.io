@@ -32,10 +32,21 @@
     {
       "title": "Red Rising Saga",
       "author": "Pierce Brown",
-      "entries": ["Dark Age", "Light Bringer"]
+      "entries": ["Light Bringer"]
     }
   ],
   "completed": [
+    {
+      "title": "Red Rising Saga",
+      "author": "Pierce Brown",
+      "entries": [
+        "Red Rising",
+        "Golden Son",
+        "Morning Star",
+        "Iron Gold",
+        "Dark Age"
+      ]
+    },
     {
       "title": "The Elegant Universe: Superstrings, Hidden Dimensions, and the Quest for the Ultimate Theory",
       "author": "Brian Greene"
@@ -61,11 +72,6 @@
     {
       "title": "Guns, Germs, and Steel",
       "author": "Jared Diamond"
-    },
-    {
-      "title": "Red Rising Saga",
-      "author": "Pierce Brown",
-      "entries": ["Red Rising", "Golden Son", "Morning Star", "Iron Gold"]
     },
     {
       "title": "Small Things Like These",
