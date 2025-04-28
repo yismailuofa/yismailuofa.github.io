@@ -28,11 +28,6 @@
       "title": "The Stormlight Archive Series",
       "author": "Brandon Sanderson",
       "entries": ["The Way of Kings"]
-    },
-    {
-      "title": "Red Rising Saga",
-      "author": "Pierce Brown",
-      "entries": ["Light Bringer"]
     }
   ],
   "completed": [
@@ -44,7 +39,8 @@
         "Golden Son",
         "Morning Star",
         "Iron Gold",
-        "Dark Age"
+        "Dark Age",
+        "Light Bringer"
       ]
     },
     {
