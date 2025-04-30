@@ -1,16 +1,17 @@
 {
   "readingList": [
     {
+      "title": "Acquired Podcast",
+      "author": "Ben Gilbert and David Rosenthal",
+      "entries": ["Epic Systems (MyChart)"]
+    },
+    {
       "title": "Morals and Behaviour",
       "author": "Ibn Hazm"
     },
     {
       "title": "The Soul",
       "author": "Ibn Al-Qayyim"
-    },
-    {
-      "title": "Architecture: Form, Space, and Order",
-      "author": "Frank Ching"
     },
     {
       "title": "Principles of Neural Science",
@@ -31,6 +32,10 @@
     }
   ],
   "completed": [
+    {
+      "title": "Architecture: Form, Space, and Order",
+      "author": "Frank Ching"
+    },
     {
       "title": "Red Rising Saga",
       "author": "Pierce Brown",
