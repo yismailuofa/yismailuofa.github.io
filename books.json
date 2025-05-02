@@ -160,6 +160,32 @@
       "author": "George Orwell"
     },
     {
+      "title": "The Inheritance Cycle",
+      "author": "Christopher Paolini",
+      "entries": ["Eragon", "Eldest", "Brisingr", "Inheritance"]
+    },
+    {
+      "title": "The Hunger Games",
+      "author": "Suzanne Collins"
+    },
+    {
+      "title": "The Hobbit",
+      "author": "J.R.R. Tolkien"
+    },
+    {
+      "title": "The Chronicles of Narnia",
+      "author": "C.S. Lewis",
+      "entries": [
+        "The Magician's Nephew",
+        "The Lion, the Witch, and the Wardrobe",
+        "The Horse and His Boy",
+        "Prince Caspian",
+        "The Voyage of the Dawn Treader",
+        "The Silver Chair",
+        "The Last Battle"
+      ]
+    },
+    {
       "title": "Quran",
       "author": "Allah"
     }
