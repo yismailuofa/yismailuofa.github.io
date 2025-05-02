@@ -1,11 +1,6 @@
 {
   "readingList": [
     {
-      "title": "Acquired Podcast",
-      "author": "Ben Gilbert and David Rosenthal",
-      "entries": ["Epic Systems (MyChart)"]
-    },
-    {
       "title": "Morals and Behaviour",
       "author": "Ibn Hazm"
     },
@@ -33,6 +28,21 @@
   ],
   "completed": [
     {
+      "title": "Acquired Podcast",
+      "author": "Ben Gilbert and David Rosenthal",
+      "entries": [
+        "TSMC",
+        "Ikea",
+        "Meta",
+        "Microsoft (I/II)",
+        "Renaissance Technologies",
+        "Visa",
+        "Nvidia (I/II/III)",
+        "Amazon Web Services",
+        "Epic Systems (MyChart)"
+      ]
+    },
+    {
       "title": "Architecture: Form, Space, and Order",
       "author": "Frank Ching"
     },
@@ -51,20 +61,6 @@
     {
       "title": "The Elegant Universe: Superstrings, Hidden Dimensions, and the Quest for the Ultimate Theory",
       "author": "Brian Greene"
-    },
-    {
-      "title": "Acquired Podcast",
-      "author": "Ben Gilbert and David Rosenthal",
-      "entries": [
-        "TSMC",
-        "Ikea",
-        "Meta",
-        "Microsoft (I/II)",
-        "Renaissance Technologies",
-        "Visa",
-        "Nvidia (I/II/III)",
-        "Amazon Web Services"
-      ]
     },
     {
       "title": "Islamic Declaration",
