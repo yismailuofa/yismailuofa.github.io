@@ -17,10 +17,6 @@
       "author": "Eric R. Kandel, James H. Schwartz, Thomas M. Jessell"
     },
     {
-      "title": "Cloud Atlas",
-      "author": "David Mitchell"
-    },
-    {
       "title": "Sahih Al-Bukhari",
       "author": "Imam Bukhari"
     },
@@ -31,6 +27,10 @@
     }
   ],
   "completed": [
+    {
+      "title": "Cloud Atlas",
+      "author": "David Mitchell"
+    },
     {
       "title": "Acquired Podcast",
       "author": "Ben Gilbert and David Rosenthal",
