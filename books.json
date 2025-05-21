@@ -1,10 +1,6 @@
 {
   "readingList": [
     {
-      "title": "Project Hail Mary",
-      "author": "Andy Weir"
-    },
-    {
       "title": "Morals and Behaviour",
       "author": "Ibn Hazm"
     },
@@ -27,6 +23,10 @@
     }
   ],
   "completed": [
+    {
+      "title": "Project Hail Mary",
+      "author": "Andy Weir"
+    },
     {
       "title": "Cloud Atlas",
       "author": "David Mitchell"
