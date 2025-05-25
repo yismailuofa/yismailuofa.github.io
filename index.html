@@ -33,7 +33,7 @@
             $("#last-modified").attr("href", latestCommit.html_url);
           });
 
-        $.getJSON("books.json", ({ readingList, completed }) => {
+        $.getJSON("books.json", ({ books }) => {
           const createEntry = (title, author, entries) =>
             $("<li>")
               .text(title)
@@ -44,6 +44,12 @@
                     entries.map((entry) => $("<li>").text(entry))
                   )
               );
+
+          const readingList = books.filter(
+            (book) => book.status === "in progress"
+          );
+          const completed = books.filter((book) => book.status === "completed");
+
           readingList.reverse().forEach(({ title, author, entries }) => {
             $("#reading-list").after(createEntry(title, author, entries));
           });

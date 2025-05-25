@@ -1,35 +1,40 @@
 {
-  "readingList": [
+  "books": [
     {
       "title": "Morals and Behaviour",
-      "author": "Ibn Hazm"
+      "author": "Ibn Hazm",
+      "status": "in progress"
     },
     {
       "title": "The Soul",
-      "author": "Ibn Al-Qayyim"
+      "author": "Ibn Al-Qayyim",
+      "status": "in progress"
     },
     {
       "title": "Principles of Neural Science",
-      "author": "Eric R. Kandel, James H. Schwartz, Thomas M. Jessell"
+      "author": "Eric R. Kandel, James H. Schwartz, Thomas M. Jessell",
+      "status": "in progress"
     },
     {
       "title": "Sahih Al-Bukhari",
-      "author": "Imam Bukhari"
+      "author": "Imam Bukhari",
+      "status": "in progress"
     },
     {
       "title": "The Stormlight Archive Series",
       "author": "Brandon Sanderson",
-      "entries": ["The Way of Kings"]
-    }
-  ],
-  "completed": [
+      "entries": ["The Way of Kings"],
+      "status": "in progress"
+    },
     {
       "title": "Project Hail Mary",
-      "author": "Andy Weir"
+      "author": "Andy Weir",
+      "status": "completed"
     },
     {
       "title": "Cloud Atlas",
-      "author": "David Mitchell"
+      "author": "David Mitchell",
+      "status": "completed"
     },
     {
       "title": "Acquired Podcast",
@@ -44,11 +49,13 @@
         "Nvidia (I/II/III)",
         "Amazon Web Services",
         "Epic Systems (MyChart)"
-      ]
+      ],
+      "status": "completed"
     },
     {
       "title": "Architecture: Form, Space, and Order",
-      "author": "Frank Ching"
+      "author": "Frank Ching",
+      "status": "completed"
     },
     {
       "title": "Red Rising Saga",
@@ -60,121 +67,150 @@
         "Iron Gold",
         "Dark Age",
         "Light Bringer"
-      ]
+      ],
+      "status": "completed"
     },
     {
       "title": "The Elegant Universe: Superstrings, Hidden Dimensions, and the Quest for the Ultimate Theory",
-      "author": "Brian Greene"
+      "author": "Brian Greene",
+      "status": "completed"
     },
     {
       "title": "Islamic Declaration",
-      "author": "Alija Izetbegović"
+      "author": "Alija Izetbegović",
+      "status": "completed"
     },
     {
       "title": "Guns, Germs, and Steel",
-      "author": "Jared Diamond"
+      "author": "Jared Diamond",
+      "status": "completed"
     },
     {
       "title": "Small Things Like These",
-      "author": "Claire Keegan"
+      "author": "Claire Keegan",
+      "status": "completed"
     },
     {
       "title": "The Murder of Roger Ackroyd",
-      "author": "Agatha Christie"
+      "author": "Agatha Christie",
+      "status": "completed"
     },
     {
       "title": "The Song of the Cell: An Exploration of Medicine and the New Human",
-      "author": "Siddhartha Mukherjee"
+      "author": "Siddhartha Mukherjee",
+      "status": "completed"
     },
     {
       "title": "Site Reliability Engineering: How Google Runs Production Systems",
-      "author": "Betsy Beyer, Chris Jones, Jennifer Petoff & Niall Richard Murphy"
+      "author": "Betsy Beyer, Chris Jones, Jennifer Petoff & Niall Richard Murphy",
+      "status": "completed"
     },
     {
       "title": "Crooked House",
-      "author": "Agatha Christie"
+      "author": "Agatha Christie",
+      "status": "completed"
     },
     {
       "title": "And Then There Were None",
-      "author": "Agatha Christie"
+      "author": "Agatha Christie",
+      "status": "completed"
     },
     {
       "title": "Lord of the Flies",
-      "author": "William Golding"
+      "author": "William Golding",
+      "status": "completed"
     },
     {
       "title": "The Emperor of All Maladies: A Biography of Cancer",
-      "author": "Siddhartha Mukherjee"
+      "author": "Siddhartha Mukherjee",
+      "status": "completed"
     },
     {
       "title": "Remembrance of Earth's Past Series",
       "author": "Liu Cixin",
-      "entries": ["The Three-Body Problem", "The Dark Forest", "Death's End"]
+      "entries": ["The Three-Body Problem", "The Dark Forest", "Death's End"],
+      "status": "completed"
     },
     {
       "title": "The Gene: An Intimate History",
-      "author": "Siddhartha Mukherjee"
+      "author": "Siddhartha Mukherjee",
+      "status": "completed"
     },
     {
       "title": "The Stranger",
-      "author": "Albert Camus"
+      "author": "Albert Camus",
+      "status": "completed"
     },
     {
       "title": "The Death of Ivan Ilyich",
-      "author": "Leo Tolstoy"
+      "author": "Leo Tolstoy",
+      "status": "completed"
     },
     {
       "title": "Dr. Jekyll and Mr. Hyde",
-      "author": "Robert Louis Stevenson"
+      "author": "Robert Louis Stevenson",
+      "status": "completed"
     },
     {
       "title": "Animal Farm",
-      "author": "George Orwell"
+      "author": "George Orwell",
+      "status": "completed"
     },
     {
       "title": "When We Cease to Understand the World",
-      "author": "Benjamin Labatut"
+      "author": "Benjamin Labatut",
+      "status": "completed"
     },
     {
       "title": "Effective Kafka",
-      "author": "Emil Koutanov"
+      "author": "Emil Koutanov",
+      "status": "completed"
     },
     {
       "title": "Dune",
-      "author": "Frank Herbert"
+      "author": "Frank Herbert",
+      "status": "completed"
     },
     {
       "title": "Designing Data-Intensive Applications",
-      "author": "Martin Kleppmann"
+      "author": "Martin Kleppmann",
+      "status": "completed"
     },
     {
       "title": "The Disease & The Cure",
-      "author": "Ibn Al-Qayyim"
+      "author": "Ibn Al-Qayyim",
+      "status": "completed"
     },
     {
       "title": "Muhammad: His Life Based on the Earliest Sources",
-      "author": "Martin Lings"
+      "author": "Martin Lings",
+      "status": "completed"
     },
     {
       "title": "Fahrenheit 451",
-      "author": "Ray Bradbury"
+      "author": "Ray Bradbury",
+      "status": "completed"
     },
     {
       "title": "1984",
-      "author": "George Orwell"
+      "author": "George Orwell",
+      "status": "completed"
     },
     {
       "title": "The Inheritance Cycle",
       "author": "Christopher Paolini",
-      "entries": ["Eragon", "Eldest", "Brisingr", "Inheritance"]
+      "entries": ["Eragon", "Eldest", "Brisingr", "Inheritance"],
+      "status": "completed"
     },
     {
       "title": "The Hunger Games",
-      "author": "Suzanne Collins"
+      "author": "Suzanne Collins",
+      "status": "completed"
     },
     {
       "title": "The Hobbit",
-      "author": "J.R.R. Tolkien"
+      "author": "J.R.R. Tolkien",
+      "status": "completed"
     },
     {
       "title": "The Chronicles of Narnia",
@@ -187,11 +223,13 @@
         "The Voyage of the Dawn Treader",
         "The Silver Chair",
         "The Last Battle"
-      ]
+      ],
+      "status": "completed"
     },
     {
       "title": "Quran",
-      "author": "Allah"
+      "author": "Allah",
+      "status": "completed"
     }
   ]
 }
