@@ -46,7 +46,7 @@
               );
 
           const readingList = books.filter(
-            (book) => book.status === "in progress"
+            (book) => book.status === "inProgress"
           );
           const completed = books.filter((book) => book.status === "completed");
 
@@ -55,10 +55,6 @@
           });
           completed.reverse().forEach(({ title, author, entries }) => {
             $("#completed").after(createEntry(title, author, entries));
-          });
-        }).then(() => {
-          $("ul > *").each((index, element) => {
-            $(element).css("animation-delay", `${index * 0.1}s`);
           });
         });
       });
