@@ -33,12 +33,6 @@ ul {
   padding-inline-start: 20px;
 }
 
-ul > * {
-  animation: fade-in 1s linear;
-  animation-fill-mode: forwards;
-  opacity: 0;
-}
-
 hr {
   border-color: var(--gray-12);
 }
@@ -63,6 +57,7 @@ hr {
   margin-bottom: 0.2em;
   text-decoration: underline;
   text-underline-offset: 0.2em;
+  font-size: 1.1em;
   margin-top: 0.4em;
 }
 
@@ -81,6 +76,7 @@ hr {
   display: block;
   font-size: 0.8em;
   margin-left: 0.6em;
+  opacity: 0.9;
 }
 
 .badge {
