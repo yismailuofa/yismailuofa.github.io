@@ -17,7 +17,7 @@ $(() => {
   )
     .then((response) => response.json())
     .then(
-      (data) => new Promise((resolve) => setTimeout(() => resolve(data), 400))
+      (data) => new Promise((resolve) => setTimeout(() => resolve(data), 600))
     )
     .then(([latestCommit]) => {
       clearInterval(cyclingInterval);
@@ -25,6 +25,21 @@ $(() => {
       $("#last-modified").text(latestCommit.sha.slice(0, 7));
       $("#last-modified").attr("href", latestCommit.html_url);
     });
+
+  $("hr").after(
+    $("<ul>")
+      .append(
+        $("<span>", { class: "heading", id: "reading-list" })
+          .append($("<span>", { class: "dignified" }).text("reading"))
+          .append(" ")
+          .append($("<span>", { class: "dignified" }).text("list"))
+      )
+      .append(
+        $("<span>", { class: "heading", id: "completed" }).append(
+          $("<span>", { class: "dignified" }).text("completed")
+        )
+      )
+  );
 
   const createEntry = (title, author, entries) =>
     $("<li>")
