@@ -1,2 +1,3 @@
-plugins:
-  - jekyll-github-metadata
+include:
+  - _data/books.yml
+theme: null
