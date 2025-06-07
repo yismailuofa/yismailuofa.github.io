@@ -89,6 +89,10 @@ hr {
   text-decoration: none;
 }
 
+.book-entry {
+  margin-bottom: 0.3em;
+}
+
 #nav {
   display: flex;
   justify-content: space-between;
