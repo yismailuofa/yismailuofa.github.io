@@ -21,9 +21,6 @@
       href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>"
     />
     <meta charset="utf-8" />
-    <script src="jquery.min.js"></script>
-    <script src="books.js"></script>
-    <script src="dom.js"></script>
   </head>
   <body>
     <div class="container">
@@ -36,12 +33,51 @@
         <a
           id="last-modified"
           class="badge"
-          href="https://github.com/yismailuofa/yismailuofa.github.io/commit/6d148b8"
+          href="https://github.com/yismailuofa/yismailuofa.github.io/commit/{{ site.github.build_revision }}"
           target="_blank"
-          >6d148b8</a
+          >{{ site.github.build_revision | slice: 0, 7 }}</a
         >
       </div>
       <hr />
+
+      <ul>
+        <span class="heading" id="reading-list">
+          <span class="dignified">reading</span>
+          <span class="dignified">list</span>
+        </span>
+
+        {% for book in site.data.books | where: "status", "inProgress" %}
+        <li>
+          {{ book.title }}
+          <span class="author">{{ book.author }}</span>
+          {% if book.entries %}
+          <ul>
+            {% for entry in book.entries %}
+            <li>{{ entry }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </li>
+        {% endfor %}
+
+        <span class="heading" id="completed">
+          <span class="dignified">completed</span>
+        </span>
+
+        {% for book in site.data.books | where: "status", "completed" %}
+        <li>
+          {{ book.title }}
+          <span class="author">{{ book.author }}</span>
+          {% if book.entries %}
+          <ul>
+            {% for entry in book.entries %}
+            <li>{{ entry }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
     </div>
   </body>
 </html>
