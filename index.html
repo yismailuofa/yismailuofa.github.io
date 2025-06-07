@@ -53,7 +53,7 @@
         </span>
 
         {% for book in in_progress_books %}
-        <li>
+        <li class="book-entry">
           {{ book.title }}
           <span class="author">{{ book.author }}</span>
           {% if book.entries %}
@@ -71,7 +71,7 @@
         </span>
 
         {% for book in completed_books %}
-        <li>
+        <li class="book-entry">
           {{ book.title }}
           <span class="author">{{ book.author }}</span>
           {% if book.entries %}
