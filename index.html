@@ -1,3 +1,6 @@
+---
+---
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -39,6 +42,9 @@
         >
       </div>
       <hr />
+      {% assign in_progress_books = site.data.books | where: "status",
+      "inProgress" %} {% assign completed_books = site.data.books | where:
+      "status", "completed" %}
 
       <ul>
         <span class="heading" id="reading-list">
@@ -46,7 +52,7 @@
           <span class="dignified">list</span>
         </span>
 
-        {% for book in site.data.books | where: "status", "inProgress" %}
+        {% for book in in_progress_books %}
         <li>
           {{ book.title }}
           <span class="author">{{ book.author }}</span>
@@ -64,7 +70,7 @@
           <span class="dignified">completed</span>
         </span>
 
-        {% for book in site.data.books | where: "status", "completed" %}
+        {% for book in completed_books %}
         <li>
           {{ book.title }}
           <span class="author">{{ book.author }}</span>
