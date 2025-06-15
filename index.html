@@ -38,7 +38,12 @@
           class="badge"
           href="https://github.com/yismailuofa/yismailuofa.github.io/commit/{{ site.github.build_revision }}"
           target="_blank"
-          >{{ site.github.build_revision | slice: 0, 7 }}</a
+        >
+          <div
+            id="sha-indicator"
+            style="--sha-color: #{{ site.github.build_revision | slice: 0, 6 }};"
+          ></div>
+          {{ site.github.build_revision | slice: 0, 7 }}</a
         >
       </div>
       <hr />
