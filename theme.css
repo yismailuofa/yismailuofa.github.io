@@ -80,13 +80,15 @@ hr {
 }
 
 .badge {
-  display: inline-block;
   padding: 0.2em 0.4em;
-  background-color: var(--accent-a1-50);
-  color: var(--accent-a1);
+  border: 1px solid var(--gray-12);
+  color: var(--gray-12);
   border-radius: 0.2em;
-  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
   text-decoration: none;
+  font-family: monospace;
 }
 
 .book-entry {
@@ -102,4 +104,13 @@ hr {
 
 #last-modified {
   margin-left: auto;
+}
+
+#sha-indicator {
+  display: inline-block;
+  width: 0.9em;
+  height: 0.9em;
+  background-color: var(--sha-color, var(--accent-a1));
+  border-radius: 50%;
+  vertical-align: middle;
 }
