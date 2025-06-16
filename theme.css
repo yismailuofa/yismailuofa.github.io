@@ -80,19 +80,19 @@ hr {
 }
 
 .badge {
-  padding: 0.2em 0.4em;
-  border: 1px solid var(--gray-12);
   color: var(--gray-12);
-  border-radius: 0.2em;
   display: flex;
   align-items: center;
   gap: 0.3em;
   text-decoration: none;
-  font-family: monospace;
 }
 
 .book-entry {
   margin-bottom: 0.3em;
+}
+
+.star {
+  color: var(--accent-a1);
 }
 
 #nav {
