@@ -1,7 +1,3 @@
-- title: "Morals and Behaviour"
-  author: "Ibn Hazm"
-  status: "inProgress"
-
 - title: "Principles of Neural Science"
   author: "Eric R. Kandel, James H. Schwartz, Thomas M. Jessell"
   status: "inProgress"
@@ -15,6 +11,11 @@
   entries:
     - "The Way of Kings"
   status: "inProgress"
+
+- title: "Morals and Behaviour"
+  author: "Ibn Hazm"
+  status: "completed"
+  starred: true
 
 - title: "Project Hail Mary"
   author: "Andy Weir"
@@ -37,6 +38,7 @@
     - "Amazon Web Services"
     - "Epic Systems (MyChart)"
   status: "completed"
+  starred: true
 
 - title: "Architecture: Form, Space, and Order"
   author: "Frank Ching"
@@ -52,10 +54,12 @@
     - "Dark Age"
     - "Light Bringer"
   status: "completed"
+  starred: true
 
 - title: "The Elegant Universe: Superstrings, Hidden Dimensions, and the Quest for the Ultimate Theory"
   author: "Brian Greene"
   status: "completed"
+  starred: true
 
 - title: "Islamic Declaration"
   author: "Alija Izetbegović"
@@ -72,10 +76,12 @@
 - title: "The Murder of Roger Ackroyd"
   author: "Agatha Christie"
   status: "completed"
+  starred: true
 
 - title: "The Song of the Cell: An Exploration of Medicine and the New Human"
   author: "Siddhartha Mukherjee"
   status: "completed"
+  starred: true
 
 - title: "Site Reliability Engineering: How Google Runs Production Systems"
   author: "Betsy Beyer, Chris Jones, Jennifer Petoff & Niall Richard Murphy"
@@ -88,6 +94,7 @@
 - title: "And Then There Were None"
   author: "Agatha Christie"
   status: "completed"
+  starred: true
 
 - title: "Lord of the Flies"
   author: "William Golding"
@@ -96,6 +103,7 @@
 - title: "The Emperor of All Maladies: A Biography of Cancer"
   author: "Siddhartha Mukherjee"
   status: "completed"
+  starred: true
 
 - title: "Remembrance of Earth's Past Series"
   author: "Liu Cixin"
@@ -104,10 +112,12 @@
     - "The Dark Forest"
     - "Death's End"
   status: "completed"
+  starred: true
 
 - title: "The Gene: An Intimate History"
   author: "Siddhartha Mukherjee"
   status: "completed"
+  starred: true
 
 - title: "The Stranger"
   author: "Albert Camus"
@@ -124,22 +134,27 @@
 - title: "Animal Farm"
   author: "George Orwell"
   status: "completed"
+  starred: true
 
 - title: "When We Cease to Understand the World"
   author: "Benjamin Labatut"
   status: "completed"
+  starred: true
 
 - title: "Effective Kafka"
   author: "Emil Koutanov"
   status: "completed"
+  starred: true
 
 - title: "Dune"
   author: "Frank Herbert"
   status: "completed"
+  starred: true
 
 - title: "Designing Data-Intensive Applications"
   author: "Martin Kleppmann"
   status: "completed"
+  starred: true
 
 - title: "The Disease & The Cure"
   author: "Ibn Al-Qayyim"
@@ -189,3 +204,4 @@
 - title: "Quran"
   author: "Allah"
   status: "completed"
+  starred: true
