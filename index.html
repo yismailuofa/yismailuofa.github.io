@@ -27,29 +27,9 @@
   </head>
   <body>
     <div class="container">
-      <div id="nav">
-        <span>youssef ismail</span>
-        <span>-</span>
-        <a href="mailto:yusufismailhassan+website@gmail.com">email</a>
-        <span>-</span>
-        <a href="https://github.com/yismailuofa" target="_blank">github</a>
-        <a
-          id="last-modified"
-          class="badge"
-          href="https://github.com/yismailuofa/yismailuofa.github.io/commit/{{ site.github.build_revision }}"
-          target="_blank"
-        >
-          <div
-            id="sha-indicator"
-            style="--sha-color: #{{ site.github.build_revision | slice: 0, 6 }};"
-          ></div>
-          {{ site.github.build_revision | slice: 0, 7 }}</a
-        >
-      </div>
-      <hr />
-      {% assign in_progress_books = site.data.books | where: "status",
-      "inProgress" %} {% assign completed_books = site.data.books | where:
-      "status", "completed" %}
+      {% include header.html %} {% assign in_progress_books = site.data.books |
+      where: "status", "inProgress" %} {% assign completed_books =
+      site.data.books | where: "status", "completed" %}
 
       <ul>
         <span class="heading" id="reading-list">
