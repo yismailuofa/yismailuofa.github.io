@@ -27,49 +27,21 @@
   </head>
   <body>
     <div class="container">
-      {% include header.html %} {% assign in_progress_books = site.data.books |
-      where: "status", "inProgress" %} {% assign completed_books =
-      site.data.books | where: "status", "completed" %}
+      {% include header.html %} {% assign listed_books = site.data.books |
+      where: "status", "listed" %} {% assign completed_books = site.data.books |
+      where: "status", "completed" %}
 
       <ul>
         <span class="heading" id="reading-list">
           <span class="dignified">reading</span>
           <span class="dignified">list</span>
         </span>
-
-        {% for book in in_progress_books %}
-        <li class="book-entry">
-          {% if book.starred %} <span class="star">✷</span> {% endif %} {{
-          book.title }}
-          <span class="author">{{ book.author }}</span>
-          {% if book.entries %}
-          <ul>
-            {% for entry in book.entries %}
-            <li>{{ entry }}</li>
-            {% endfor %}
-          </ul>
-          {% endif %}
-        </li>
-        {% endfor %}
+        {% include book-list.html books=listed_books %}
 
         <span class="heading" id="completed">
           <span class="dignified">completed</span>
         </span>
-
-        {% for book in completed_books %}
-        <li class="book-entry">
-          {% if book.starred %} <span class="star">✷</span> {% endif %} {{
-          book.title }}
-          <span class="author">{{ book.author }}</span>
-          {% if book.entries %}
-          <ul>
-            {% for entry in book.entries %}
-            <li>{{ entry }}</li>
-            {% endfor %}
-          </ul>
-          {% endif %}
-        </li>
-        {% endfor %}
+        {% include book-list.html books=completed_books %}
       </ul>
     </div>
   </body>
