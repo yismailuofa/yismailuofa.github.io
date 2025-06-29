@@ -1,20 +1,20 @@
 - title: "Guyton and Hall Textbook of Medical Physiology"
   author: "John E. Hall"
-  status: "inProgress"
+  status: "listed"
 
 - title: "Principles of Neural Science"
   author: "Eric R. Kandel, James H. Schwartz, Thomas M. Jessell"
-  status: "inProgress"
+  status: "listed"
 
 - title: "Sahih Al-Bukhari"
   author: "Imam Bukhari"
-  status: "inProgress"
+  status: "listed"
 
 - title: "The Stormlight Archive Series"
   author: "Brandon Sanderson"
   entries:
     - "The Way of Kings"
-  status: "inProgress"
+  status: "listed"
 
 - title: "Morals and Behaviour"
   author: "Ibn Hazm"
