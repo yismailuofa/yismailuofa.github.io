@@ -181,6 +181,7 @@
 - title: "1984"
   author: "George Orwell"
   status: "completed"
+  starred: true
 
 - title: "The Inheritance Cycle"
   author: "Christopher Paolini"
