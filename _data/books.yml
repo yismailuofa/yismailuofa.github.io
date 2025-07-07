@@ -1,7 +1,7 @@
 - title: "Acquired Podcast"
   author: "Ben Gilbert and David Rosenthal"
   entries:
-    - "Google"
+    - "Amazon"
   status: "listed"
 
 - title: "Guyton and Hall Textbook of Medical Physiology"
@@ -38,6 +38,7 @@
 - title: "Acquired Podcast"
   author: "Ben Gilbert and David Rosenthal"
   entries:
+    - "Google"
     - "TSMC"
     - "Ikea"
     - "Meta"
