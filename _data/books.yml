@@ -1,7 +1,5 @@
-- title: "Acquired Podcast"
-  author: "Ben Gilbert and David Rosenthal"
-  entries:
-    - "Amazon"
+- title: "The A.B.C. Murders"
+  author: "Agatha Christie"
   status: "listed"
 
 - title: "Guyton and Hall Textbook of Medical Physiology"
@@ -38,6 +36,7 @@
 - title: "Acquired Podcast"
   author: "Ben Gilbert and David Rosenthal"
   entries:
+    - "Amazon"
     - "Google"
     - "TSMC"
     - "Ikea"
