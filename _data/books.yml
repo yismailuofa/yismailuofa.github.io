@@ -5,7 +5,6 @@
   author: "Ben Gilbert and David Rosenthal"
   entries:
     - "Sony"
-    - "Walmart"
     - "Costco"
     - "Amazon"
   status: "listed"
@@ -16,10 +15,6 @@
 
 - title: "Principles of Neural Science"
   author: "Eric R. Kandel, James H. Schwartz, Thomas M. Jessell"
-  status: "listed"
-
-- title: "Sahih Al-Bukhari"
-  author: "Imam Bukhari"
   status: "listed"
 
 - title: "The Stormlight Archive Series"
@@ -44,6 +39,7 @@
 - title: "Acquired Podcast"
   author: "Ben Gilbert and David Rosenthal"
   entries:
+    - "Walmart"
     - "Amazon"
     - "Google"
     - "TSMC"
