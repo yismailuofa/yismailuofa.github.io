@@ -5,8 +5,6 @@
   author: "Ben Gilbert and David Rosenthal"
   entries:
     - "Sony"
-    - "Costco"
-    - "Amazon"
   status: "listed"
 
 - title: "Guyton and Hall Textbook of Medical Physiology"
@@ -39,6 +37,7 @@
 - title: "Acquired Podcast"
   author: "Ben Gilbert and David Rosenthal"
   entries:
+    - "Costco"
     - "Walmart"
     - "Amazon"
     - "Google"
