@@ -1,13 +1,16 @@
 {% for book in include.books %}
-<li class="book-entry">
-  {% if book.starred %} <span class="star">✷</span> {% endif %} {{ book.title }}
-  <span class="author">{{ book.author }}</span>
-  {% if book.entries %}
-  <ul>
-    {% for entry in book.entries %}
-    <li>{{ entry }}</li>
-    {% endfor %}
-  </ul>
-  {% endif %}
-</li>
+  <li class="book-entry">
+    {% if book.starred %}
+      <span class="star">✷</span>
+    {% endif %}
+    {{ book.title }}
+    <span class="author">{{ book.author }}</span>
+    {% if book.entries %}
+      <ul>
+        {% for entry in book.entries %}
+          <li>{{ entry }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </li>
 {% endfor %}
