@@ -2,12 +2,6 @@
   author: "Agatha Christie"
   status: "listed"
 
-- title: "Acquired Podcast"
-  author: "Ben Gilbert and David Rosenthal"
-  entries:
-    - "Sony"
-  status: "listed"
-
 - title: "Guyton and Hall Textbook of Medical Physiology"
   author: "John E. Hall"
   status: "listed"
@@ -38,6 +32,7 @@
 - title: "Acquired Podcast"
   author: "Ben Gilbert and David Rosenthal"
   entries:
+    - "Sony"
     - "Costco"
     - "Walmart"
     - "Amazon"
