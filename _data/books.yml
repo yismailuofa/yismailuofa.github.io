@@ -1,6 +1,4 @@
-- title: "The A.B.C. Murders"
-  author: "Agatha Christie"
-
+# --- Listed ---
 - title: "Guyton and Hall Textbook of Medical Physiology"
   author: "John E. Hall"
   status: "listed"
@@ -14,6 +12,11 @@
   entries:
     - "The Way of Kings"
   status: "listed"
+
+# --- Completed ---
+- title: "The A.B.C. Murders"
+  author: "Agatha Christie"
+  status: "completed"
 
 - title: "Morals and Behaviour"
   author: "Ibn Hazm"
