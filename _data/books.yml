@@ -13,6 +13,12 @@
     - "The Way of Kings"
   status: "listed"
 
+- title: "Acquired Podcast"
+  author: "Ben Gilbert and David Rosenthal"
+  entries:
+    - "Alphabet"
+  status: "listed"
+
 # --- Completed ---
 - title: "The A.B.C. Murders"
   author: "Agatha Christie"
