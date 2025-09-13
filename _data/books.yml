@@ -1,229 +1,187 @@
-# --- Listed ---
-- title: "Recursion"
-  author: "Blake Crouch"
-  status: "listed"
+listed:
+  - title: "Recursion"
+    author: "Blake Crouch"
 
-- title: "Guyton and Hall Textbook of Medical Physiology"
-  author: "John E. Hall"
-  status: "listed"
+  - title: "Acquired Podcast"
+    author: "Ben Gilbert and David Rosenthal"
+    entries:
+      - "Alphabet"
 
-- title: "Principles of Neural Science"
-  author: "Eric R. Kandel, James H. Schwartz, Thomas M. Jessell"
-  status: "listed"
+  - title: "Guyton and Hall Textbook of Medical Physiology"
+    author: "John E. Hall"
 
-- title: "The Stormlight Archive Series"
-  author: "Brandon Sanderson"
-  entries:
-    - "The Way of Kings"
-  status: "listed"
+  - title: "Principles of Neural Science"
+    author: "Eric R. Kandel, James H. Schwartz, Thomas M. Jessell"
 
-- title: "Acquired Podcast"
-  author: "Ben Gilbert and David Rosenthal"
-  entries:
-    - "Alphabet"
-  status: "listed"
+  - title: "The Stormlight Archive Series"
+    author: "Brandon Sanderson"
+    entries:
+      - "The Way of Kings"
 
-# --- Completed ---
-- title: "The A.B.C. Murders"
-  author: "Agatha Christie"
-  status: "completed"
+completed:
+  - title: "The A.B.C. Murders"
+    author: "Agatha Christie"
 
-- title: "Morals and Behaviour"
-  author: "Ibn Hazm"
-  status: "completed"
-  starred: true
+  - title: "Morals and Behaviour"
+    author: "Ibn Hazm"
+    starred: true
 
-- title: "Project Hail Mary"
-  author: "Andy Weir"
-  status: "completed"
+  - title: "Project Hail Mary"
+    author: "Andy Weir"
 
-- title: "Cloud Atlas"
-  author: "David Mitchell"
-  status: "completed"
+  - title: "Cloud Atlas"
+    author: "David Mitchell"
 
-- title: "Acquired Podcast"
-  author: "Ben Gilbert and David Rosenthal"
-  entries:
-    - "Sony"
-    - "Costco"
-    - "Walmart"
-    - "Amazon"
-    - "Google"
-    - "TSMC"
-    - "Ikea"
-    - "Meta"
-    - "Microsoft (I/II)"
-    - "Renaissance Technologies"
-    - "Visa"
-    - "Nvidia (I/II/III)"
-    - "Amazon Web Services"
-    - "Epic Systems (MyChart)"
-  status: "completed"
-  starred: true
+  - title: "Acquired Podcast"
+    author: "Ben Gilbert and David Rosenthal"
+    entries:
+      - "Sony"
+      - "Costco"
+      - "Walmart"
+      - "Amazon"
+      - "Google"
+      - "TSMC"
+      - "Ikea"
+      - "Meta"
+      - "Microsoft (I/II)"
+      - "Renaissance Technologies"
+      - "Visa"
+      - "Nvidia (I/II/III)"
+      - "Amazon Web Services"
+      - "Epic Systems (MyChart)"
+    starred: true
 
-- title: "Architecture: Form, Space, and Order"
-  author: "Frank Ching"
-  status: "completed"
+  - title: "Architecture: Form, Space, and Order"
+    author: "Frank Ching"
 
-- title: "Red Rising Saga"
-  author: "Pierce Brown"
-  entries:
-    - "Red Rising"
-    - "Golden Son"
-    - "Morning Star"
-    - "Iron Gold"
-    - "Dark Age"
-    - "Light Bringer"
-  status: "completed"
-  starred: true
+  - title: "Red Rising Saga"
+    author: "Pierce Brown"
+    entries:
+      - "Red Rising"
+      - "Golden Son"
+      - "Morning Star"
+      - "Iron Gold"
+      - "Dark Age"
+      - "Light Bringer"
+    starred: true
 
-- title: "The Elegant Universe: Superstrings, Hidden Dimensions, and the Quest for the Ultimate Theory"
-  author: "Brian Greene"
-  status: "completed"
-  starred: true
+  - title: "The Elegant Universe: Superstrings, Hidden Dimensions, and the Quest for the Ultimate Theory"
+    author: "Brian Greene"
+    starred: true
 
-- title: "Islamic Declaration"
-  author: "Alija Izetbegović"
-  status: "completed"
+  - title: "Islamic Declaration"
+    author: "Alija Izetbegović"
 
-- title: "Guns, Germs, and Steel"
-  author: "Jared Diamond"
-  status: "completed"
+  - title: "Guns, Germs, and Steel"
+    author: "Jared Diamond"
 
-- title: "Small Things Like These"
-  author: "Claire Keegan"
-  status: "completed"
+  - title: "Small Things Like These"
+    author: "Claire Keegan"
 
-- title: "The Murder of Roger Ackroyd"
-  author: "Agatha Christie"
-  status: "completed"
-  starred: true
+  - title: "The Murder of Roger Ackroyd"
+    author: "Agatha Christie"
+    starred: true
 
-- title: "The Song of the Cell: An Exploration of Medicine and the New Human"
-  author: "Siddhartha Mukherjee"
-  status: "completed"
-  starred: true
+  - title: "The Song of the Cell: An Exploration of Medicine and the New Human"
+    author: "Siddhartha Mukherjee"
+    starred: true
 
-- title: "Site Reliability Engineering: How Google Runs Production Systems"
-  author: "Betsy Beyer, Chris Jones, Jennifer Petoff & Niall Richard Murphy"
-  status: "completed"
+  - title: "Site Reliability Engineering: How Google Runs Production Systems"
+    author: "Betsy Beyer, Chris Jones, Jennifer Petoff & Niall Richard Murphy"
 
-- title: "Crooked House"
-  author: "Agatha Christie"
-  status: "completed"
+  - title: "Crooked House"
+    author: "Agatha Christie"
 
-- title: "And Then There Were None"
-  author: "Agatha Christie"
-  status: "completed"
-  starred: true
+  - title: "And Then There Were None"
+    author: "Agatha Christie"
+    starred: true
 
-- title: "Lord of the Flies"
-  author: "William Golding"
-  status: "completed"
+  - title: "Lord of the Flies"
+    author: "William Golding"
 
-- title: "The Emperor of All Maladies: A Biography of Cancer"
-  author: "Siddhartha Mukherjee"
-  status: "completed"
-  starred: true
+  - title: "The Emperor of All Maladies: A Biography of Cancer"
+    author: "Siddhartha Mukherjee"
+    starred: true
 
-- title: "Remembrance of Earth's Past Series"
-  author: "Liu Cixin"
-  entries:
-    - "The Three-Body Problem"
-    - "The Dark Forest"
-    - "Death's End"
-  status: "completed"
-  starred: true
+  - title: "Remembrance of Earth's Past Series"
+    author: "Liu Cixin"
+    entries:
+      - "The Three-Body Problem"
+      - "The Dark Forest"
+      - "Death's End"
+    starred: true
 
-- title: "The Gene: An Intimate History"
-  author: "Siddhartha Mukherjee"
-  status: "completed"
-  starred: true
+  - title: "The Gene: An Intimate History"
+    author: "Siddhartha Mukherjee"
+    starred: true
 
-- title: "The Stranger"
-  author: "Albert Camus"
-  status: "completed"
+  - title: "The Stranger"
+    author: "Albert Camus"
 
-- title: "The Death of Ivan Ilyich"
-  author: "Leo Tolstoy"
-  status: "completed"
+  - title: "The Death of Ivan Ilyich"
+    author: "Leo Tolstoy"
 
-- title: "Dr. Jekyll and Mr. Hyde"
-  author: "Robert Louis Stevenson"
-  status: "completed"
+  - title: "Dr. Jekyll and Mr. Hyde"
+    author: "Robert Louis Stevenson"
 
-- title: "Animal Farm"
-  author: "George Orwell"
-  status: "completed"
-  starred: true
+  - title: "Animal Farm"
+    author: "George Orwell"
+    starred: true
 
-- title: "When We Cease to Understand the World"
-  author: "Benjamin Labatut"
-  status: "completed"
-  starred: true
+  - title: "When We Cease to Understand the World"
+    author: "Benjamin Labatut"
+    starred: true
 
-- title: "Effective Kafka"
-  author: "Emil Koutanov"
-  status: "completed"
-  starred: true
+  - title: "Effective Kafka"
+    author: "Emil Koutanov"
+    starred: true
 
-- title: "Dune"
-  author: "Frank Herbert"
-  status: "completed"
-  starred: true
+  - title: "Dune"
+    author: "Frank Herbert"
+    starred: true
 
-- title: "Designing Data-Intensive Applications"
-  author: "Martin Kleppmann"
-  status: "completed"
-  starred: true
+  - title: "Designing Data-Intensive Applications"
+    author: "Martin Kleppmann"
+    starred: true
 
-- title: "The Disease & The Cure"
-  author: "Ibn Al-Qayyim"
-  status: "completed"
+  - title: "The Disease & The Cure"
+    author: "Ibn Al-Qayyim"
 
-- title: "Muhammad: His Life Based on the Earliest Sources"
-  author: "Martin Lings"
-  status: "completed"
+  - title: "Muhammad: His Life Based on the Earliest Sources"
+    author: "Martin Lings"
 
-- title: "Fahrenheit 451"
-  author: "Ray Bradbury"
-  status: "completed"
+  - title: "Fahrenheit 451"
+    author: "Ray Bradbury"
 
-- title: "1984"
-  author: "George Orwell"
-  status: "completed"
-  starred: true
+  - title: "1984"
+    author: "George Orwell"
+    starred: true
 
-- title: "The Inheritance Cycle"
-  author: "Christopher Paolini"
-  entries:
-    - "Eragon"
-    - "Eldest"
-    - "Brisingr"
-    - "Inheritance"
-  status: "completed"
+  - title: "The Inheritance Cycle"
+    author: "Christopher Paolini"
+    entries:
+      - "Eragon"
+      - "Eldest"
+      - "Brisingr"
+      - "Inheritance"
 
-- title: "The Hunger Games"
-  author: "Suzanne Collins"
-  status: "completed"
+  - title: "The Hunger Games"
+    author: "Suzanne Collins"
 
-- title: "The Hobbit"
-  author: "J.R.R. Tolkien"
-  status: "completed"
+  - title: "The Hobbit"
+    author: "J.R.R. Tolkien"
 
-- title: "The Chronicles of Narnia"
-  author: "C.S. Lewis"
-  entries:
-    - "The Magician's Nephew"
-    - "The Lion, the Witch, and the Wardrobe"
-    - "The Horse and His Boy"
-    - "Prince Caspian"
-    - "The Voyage of the Dawn Treader"
-    - "The Silver Chair"
-    - "The Last Battle"
-  status: "completed"
+  - title: "The Chronicles of Narnia"
+    author: "C.S. Lewis"
+    entries:
+      - "The Magician's Nephew"
+      - "The Lion, the Witch, and the Wardrobe"
+      - "The Horse and His Boy"
+      - "Prince Caspian"
+      - "The Voyage of the Dawn Treader"
+      - "The Silver Chair"
+      - "The Last Battle"
 
-- title: "Quran"
-  author: "Allah"
-  status: "completed"
-  starred: true
+  - title: "Quran"
+    author: "Allah"
+    starred: true
