@@ -27,18 +27,16 @@
   <body>
     <div class="container">
       {% include header.html %}
-      {% assign listed_books = site.data.books.listed %}
-      {% assign completed_books = site.data.books.completed %}
       <ul>
         <span class="heading" id="reading-list">
           <span class="dignified">reading</span>
           <span class="dignified">list</span>
         </span>
-        {% include book-list.html books=listed_books %}
+        {% include book-list.html books=site.data.books.listed %}
         <span class="heading" id="completed">
           <span class="dignified">completed</span>
         </span>
-        {% include book-list.html books=completed_books %}
+        {% include book-list.html books=site.data.books.completed %}
       </ul>
     </div>
   </body>
