@@ -2,11 +2,6 @@ listed:
   - title: "Recursion"
     author: "Blake Crouch"
 
-  - title: "Acquired Podcast"
-    author: "Ben Gilbert and David Rosenthal"
-    entries:
-      - "Alphabet"
-
   - title: "Guyton and Hall Textbook of Medical Physiology"
     author: "John E. Hall"
 
@@ -49,6 +44,7 @@ completed:
       - "Nvidia (I/II/III)"
       - "Amazon Web Services"
       - "Epic Systems (MyChart)"
+      - "Alphabet"
     starred: true
 
   - title: "Architecture: Form, Space, and Order"
