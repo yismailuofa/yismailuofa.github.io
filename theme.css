@@ -1,20 +1,20 @@
 :root {
-  --accent-a1: #7b5037;
-  --gray-1: #f8f5ed;
-  --gray-12: #4f493f;
+  --accent-a1: #6c3f26;
+  --background-1: #f8f5ed;
+  --text-1: #423127;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --accent-a1: #c49478;
-    --gray-1: #1a1816;
-    --gray-12: #e6e2da;
+    --background-1: #1a1816;
+    --text-1: #e6e2da;
   }
 }
 
 html {
-  color: var(--gray-12);
-  background-color: var(--gray-1);
+  color: var(--text-1);
+  background-color: var(--background-1);
 }
 
 body {
@@ -32,7 +32,7 @@ ul {
 }
 
 hr {
-  border-color: var(--gray-12);
+  border-color: var(--text-1);
 }
 
 .container {
@@ -41,21 +41,15 @@ hr {
   padding: 0.5em;
 }
 
-.heading {
-  display: block;
-  margin-block: 0.4em 0.2em;
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
-}
-
-.dignified {
-  display: inline-block;
-  text-transform: uppercase;
-  text-decoration: underline;
-}
-
-.dignified::first-letter {
+.heading-1 {
   font-size: 1.3em;
+  display: block;
+  text-transform: uppercase;
+}
+
+.heading-1::first-letter {
+  font-size: 1.3em;
+  font-style: italic;
 }
 
 .author {
@@ -67,7 +61,7 @@ hr {
 }
 
 .badge {
-  color: var(--gray-12);
+  color: var(--text-1);
   display: flex;
   align-items: center;
   gap: 0.3em;
@@ -80,6 +74,10 @@ hr {
 
 .star {
   color: var(--accent-a1);
+}
+
+.book-list {
+  margin-bottom: 1em;
 }
 
 #nav {

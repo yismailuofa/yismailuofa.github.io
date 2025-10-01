@@ -17,7 +17,10 @@
       content="#000000"
     >
     <meta name="color-scheme" content="dark light">
-    <meta name="google-site-verification" content="Fp0ckxgfOxyxUTzVmYGxG0XPv8ZQsIPl3HEdGdBV3gA">
+    <meta
+      name="google-site-verification"
+      content="Fp0ckxgfOxyxUTzVmYGxG0XPv8ZQsIPl3HEdGdBV3gA"
+    >
     <link rel="stylesheet" href="theme.css">
     <link
       rel="icon"
@@ -29,14 +32,9 @@
     <div class="container">
       {% include header.html %}
       <ul>
-        <span class="heading" id="reading-list">
-          <span class="dignified">reading</span>
-          <span class="dignified">list</span>
-        </span>
+        <span class="heading-1" id="reading-list">Reading List</span>
         {% include book-list.html books=site.data.books.listed %}
-        <span class="heading" id="completed">
-          <span class="dignified">completed</span>
-        </span>
+        <span class="heading-1" id="completed">Completed</span>
         {% include book-list.html books=site.data.books.completed %}
       </ul>
     </div>
