@@ -35,6 +35,19 @@ hr {
   border-color: var(--text-1);
 }
 
+blockquote {
+  border-left: 0.3em solid var(--accent-a1);
+  padding-left: 1em;
+  margin: auto auto 2em;
+  font-style: italic;
+  color: var(--text-1);
+}
+
+cite {
+  font-weight: bold;
+  font-style: normal;
+}
+
 .container {
   max-width: 800px;
   margin: 0 auto;
@@ -78,6 +91,10 @@ hr {
 
 .book-list {
   margin-bottom: 0.5em;
+}
+
+.back-arrow {
+  text-decoration: none;
 }
 
 #nav {

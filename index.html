@@ -1,40 +1,18 @@
 ---
 ---
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>youssef ismail</title>
-    <meta name="description" content="Youssef Ismail's personal web page">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta
-      name="theme-color"
-      media="(prefers-color-scheme: light)"
-      content="#ffffff"
-    >
-    <meta
-      name="theme-color"
-      media="(prefers-color-scheme: dark)"
-      content="#000000"
-    >
-    <meta name="color-scheme" content="dark light">
-    <meta
-      name="google-site-verification"
-      content="Fp0ckxgfOxyxUTzVmYGxG0XPv8ZQsIPl3HEdGdBV3gA"
-    >
-    <link rel="stylesheet" href="theme.css">
-    <link
-      rel="icon"
-      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>"
-    >
-    <meta charset="utf-8">
-  </head>
+  {% include header.html %}
   <body>
     <div class="container">
-      {% include header.html %}
+      {% include navbar.html %}
+      <span class="heading-1" id="reading-list">Reading List</span>
       <ul>
-        <span class="heading-1" id="reading-list">Reading List</span>
         {% include book-list.html books=site.data.books.listed %}
-        <span class="heading-1" id="completed">Completed</span>
+      </ul>
+      <span class="heading-1" id="completed">Completed</span>
+      <ul>
         {% include book-list.html books=site.data.books.completed %}
       </ul>
     </div>
