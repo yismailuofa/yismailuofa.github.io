@@ -10,7 +10,9 @@
       <span class="heading-1" id="reading-list">Fragments</span>
       {% for fragment in site.data.fragments.fragments %}
       <blockquote>
-        <p>{{ fragment.text }}</p>
+        {% for line in fragment.text %}
+        <p>{{ line }}</p>
+        {% endfor %}
         <cite>{{ fragment.cite }}</cite>
       </blockquote>
       {% endfor %}
