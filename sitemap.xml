@@ -8,6 +8,13 @@ layout:
   {% if page.url contains '.xml' or page.url contains 'assets' %}{% else %}
       <url>
         <loc>{{ site.url }}{{ page.url }}</loc>
+        <lastmod>
+          {% if page.date %}
+            {{ page.date | date: "%Y-%m-%d" }}
+          {% else %}
+            {{ "now" | date: "%Y-%m-%d" }}
+          {% endif %}
+        </lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
        </url>
@@ -16,6 +23,7 @@ layout:
   {% for page in site.posts %}
       <url>
         <loc>{{ site.url }}{{ page.url | replace: 'index.html', '' }}</loc>
+        <lastmod>{{ page.date | date: "%Y-%m-%d" }}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
        </url>
