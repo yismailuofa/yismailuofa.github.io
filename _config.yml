@@ -1,0 +1,13 @@
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      permalink: /blog/:categories/:year/:month/:day/:title/
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: default
+theme: null

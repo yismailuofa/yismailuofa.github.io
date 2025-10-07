@@ -1,21 +1,11 @@
 ---
-title: "bookshelf - youssef ismail"
+title: "bookshelf"
 ---
-
-<!DOCTYPE html>
-<html lang="en">
-  {% include header.html %}
-  <body>
-    <div class="container">
-      {% include navbar.html %}
-      <span class="heading-1" id="reading-list">Reading List</span>
-      <ul>
-        {% include book-list.html books=site.data.books.listed %}
-      </ul>
-      <span class="heading-1" id="completed">Completed</span>
-      <ul>
-        {% include book-list.html books=site.data.books.completed %}
-      </ul>
-    </div>
-  </body>
-</html>
+<span class="heading-2">Reading List</span>
+<ul>
+  {% include book-list.html books=site.data.books.listed %}
+</ul>
+<span class="heading-2">Completed</span>
+<ul>
+  {% include book-list.html books=site.data.books.completed %}
+</ul>

@@ -1,3 +1,5 @@
+@import "highlight.css";
+
 :root {
   --accent-a1: #6c3f26;
   --background-1: #f8f5ed;
@@ -53,19 +55,23 @@ cite {
   font-style: normal;
 }
 
+pre {
+  padding: 1.4em;
+}
+
 .container {
   max-width: 800px;
   margin: 0 auto;
   padding: 0.5em;
 }
 
-.heading-1 {
+.heading-2 {
   font-size: 1.3em;
   display: block;
   text-transform: uppercase;
 }
 
-.heading-1::first-letter {
+.heading-2::first-letter {
   font-size: 1.3em;
   font-style: italic;
 }
@@ -76,6 +82,13 @@ cite {
   font-size: 0.8em;
   margin-left: 0.6em;
   opacity: 0.9;
+}
+
+.subtitle {
+  font-style: italic;
+  font-size: 0.8em;
+  opacity: 0.9;
+  margin-bottom: 3em;
 }
 
 .badge {

@@ -3,11 +3,9 @@
   <span>-</span>
   <a href="mailto:yusufismailhassan+website@gmail.com">📧</a>
   <span>-</span>
-  {% if page.url != '/' %}
   <a href="/">bookshelf</a>
-  {% else %}
-  <a href="/fragments/">fragments</a>
-  {% endif %}
+  <span>-</span>
+  <a href="/blog/">blog</a>
   <a
     id="last-modified"
     class="badge"
@@ -21,4 +19,4 @@
     {{ site.github.build_revision | slice: 0, 7 -}}
   </a>
 </div>
-<hr />
+<hr>

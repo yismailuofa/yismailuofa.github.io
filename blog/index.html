@@ -1,0 +1,12 @@
+---
+title: "blog posts"
+---
+<span class="heading-2">Blog Posts</span>
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      ({{ post.date | date_to_string }})
+    </li>
+  {% endfor %}
+</ul>

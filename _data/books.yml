@@ -1,4 +1,8 @@
 listed:
+  - title: "Acquired Podcast"
+    author: "Ben Gilbert and David Rosenthal"
+    entries:
+      - "Google II"
   - title: "Musashi"
     author: "Eiji Yoshikawa"
 
@@ -37,7 +41,7 @@ completed:
       - "Costco"
       - "Walmart"
       - "Amazon"
-      - "Google"
+      - "Google (I)"
       - "TSMC"
       - "Ikea"
       - "Meta"
