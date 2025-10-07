@@ -108,14 +108,6 @@ h6::first-letter {
   color: var(--text-2);
 }
 
-.badge {
-  color: var(--text-1);
-  display: flex;
-  align-items: center;
-  gap: 0.3em;
-  text-decoration: none;
-}
-
 .list-entry {
   margin-bottom: 0.4em;
 }
@@ -126,10 +118,6 @@ h6::first-letter {
 
 .book-list {
   margin-bottom: 0.5em;
-}
-
-.back-arrow {
-  text-decoration: none;
 }
 
 .highlight {
@@ -145,6 +133,11 @@ h6::first-letter {
 
 #last-modified {
   margin-left: auto;
+  color: var(--text-1);
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+  text-decoration: none;
 }
 
 #sha-indicator {
