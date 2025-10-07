@@ -4,6 +4,7 @@
   --accent-a1: #6c3f26;
   --background-1: #f8f5ed;
   --text-1: #423127;
+  --text-2: hsl(from var(--text-1) h s calc(l + 10));
 }
 
 @media (prefers-color-scheme: dark) {
@@ -11,6 +12,7 @@
     --accent-a1: #c49478;
     --background-1: #1a1816;
     --text-1: #e6e2da;
+    --text-2: hsl(from var(--text-1) h s calc(l - 10));
   }
 }
 
@@ -59,6 +61,28 @@ pre {
   padding: 1.4em;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: block;
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: normal;
+}
+
+h1::first-letter,
+h2::first-letter,
+h3::first-letter,
+h4::first-letter,
+h5::first-letter,
+h6::first-letter {
+  font-size: 1.3em;
+  font-style: italic;
+}
+
 .container {
   max-width: 800px;
   margin: 0 auto;
@@ -76,19 +100,12 @@ pre {
   font-style: italic;
 }
 
-.author {
+.subtitle {
   font-style: italic;
   display: block;
   font-size: 0.8em;
-  margin-left: 0.6em;
   opacity: 0.9;
-}
-
-.subtitle {
-  font-style: italic;
-  font-size: 0.8em;
-  opacity: 0.9;
-  margin-bottom: 3em;
+  color: var(--text-2);
 }
 
 .badge {
@@ -99,8 +116,8 @@ pre {
   text-decoration: none;
 }
 
-.book-entry {
-  margin-bottom: 0.3em;
+.list-entry {
+  margin-bottom: 0.4em;
 }
 
 .star {
@@ -113,6 +130,10 @@ pre {
 
 .back-arrow {
   text-decoration: none;
+}
+
+.highlight {
+  border-radius: 0.5em;
 }
 
 #nav {

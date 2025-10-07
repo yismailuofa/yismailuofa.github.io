@@ -1,11 +1,11 @@
 <div class="book-list">
   {% for book in include.books %}
-    <li class="book-entry">
+    <li class="list-entry">
       {% if book.starred %}
         <span class="star">✷</span>
       {% endif %}
       {{ book.title }}
-      <span class="author">{{ book.author }}</span>
+      <span class="subtitle">{{ book.author }}</span>
       {% if book.entries %}
         <ul>
           {% for entry in book.entries %}

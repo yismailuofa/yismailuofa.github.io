@@ -1,12 +1,12 @@
 ---
 title: "blog posts"
 ---
-<span class="heading-2">Blog Posts</span>
+<h2>Blog Posts</h2>
 <ul>
   {% for post in site.posts %}
-    <li>
+    <li class="list-entry">
       <a href="{{ post.url }}">{{ post.title }}</a>
-      ({{ post.date | date_to_string }})
+      <span class="subtitle"> {{ post.date | date_to_string: 'ordinal', 'US' }} </span>
     </li>
   {% endfor %}
 </ul>
