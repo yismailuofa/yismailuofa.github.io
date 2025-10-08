@@ -124,6 +124,11 @@ h6::first-letter {
   border-radius: 0.5em;
 }
 
+.active {
+  text-decoration: none;
+  pointer-events: none;
+}
+
 #nav {
   display: flex;
   justify-content: space-between;
