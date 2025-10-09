@@ -33,7 +33,6 @@ a {
 ul {
   margin-block-start: 0;
   padding-inline-start: 20px;
-  margin-bottom: 0;
 }
 
 hr {
@@ -89,23 +88,16 @@ h6::first-letter {
   padding: 0.5em;
 }
 
-.heading-2 {
-  font-size: 1.3em;
-  display: block;
-  text-transform: uppercase;
-}
-
-.heading-2::first-letter {
-  font-size: 1.3em;
-  font-style: italic;
-}
-
 .subtitle {
   font-style: italic;
   display: block;
   font-size: 0.8em;
   opacity: 0.9;
   color: var(--text-2);
+}
+
+article > .subtitle {
+  margin-bottom: 2em;
 }
 
 .list-entry {
