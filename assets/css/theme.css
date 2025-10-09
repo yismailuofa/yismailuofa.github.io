@@ -82,6 +82,10 @@ h6::first-letter {
   font-style: italic;
 }
 
+h3 {
+  margin-top: 2em;
+}
+
 .container {
   max-width: 800px;
   margin: 0 auto;
@@ -97,7 +101,7 @@ h6::first-letter {
 }
 
 article > .subtitle {
-  margin-bottom: 2em;
+  margin-bottom: 3em;
 }
 
 .list-entry {
