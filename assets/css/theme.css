@@ -24,6 +24,7 @@ html {
 body {
   font-family: Georgia, serif;
   line-height: 1.5;
+  margin-bottom: 4em;
 }
 
 a {
@@ -82,8 +83,12 @@ h6::first-letter {
   font-style: italic;
 }
 
-h3 {
-  margin-top: 2em;
+article h2 {
+  margin-top: 1em;
+}
+
+article .subtitle {
+  margin-bottom: 3em;
 }
 
 .container {
@@ -98,10 +103,6 @@ h3 {
   font-size: 0.8em;
   opacity: 0.9;
   color: var(--text-2);
-}
-
-article > .subtitle {
-  margin-bottom: 3em;
 }
 
 .list-entry {
