@@ -91,6 +91,15 @@ article .subtitle {
   margin-bottom: 3em;
 }
 
+img {
+  max-width: 100%;
+  border-radius: 0.5em;
+}
+
+p:has(> img):has(> em) {
+  text-align: center;
+}
+
 .container {
   max-width: 800px;
   margin: 0 auto;
