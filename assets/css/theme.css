@@ -1,8 +1,8 @@
 @import "highlight.css";
 
 :root {
-  --accent-a1: #6c3f26;
-  --background-1: #f8f5ed;
+  --accent-a1: #95644a;
+  --background-1: #fffaf4;
   --text-1: #423127;
   --text-2: hsl(from var(--text-1) h s calc(l + 10));
 }
@@ -34,6 +34,10 @@ a {
 ul {
   margin-block-start: 0;
   padding-inline-start: 20px;
+}
+
+ol {
+  padding-inline-start: 30px;
 }
 
 hr {
@@ -88,7 +92,7 @@ article h2 {
 }
 
 article .subtitle {
-  margin-bottom: 3em;
+  margin-bottom: 2em;
 }
 
 img {

@@ -1,8 +1,12 @@
 listed:
+  - title: "Prisoners of Geography"
+    author: "Tim Marshall"
+
   - title: "Acquired Podcast"
     author: "Ben Gilbert and David Rosenthal"
     entries:
       - "Google II"
+
   - title: "Musashi"
     author: "Eiji Yoshikawa"
 
