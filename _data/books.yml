@@ -2,11 +2,6 @@ listed:
   - title: "Prisoners of Geography"
     author: "Tim Marshall"
 
-  - title: "Acquired Podcast"
-    author: "Ben Gilbert and David Rosenthal"
-    entries:
-      - "Google II"
-
   - title: "Musashi"
     author: "Eiji Yoshikawa"
 
@@ -45,7 +40,7 @@ completed:
       - "Costco"
       - "Walmart"
       - "Amazon"
-      - "Google (I)"
+      - "Google (I/II/III)"
       - "TSMC"
       - "Ikea"
       - "Meta"
@@ -55,7 +50,6 @@ completed:
       - "Nvidia (I/II/III)"
       - "Amazon Web Services"
       - "Epic Systems (MyChart)"
-      - "Alphabet"
     starred: true
 
   - title: "Architecture: Form, Space, and Order"
