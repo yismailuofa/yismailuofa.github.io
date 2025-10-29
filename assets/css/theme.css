@@ -31,13 +31,15 @@ a {
   color: var(--accent-a1);
 }
 
-ul {
+ul,
+ol {
   margin-block-start: 0;
   padding-inline-start: 20px;
+  margin: 0;
 }
 
-ol {
-  padding-inline-start: 30px;
+li {
+  margin: 0.1rem 0;
 }
 
 hr {
@@ -118,16 +120,8 @@ p:has(> img):has(> em) {
   color: var(--text-2);
 }
 
-.list-entry {
-  margin-bottom: 0.4em;
-}
-
 .star {
   color: var(--accent-a1);
-}
-
-.book-list {
-  margin-bottom: 0.5em;
 }
 
 .highlight {
