@@ -93,7 +93,7 @@ article h2 {
   margin-top: 1em;
 }
 
-article .subtitle {
+article > .subtitle {
   margin-bottom: 2em;
 }
 
@@ -118,6 +118,7 @@ p:has(> img):has(> em) {
   font-size: 0.8em;
   opacity: 0.9;
   color: var(--text-2);
+  margin-top: -0.2em;
 }
 
 .star {
