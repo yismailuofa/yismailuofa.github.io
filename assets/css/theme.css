@@ -38,8 +38,8 @@ ol {
   margin: 0;
 }
 
-li {
-  margin: 0.1rem 0;
+.book-list > li {
+  margin-bottom: 0.2rem;
 }
 
 hr {
@@ -90,12 +90,9 @@ h6::first-letter {
   font-style: italic;
 }
 
-article h2 {
-  margin-top: 1em;
-}
-
 article > .subtitle {
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
+  margin-top: 0em;
 }
 
 img {
