@@ -4,7 +4,7 @@ defaults:
       type: "posts"
     values:
       layout: post
-      permalink: /stories/:categories/:title/
+      permalink: /writings/:categories/:title/
   - scope:
       path: ""
       type: "pages"
