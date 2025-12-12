@@ -22,7 +22,7 @@ html {
 body {
   font-family: Georgia, serif;
   line-height: 1.5;
-  margin-bottom: 2em;
+  margin: 0;
 }
 
 a {
