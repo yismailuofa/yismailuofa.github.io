@@ -1,15 +1,13 @@
 :root {
-  --accent-a1: #95644a;
   --background-1: #fffaf4;
-  --text-1: #423127;
+  --text-1: #694f38;
   --text-2: hsl(from var(--text-1) h s calc(l + 10));
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --accent-a1: #c49478;
-    --background-1: #1a1816;
-    --text-1: #e6e2da;
+    --background-1: #20180d;
+    --text-1: #f9f4ef;
     --text-2: hsl(from var(--text-1) h s calc(l - 10));
   }
 }
@@ -22,11 +20,11 @@ html {
 body {
   font-family: Georgia, serif;
   line-height: 1.5;
-  margin: 0;
+  margin: 0 1em 1em;
 }
 
 a {
-  color: var(--accent-a1);
+  color: var(--text-1);
 }
 
 ul,
@@ -37,7 +35,7 @@ ol {
 }
 
 .book-list > li {
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.3rem;
 }
 
 hr {
@@ -88,7 +86,7 @@ article > .subtitle {
 }
 
 .star {
-  color: var(--accent-a1);
+  color: var(--text-1);
 }
 
 .active {
@@ -120,6 +118,6 @@ article > .subtitle {
   display: inline-block;
   width: 0.9em;
   height: 0.9em;
-  background-color: var(--sha-color, var(--accent-a1));
+  background-color: var(--sha-color, var(--text-1));
   border-radius: 50%;
 }
