@@ -1,9 +1,6 @@
 <ul class="book-list">
   {% for book in include.books %}
-    <li>
-      {% if book.starred %}
-        <span class="star">✷</span>
-      {% endif %}
+    <li{% if book.starred %} class="starred"{% endif %}>
       {{ book.title }}
       <span class="subtitle">{{ book.author }}</span>
       {% if book.entries %}
