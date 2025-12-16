@@ -85,18 +85,6 @@ article > .subtitle {
   margin-top: -0.2em;
 }
 
-.book-list > li.starred {
-  list-style-type: none;
-  position: relative;
-}
-
-.book-list > li.starred::before {
-  content: "✷";
-  position: absolute;
-  left: -1.15em;
-  top: 0.15em;
-  font-size: 0.85em;
-}
 
 .active {
   text-decoration: none;
