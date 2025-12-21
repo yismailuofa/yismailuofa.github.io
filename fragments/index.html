@@ -1,0 +1,21 @@
+---
+title: "fragments"
+description: "A collection of fragments."
+---
+
+<h2>Fragments</h2>
+<div class="fragments-container">
+  {% for fragment in site.data.fragments.fragments %}
+  <div class="fragment-item">
+    <div class="fragment-content">
+      <div class="fragment-column">
+        <p>{{ fragment.englishText }}</p>
+      </div>
+      <div class="fragment-column">
+        <p class="fragment-arabic">{{ fragment.arabicText }}</p>
+      </div>
+    </div>
+    <cite class="subtitle">{{ fragment.cite }}</cite>
+  </div>
+  {% endfor %}
+</div>

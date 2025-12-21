@@ -52,7 +52,7 @@ h6 {
   text-transform: uppercase;
   margin: 0;
   font-weight: normal;
-  line-height: 1.0;
+  line-height: 1;
 }
 
 h1::first-letter,
@@ -85,7 +85,6 @@ article > .subtitle {
   margin-top: -0.2em;
 }
 
-
 .active {
   text-decoration: none;
   pointer-events: none;
@@ -93,6 +92,39 @@ article > .subtitle {
 
 .book-list {
   margin-bottom: 1em;
+}
+
+.fragments-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  margin-top: 1.5em;
+}
+
+.fragment-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.fragment-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5em;
+  align-items: start;
+}
+
+.fragment-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.fragment-column p {
+  margin: 0;
+}
+
+.fragment-arabic {
+  direction: rtl;
 }
 
 #nav {
