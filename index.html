@@ -7,13 +7,3 @@ description: What I've read and what I'm reading."
 {% include book-list.html books=site.data.books.listed %}
 <h2>Completed</h2>
 {% include book-list.html books=site.data.books.completed %}
-
-<script>
-  (function () {
-    document.addEventListener("click", function (event) {
-      if (event.detail === 3) {
-        window.location.href = "/fragments";
-      }
-    });
-  })();
-</script>

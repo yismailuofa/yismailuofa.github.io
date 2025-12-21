@@ -5,7 +5,12 @@
   <span>-</span>
   <a href="/" class="{% if page.url == '/' %}active{% endif %}">bookshelf</a>
   <span>-</span>
-  <a href="/writings/" class="{% if page.url == '/writings/' %}active{% endif %}">writings</a>
+  <a
+    href="/writings/"
+    class="{% if page.url == '/writings/' %}active{% endif %}"
+    >writings</a
+  >
+  <a href="/fragments/" style="opacity: 0">_</a>
   <a
     id="last-modified"
     class="badge"
@@ -19,4 +24,4 @@
     {{ site.github.build_revision | slice: 0, 7 -}}
   </a>
 </div>
-<hr>
+<hr />
