@@ -1,7 +1,9 @@
 <ul class="book-list">
   {% for book in include.books %}
   <li>
-    {{ book.title }} {% if book.starred %}✶{% endif %}
+    {% if book.title contains "Quran" %}
+    <a href="/fragments">{{ book.title }}</a>
+    {% else %} {{ book.title }} {% endif %} {% if book.starred %}✶{% endif %}
     <span class="subtitle">{{ book.author }}</span>
     {% if book.entries %}
     <ul>
