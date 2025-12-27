@@ -97,18 +97,12 @@ article > .subtitle {
 .reminders-container {
   display: flex;
   flex-direction: column;
-  gap: 1.5em;
-  margin-top: 0.5em;
+  gap: 1em;
 }
 
-.reminder-item {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em;
-}
-
-.reminder-item p {
+.reminder-paragraph {
   white-space: pre-line;
+  margin-top: 0;
 }
 
 .reminder-line {
