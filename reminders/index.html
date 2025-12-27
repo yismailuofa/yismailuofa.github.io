@@ -1,0 +1,16 @@
+---
+title: "reminders"
+description: "A collection of reminders."
+---
+
+<h2>Reminders</h2>
+<div class="reminders-container">
+  {% for reminder in site.data.reminders.reminders %}
+  <div class="reminder-item">
+    <p>{{ reminder.englishText }}</p>
+    <cite class="subtitle">{{ reminder.cite }}</cite>
+  </div>
+  {% unless forloop.last %}
+  <hr class="reminder-line" />
+  {% endunless %} {% endfor %}
+</div>

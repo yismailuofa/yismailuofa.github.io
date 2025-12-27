@@ -94,37 +94,25 @@ article > .subtitle {
   margin-bottom: 1em;
 }
 
-.fragments-container {
+.reminders-container {
   display: flex;
   flex-direction: column;
-  gap: 2em;
-  margin-top: 1.5em;
+  gap: 1.5em;
+  margin-top: 0.5em;
 }
 
-.fragment-item {
+.reminder-item {
   display: flex;
   flex-direction: column;
   gap: 0.5em;
 }
 
-.fragment-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5em;
-  align-items: start;
+.reminder-item p {
+  white-space: pre-line;
 }
 
-.fragment-column {
-  display: flex;
-  flex-direction: column;
-}
-
-.fragment-column p {
-  margin: 0;
-}
-
-.fragment-arabic {
-  direction: rtl;
+.reminder-line {
+  width: 50%;
 }
 
 #nav {
