@@ -98,6 +98,7 @@ article > .subtitle {
   display: flex;
   flex-direction: column;
   gap: 1em;
+  margin-top: 0.5em;
 }
 
 .reminder-paragraph {
