@@ -9,6 +9,7 @@ listed:
       - "Order of the Phoenix"
       - "Half-Blood Prince"
       - "Deathly Hallows"
+
   - title: "Stoner"
     author: "John Williams"
 
@@ -33,7 +34,6 @@ listed:
   - title: "The Stormlight Archive Series"
     author: "Brandon Sanderson"
     entries:
-      - "The Way of Kings"
       - "Words of Radiance"
       - "Edgedancer"
       - "Oathbringer"
@@ -42,6 +42,11 @@ listed:
       - "Wind and Truth"
 
 completed:
+  - title: "The Stormlight Archive Series"
+    author: "Brandon Sanderson"
+    entries:
+      - "The Way of Kings"
+
   - title: "The A.B.C. Murders"
     author: "Agatha Christie"
 
