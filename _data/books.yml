@@ -44,6 +44,7 @@ listed:
 completed:
   - title: "The Stormlight Archive Series"
     author: "Brandon Sanderson"
+    starred: true
     entries:
       - "The Way of Kings"
 
