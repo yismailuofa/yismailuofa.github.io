@@ -22,9 +22,6 @@ listed:
   - title: "Musashi"
     author: "Eiji Yoshikawa"
 
-  - title: "Recursion"
-    author: "Blake Crouch"
-
   - title: "Guyton and Hall Textbook of Medical Physiology"
     author: "John E. Hall"
 
@@ -42,6 +39,9 @@ listed:
       - "Wind and Truth"
 
 completed:
+  - title: "Recursion"
+    author: "Blake Crouch"
+
   - title: "The Stormlight Archive Series"
     author: "Brandon Sanderson"
     starred: true
