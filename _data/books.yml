@@ -10,9 +10,6 @@ listed:
       - "Half-Blood Prince"
       - "Deathly Hallows"
 
-  - title: "Stoner"
-    author: "John Williams"
-
   - title: "Timeless Seeds of Advice"
     author: "B. B. Abdulla"
 
@@ -39,6 +36,9 @@ listed:
       - "Wind and Truth"
 
 completed:
+  - title: "Stoner"
+    author: "John Williams"
+
   - title: "Recursion"
     author: "Blake Crouch"
 
