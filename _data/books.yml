@@ -10,9 +10,6 @@ listed:
       - "Half-Blood Prince"
       - "Deathly Hallows"
 
-  - title: "Timeless Seeds of Advice"
-    author: "B. B. Abdulla"
-
   - title: "Prisoners of Geography"
     author: "Tim Marshall"
 
@@ -36,6 +33,9 @@ listed:
       - "Wind and Truth"
 
 completed:
+  - title: "Timeless Seeds of Advice"
+    author: "B. B. Abdulla"
+
   - title: "Stoner"
     author: "John Williams"
 
