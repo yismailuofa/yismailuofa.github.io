@@ -10,9 +10,6 @@ listed:
       - "Half-Blood Prince"
       - "Deathly Hallows"
 
-  - title: "Prisoners of Geography"
-    author: "Tim Marshall"
-
   - title: "Musashi"
     author: "Eiji Yoshikawa"
 
@@ -33,6 +30,9 @@ listed:
       - "Wind and Truth"
 
 completed:
+  - title: "Prisoners of Geography"
+    author: "Tim Marshall"
+
   - title: "Timeless Seeds of Advice"
     author: "B. B. Abdulla"
 
