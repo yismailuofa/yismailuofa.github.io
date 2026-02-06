@@ -2,7 +2,6 @@ listed:
   - title: "Harry Potter"
     author: "J.K. Rowling"
     entries:
-      - "Philosopher's Stone"
       - "Chamber of Secrets"
       - "Prisoner of Azkaban"
       - "Goblet of Fire"
@@ -30,6 +29,11 @@ listed:
       - "Wind and Truth"
 
 completed:
+  - title: "Harry Potter"
+    author: "J.K. Rowling"
+    entries:
+      - "Philosopher's Stone"
+
   - title: "Prisoners of Geography"
     author: "Tim Marshall"
 
