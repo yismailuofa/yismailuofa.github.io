@@ -1,7 +1,7 @@
 ---
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>{{ page.title | append: ' - youssef ismail' }}</title>
@@ -30,12 +30,19 @@
       title="Sitemap"
       href="/sitemap.xml"
     />
-    <meta name="google-site-verification" content="Fp0ckxgfOxyxUTzVmYGxG0XPv8ZQsIPl3HEdGdBV3gA" />
+    <meta
+      name="google-site-verification"
+      content="Fp0ckxgfOxyxUTzVmYGxG0XPv8ZQsIPl3HEdGdBV3gA"
+    />
   </head>
   <body>
     <div class="container">
       {% include navbar.html %}
-      <main>{{ content }}</main>
+      <main>
+        <h1>{{ page.title }}</h1>
+        <p class="subtitle">{{ page.description }}</p>
+        {{ content }}
+      </main>
     </div>
   </body>
 </html>

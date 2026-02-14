@@ -3,14 +3,14 @@ title: "reminders"
 description: "A collection of reminders."
 ---
 
-<h2>Reminders</h2>
-<div class="reminders-container">
+<section>
+  <h2>Excerpts</h2>
   {% for reminder in site.data.reminders.reminders %}
-  <div>
-    <p class="reminder-paragraph">{{ reminder.englishText }}</p>
+  <div class="reminder">
+    <p>{{ reminder.englishText }}</p>
     <cite class="subtitle">{{ reminder.cite }}</cite>
   </div>
   {% unless forloop.last %}
-  <hr class="reminder-line" />
+  <p class="separator">❦</p>
   {% endunless %} {% endfor %}
-</div>
+</section>

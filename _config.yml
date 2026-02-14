@@ -1,12 +1,6 @@
 defaults:
   - scope:
       path: ""
-      type: "posts"
-    values:
-      layout: post
-      permalink: /writings/:categories/:title/
-  - scope:
-      path: ""
       type: "pages"
     values:
       layout: default

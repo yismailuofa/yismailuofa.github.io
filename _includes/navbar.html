@@ -1,26 +1,22 @@
-<div id="nav">
-  <span>youssef ismail</span>
-  <span>-</span>
-  <a href="mailto:yusufismailhassan+website@gmail.com">📧</a>
-  <span>-</span>
-  <a href="/" class="{% if page.url == '/' %}active{% endif %}">bookshelf</a>
-  <!-- <span>-</span>
-  <a
-    href="/writings/"
-    class="{% if page.url == '/writings/' %}active{% endif %}"
-    >writings</a
-  > -->
-  <a
-    id="last-modified"
-    class="badge"
-    href="{{ site.github.repository_url }}/commit/{{ site.github.build_revision }}"
-    target="_blank"
-  >
-    <div
-      id="sha-indicator"
-      style="--sha-color: #{{ site.github.build_revision | slice: 0, 6 }};"
-    ></div>
-    {{ site.github.build_revision | slice: 0, 7 -}}
-  </a>
-</div>
-<hr />
+<header>
+  <nav>
+    <span>youssef ismail</span>
+    <span>-</span>
+    <a href="mailto:yusufismailhassan+website@gmail.com">📧</a>
+    <span>-</span>
+    <a href="/" class="{% if page.url == '/' %}active{% endif %}">bookshelf</a>
+    <a
+      id="last-modified"
+      class="badge"
+      href="{{ site.github.repository_url }}/commit/{{ site.github.build_revision }}"
+      target="_blank"
+    >
+      <div
+        id="sha-indicator"
+        style="--sha-color: #{{ site.github.build_revision | slice: 0, 6 }};"
+      ></div>
+      {{ site.github.build_revision | slice: 0, 7 -}}
+    </a>
+  </nav>
+  <hr />
+</header>
