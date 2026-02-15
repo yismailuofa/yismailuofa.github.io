@@ -1,16 +1,16 @@
 <div class="book-list">
   {% for book in include.books %}
-  <p>
-    <strong>
-      {% if book.title contains "Quran" %}
-      <a href="/reminders">{{ book.title }}</a>
-      {% else %}{{ book.title }}{% endif %}{% if book.starred %} ✶{% endif %},
-    </strong>
-    <i>{{ book.author }}</i>{% if book.entries and book.entries.size > 0 %}. —
+  <span>
+    <p>
+      <strong>
+        {% if book.starred %}<span class="starred">✶</span>{% endif %} {% if
+        book.link %} <a href="{{ book.link }}">{{ book.title }}</a>{% else %}{{
+        book.title}}{% endif %}</strong
+      ><i>, {{ book.author }}</i>
+    </p>
     {% for entry in book.entries %}
-    <span class="book-entry"
-      >{{ entry }}{% unless forloop.last %}; {% endunless %}</span
-    >{% endfor %}{% endif %}.
-  </p>
+    <p>{{ entry }}</p>
+    {% endfor %}
+  </span>
   {% endfor %}
 </div>

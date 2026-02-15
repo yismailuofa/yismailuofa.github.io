@@ -31,6 +31,7 @@ listed:
 completed:
   - title: "Harry Potter"
     author: "J.K. Rowling"
+    starred: true
     entries:
       - "Philosopher's Stone"
 
@@ -218,3 +219,4 @@ completed:
   - title: "Quran"
     author: "Allah"
     starred: true
+    link: "/reminders"
