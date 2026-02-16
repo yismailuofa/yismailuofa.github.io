@@ -46,18 +46,11 @@ header {
 
 #last-modified {
   margin-left: auto;
-  display: flex;
-  align-items: baseline;
-  gap: 0.3em;
   text-decoration: none;
 }
 
 #sha-indicator {
-  display: inline-block;
-  width: 0.8em;
-  height: 0.8em;
-  background-color: var(--sha-color, var(--text-1));
-  border-radius: 50%;
+  color: var(--sha-color, var(--text-1));
 }
 
 .active {
@@ -84,8 +77,19 @@ h1 {
 }
 
 h2 {
-  margin-top: 0;
-  margin-bottom: 0.75em;
+  margin: 0.75em 0;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+h2::before,
+h2::after {
+  content: "";
+  flex: 1;
+  height: 4px;
+  border-top: 1px solid var(--text-1);
+  border-bottom: 1px solid var(--text-1);
 }
 
 h3 {
