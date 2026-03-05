@@ -5,7 +5,9 @@ description: "A collection of reminders."
 
 <section>
   <h2>Excerpts</h2>
-  {% for reminder in site.data.reminders.reminders %}
+  {% assign reminders = site.data.reminders.reminders %}
+  {% assign shuffled = reminders | sample: reminders.size %}
+  {% for reminder in shuffled %}
   <div class="reminder">
     <p>{{ reminder.englishText }}</p>
     <cite class="subtitle">{{ reminder.cite }}</cite>
