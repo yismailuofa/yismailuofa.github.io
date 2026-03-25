@@ -9,9 +9,6 @@ listed:
       - "Half-Blood Prince"
       - "Deathly Hallows"
 
-  - title: "Musashi"
-    author: "Eiji Yoshikawa"
-
   - title: "Guyton and Hall Textbook of Medical Physiology"
     author: "John E. Hall"
 
@@ -29,6 +26,10 @@ listed:
       - "Wind and Truth"
 
 completed:
+  - title: "Musashi"
+    author: "Eiji Yoshikawa"
+    starred: true
+
   - title: "Harry Potter"
     author: "J.K. Rowling"
     starred: true
