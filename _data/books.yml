@@ -25,16 +25,16 @@ listed:
       - "Wind and Truth"
 
 completed:
-  - title: "Musashi"
-    author: "Eiji Yoshikawa"
-    starred: true
-
   - title: "Harry Potter"
     author: "J.K. Rowling"
     starred: true
     entries:
       - "Philosopher's Stone"
       - "Chamber of Secrets"
+
+  - title: "Musashi"
+    author: "Eiji Yoshikawa"
+    starred: true
 
   - title: "Prisoners of Geography"
     author: "Tim Marshall"
