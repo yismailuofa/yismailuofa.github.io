@@ -2,7 +2,6 @@ listed:
   - title: "Harry Potter"
     author: "J.K. Rowling"
     entries:
-      - "Chamber of Secrets"
       - "Prisoner of Azkaban"
       - "Goblet of Fire"
       - "Order of the Phoenix"
@@ -35,6 +34,7 @@ completed:
     starred: true
     entries:
       - "Philosopher's Stone"
+      - "Chamber of Secrets"
 
   - title: "Prisoners of Geography"
     author: "Tim Marshall"
