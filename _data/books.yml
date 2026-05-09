@@ -1,4 +1,10 @@
 listed:
+  - title: "The Cuckoo's Egg"
+    author: "Clifford Stoll"
+
+  - title: "The Prince"
+    author: "Niccolo Machiavelli"
+
   - title: "Harry Potter"
     author: "J.K. Rowling"
     entries:
