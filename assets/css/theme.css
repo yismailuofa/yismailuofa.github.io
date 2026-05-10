@@ -116,12 +116,17 @@ p {
 }
 
 p + p {
-  padding-left: 1.5em;
+  padding-left: 1.75em;
 }
 
 .book-title {
   position: relative;
   padding-left: 1em;
+}
+
+.book-author {
+  opacity: 0.9;
+  color: var(--text-2);
 }
 
 .starred {

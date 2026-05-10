@@ -2,11 +2,15 @@
   {% for book in include.books %}
   <span>
     <p class="book-title">
-      {% if book.starred %}<span class="starred">✶</span>{% endif %}
+      {% if book.starred -%}
+      <span class="starred">✶</span>
+      {%- endif %}
       <strong>
-        {% if book.link %} <a href="{{ book.link }}">{{ book.title }}</a>{% else
-        %}{{ book.title}}{% endif %}</strong
-      ><i> {{ book.author }}</i>
+        {% if book.link %}
+        <a href="{{ book.link }}">{{ book.title }}</a>
+        {%- else -%} {{- book.title -}} {%- endif -%}
+      </strong>
+      <i class="book-author"> {{ book.author }}</i>
     </p>
     {% for entry in book.entries %}
     <p>{{ entry }}</p>
