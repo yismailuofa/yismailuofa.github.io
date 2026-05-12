@@ -140,6 +140,11 @@ p + p {
   margin: 1em 0;
 }
 
+.book-item {
+  display: block;
+  margin: 0.5em 0em 0.5em;
+}
+
 .separator {
   text-align: center;
   color: var(--text-2);
