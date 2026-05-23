@@ -8,7 +8,6 @@ listed:
   - title: "Harry Potter"
     author: "J.K. Rowling"
     entries:
-      - "Prisoner of Azkaban"
       - "Goblet of Fire"
       - "Order of the Phoenix"
       - "Half-Blood Prince"
@@ -37,6 +36,7 @@ completed:
     entries:
       - "Philosopher's Stone"
       - "Chamber of Secrets"
+      - "Prisoner of Azkaban"
 
   - title: "Musashi"
     author: "Eiji Yoshikawa"
