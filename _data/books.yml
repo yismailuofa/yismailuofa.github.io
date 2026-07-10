@@ -11,7 +11,6 @@ listed:
   - title: "Harry Potter"
     author: "J.K. Rowling"
     entries:
-      - "Half-Blood Prince"
       - "Deathly Hallows"
 
   - title: "Principles of Anatomy and Physiology"
@@ -40,6 +39,7 @@ completed:
       - "Prisoner of Azkaban"
       - "Goblet of Fire"
       - "Order of the Phoenix"
+      - "Half-Blood Prince"
 
   - title: "Musashi"
     author: "Eiji Yoshikawa"
