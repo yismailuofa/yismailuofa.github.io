@@ -145,6 +145,38 @@ p + p {
   margin: 0.25em 0em;
 }
 
+.book-entries-more summary {
+  padding-left: 1.75em;
+  color: var(--text-2);
+  cursor: pointer;
+  list-style: none;
+}
+
+.book-entries-more summary::before {
+  content: "➤";
+  display: inline-block;
+  opacity: 0.7;
+  transition:
+    transform 0.15s ease,
+    opacity 0.15s ease;
+}
+
+.book-entries-more summary:hover::before {
+  opacity: 1;
+}
+
+.book-entries-more[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.book-entries-more summary::-webkit-details-marker {
+  display: none;
+}
+
+.book-entries-more p {
+  padding-left: 1.75em;
+}
+
 .separator {
   text-align: center;
   color: var(--text-2);

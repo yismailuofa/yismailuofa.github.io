@@ -12,9 +12,16 @@
       </strong>
       <i class="book-author"> {{ book.author }}</i>
     </p>
-    {% for entry in book.entries %}
+    {% for entry in book.entries limit: 7 %}
     <p>{{ entry }}</p>
-    {% endfor %}
+    {% endfor %} {% if book.entries.size > 7 %}
+    <details class="book-entries-more">
+      <summary></summary>
+      {% for entry in book.entries offset: 7 %}
+      <p>{{ entry }}</p>
+      {% endfor %}
+    </details>
+    {% endif %}
   </span>
   {% endfor %}
 </div>
