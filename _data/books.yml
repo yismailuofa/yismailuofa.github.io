@@ -25,6 +25,26 @@ listed:
       - "Wind and Truth"
 
 completed:
+  - title: "Acquired Podcast"
+    author: "Ben Gilbert and David Rosenthal"
+    entries:
+      - "Coca-Cola"
+      - "Sony"
+      - "Costco"
+      - "Walmart"
+      - "Amazon"
+      - "Google (I/II/III)"
+      - "TSMC"
+      - "Ikea"
+      - "Meta"
+      - "Microsoft (I/II)"
+      - "Renaissance Technologies"
+      - "Visa"
+      - "Nvidia (I/II/III)"
+      - "Amazon Web Services"
+      - "Epic Systems (MyChart)"
+    starred: true
+
   - title: "Harry Potter"
     author: "J.K. Rowling"
     starred: true
@@ -71,25 +91,6 @@ completed:
 
   - title: "Cloud Atlas"
     author: "David Mitchell"
-
-  - title: "Acquired Podcast"
-    author: "Ben Gilbert and David Rosenthal"
-    entries:
-      - "Sony"
-      - "Costco"
-      - "Walmart"
-      - "Amazon"
-      - "Google (I/II/III)"
-      - "TSMC"
-      - "Ikea"
-      - "Meta"
-      - "Microsoft (I/II)"
-      - "Renaissance Technologies"
-      - "Visa"
-      - "Nvidia (I/II/III)"
-      - "Amazon Web Services"
-      - "Epic Systems (MyChart)"
-    starred: true
 
   - title: "Architecture: Form, Space, and Order"
     author: "Frank Ching"
