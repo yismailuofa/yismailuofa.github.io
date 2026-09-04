@@ -15,7 +15,10 @@
     {% for entry in book.entries limit: 7 %}
     <p>{{ entry }}</p>
     {% endfor %} {% if book.entries.size > 7 %}
-    <details class="book-entries-more">
+    <details
+      class="book-entries-more"
+      ontoggle="this.open ? requestAnimationFrame(() => this.open && this.classList.add('is-open')) : this.classList.remove('is-open')"
+    >
       <summary></summary>
       {% for entry in book.entries offset: 7 %}
       <p style="--i: {{ forloop.index0 }};">{{ entry }}</p>

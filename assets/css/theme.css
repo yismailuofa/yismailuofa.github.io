@@ -163,7 +163,8 @@ p + p {
   opacity: 1;
 }
 
-.book-entries-more[open] summary::before {
+.book-entries-more[open] summary::before,
+.book-entries-more.is-open summary::before {
   transform: rotate(90deg);
 }
 
@@ -171,9 +172,9 @@ p + p {
   display: none;
 }
 
-.book-entries-more[open] p {
+.book-entries-more.is-open p {
   animation: book-entry-in 0.25s ease both;
-  animation-delay: calc(var(--i) * 45ms);
+  animation-delay: calc(var(--i, 0) * 45ms);
 }
 
 .book-entries-more p {
@@ -184,6 +185,10 @@ p + p {
   from {
     opacity: 0;
     transform: translateY(0.3em);
+  }
+  to {
+    opacity: 1;
+    transform: none;
   }
 }
 
