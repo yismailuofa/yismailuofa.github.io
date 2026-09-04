@@ -156,9 +156,7 @@ p + p {
   content: "➤";
   display: inline-block;
   opacity: 0.7;
-  transition:
-    transform 0.15s ease,
-    opacity 0.15s ease;
+  transition: transform 0.15s ease;
 }
 
 .book-entries-more summary:hover::before {
@@ -173,8 +171,20 @@ p + p {
   display: none;
 }
 
+.book-entries-more[open] p {
+  animation: book-entry-in 0.25s ease both;
+  animation-delay: calc(var(--i) * 45ms);
+}
+
 .book-entries-more p {
   padding-left: 1.75em;
+}
+
+@keyframes book-entry-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.3em);
+  }
 }
 
 .separator {

@@ -18,7 +18,7 @@
     <details class="book-entries-more">
       <summary></summary>
       {% for entry in book.entries offset: 7 %}
-      <p>{{ entry }}</p>
+      <p style="--i: {{ forloop.index0 }};">{{ entry }}</p>
       {% endfor %}
     </details>
     {% endif %}
