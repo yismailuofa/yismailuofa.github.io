@@ -2,7 +2,6 @@
   --background-1: #fff9f1;
   --text-1: #3e342c;
   --text-2: hsl(from var(--text-1) h s calc(l + 10));
-  --accent-1: #365d7d;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -10,7 +9,6 @@
     --background-1: #20180d;
     --text-1: #f9f4ef;
     --text-2: hsl(from var(--text-1) h s calc(l - 10));
-    --accent-1: #94b9d2;
   }
 }
 
@@ -20,8 +18,8 @@ html {
 }
 
 ::selection {
-  color: var(--accent-1);
-  background-color: transparent;
+  color: var(--background-1);
+  background-color: var(--text-1);
   text-shadow: none;
 }
 
@@ -133,7 +131,6 @@ p + p {
 }
 
 .book-author {
-  opacity: 0.9;
   color: var(--text-2);
 }
 
