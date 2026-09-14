@@ -106,7 +106,6 @@ h3 {
 .subtitle {
   font-style: italic;
   font-size: 0.8em;
-  opacity: 0.9;
   color: var(--text-2);
   text-align: center;
   padding-bottom: 2em;
