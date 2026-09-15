@@ -1,4 +1,25 @@
 listed:
+  - title: "Chess Story"
+    author: "Stefan Zweig"
+
+  - title: "A Short Stay in Hell"
+    author: "Steven L. Peck"
+
+  - title: "Of Mice and Men"
+    author: "John Steinbeck"
+
+  - title: "The Postman Always Rings Twice"
+    author: "James M. Cain"
+
+  - title: "Pedro Páramo"
+    author: "Juan Rulfo"
+
+  - title: "The Tartar Steppe"
+    author: "Dino Buzzati"
+
+  - title: "Piranesi"
+    author: "Susanna Clarke"
+
   - title: "Children of Time"
     author: "Adrian Tchaikovsky"
 
