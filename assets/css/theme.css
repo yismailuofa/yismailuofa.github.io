@@ -142,6 +142,7 @@ p + p {
 
 .reminder {
   margin: 1em 0;
+  text-align: center;
 }
 
 .book-item {
