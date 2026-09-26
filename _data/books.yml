@@ -1,4 +1,7 @@
 listed:
+  - title: "Billy Summers"
+    author: "Stephen King"
+
   - title: "Chess Story"
     author: "Stefan Zweig"
 
@@ -23,9 +26,6 @@ listed:
   - title: "Children of Time"
     author: "Adrian Tchaikovsky"
 
-  - title: "The Cuckoo's Egg"
-    author: "Clifford Stoll"
-
   - title: "Principles of Neural Science"
     author: "Eric R. Kandel, James H. Schwartz, Thomas M. Jessell"
 
@@ -40,6 +40,9 @@ listed:
       - "Wind and Truth"
 
 completed:
+  - title: "The Cuckoo's Egg"
+    author: "Clifford Stoll"
+
   - title: "The Prince"
     author: "Niccolo Machiavelli"
 
