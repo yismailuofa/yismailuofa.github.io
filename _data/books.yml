@@ -1,4 +1,7 @@
 listed:
+  - title: "Welcome to the Universe: An Astrophysical Tour"
+    author: "Neil deGrasse Tyson, Michael A. Strauss & J. Richard Gott"
+
   - title: "Billy Summers"
     author: "Stephen King"
 
@@ -26,9 +29,6 @@ listed:
   - title: "Children of Time"
     author: "Adrian Tchaikovsky"
 
-  - title: "Principles of Neural Science"
-    author: "Eric R. Kandel, James H. Schwartz, Thomas M. Jessell"
-
   - title: "The Stormlight Archive Series"
     author: "Brandon Sanderson"
     entries:
@@ -47,7 +47,7 @@ completed:
     author: "Niccolo Machiavelli"
 
   - title: "Acquired Podcast"
-    author: "Ben Gilbert and David Rosenthal"
+    author: "Ben Gilbert & David Rosenthal"
     entries:
       - "Coca-Cola"
       - "Sony"
