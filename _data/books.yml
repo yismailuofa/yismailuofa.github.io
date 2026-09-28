@@ -5,9 +5,6 @@ listed:
   - title: "Billy Summers"
     author: "Stephen King"
 
-  - title: "Chess Story"
-    author: "Stefan Zweig"
-
   - title: "A Short Stay in Hell"
     author: "Steven L. Peck"
 
@@ -40,6 +37,10 @@ listed:
       - "Wind and Truth"
 
 completed:
+  - title: "Chess Story"
+    author: "Stefan Zweig"
+    starred: true
+
   - title: "The Cuckoo's Egg"
     author: "Clifford Stoll"
 
