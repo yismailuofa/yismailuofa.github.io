@@ -5,9 +5,6 @@ listed:
   - title: "Billy Summers"
     author: "Stephen King"
 
-  - title: "A Short Stay in Hell"
-    author: "Steven L. Peck"
-
   - title: "Of Mice and Men"
     author: "John Steinbeck"
 
@@ -37,6 +34,10 @@ listed:
       - "Wind and Truth"
 
 completed:
+  - title: "A Short Stay in Hell"
+    author: "Steven L. Peck"
+    starred: true
+
   - title: "Chess Story"
     author: "Stefan Zweig"
     starred: true
