@@ -8,9 +8,6 @@ listed:
   - title: "Billy Summers"
     author: "Stephen King"
 
-  - title: "Of Mice and Men"
-    author: "John Steinbeck"
-
   - title: "The Postman Always Rings Twice"
     author: "James M. Cain"
 
@@ -37,6 +34,9 @@ listed:
       - "Wind and Truth"
 
 completed:
+  - title: "Of Mice and Men"
+    author: "John Steinbeck"
+
   - title: "A Short Stay in Hell"
     author: "Steven L. Peck"
     starred: true
