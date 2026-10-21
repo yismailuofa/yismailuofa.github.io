@@ -5,9 +5,6 @@ listed:
   - title: "The Book of Assistance"
     author: "Imam Abdallah Ibn Alawi al-Haddad"
 
-  - title: "The Ones Who Walk Away from Omelas"
-    author: "Ursula K. Le Guin"
-
   - title: "Invisible Cities"
     author: "Italo Calvino"
 
@@ -43,6 +40,10 @@ listed:
       - "Wind and Truth"
 
 completed:
+  - title: "The Ones Who Walk Away from Omelas"
+    author: "Ursula K. Le Guin"
+    starred: true
+
   - title: "Of Mice and Men"
     author: "John Steinbeck"
 
