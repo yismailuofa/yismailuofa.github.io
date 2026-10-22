@@ -121,6 +121,7 @@ p + p {
 }
 
 .book-title {
+  line-height: 1.25;
   position: relative;
   display: grid;
   grid-template-columns: fit-content(66.667%) minmax(0, 1fr);
@@ -148,7 +149,7 @@ p + p {
 
 .book-item {
   display: block;
-  margin: 0.8em 0;
+  margin: 0.75em 0;
 }
 
 .book-entries-more summary {
