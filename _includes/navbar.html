@@ -11,12 +11,7 @@
       href="{{ site.github.repository_url }}/commit/{{ site.github.build_revision }}"
       target="_blank"
     >
-      {{ site.github.build_revision | slice: 0, 7}}
-      <span
-        id="sha-indicator"
-        style="--sha-color: #{{ site.github.build_revision | slice: 0, 6 }};"
-        >✤</span
-      >
+      {{ site.github.build_revision | slice: 0, 7 }} · {{ site.time | date: "%b %-d, %Y" }}
     </a>
   </nav>
   <hr />

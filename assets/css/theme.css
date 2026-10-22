@@ -37,6 +37,7 @@ body {
 
 a {
   color: var(--text-1);
+  text-underline-offset: 0.1em;
 }
 
 nav {
@@ -52,11 +53,6 @@ header {
 
 #last-modified {
   margin-left: auto;
-  text-decoration: none;
-}
-
-#sha-indicator {
-  color: var(--sha-color, var(--text-1));
 }
 
 .active {
