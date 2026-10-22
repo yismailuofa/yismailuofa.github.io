@@ -122,11 +122,16 @@ p + p {
 
 .book-title {
   position: relative;
+  display: grid;
+  grid-template-columns: fit-content(66.667%) minmax(0, 1fr);
+  column-gap: clamp(1em, 4vw, 3em);
   padding-left: 1em;
+  overflow-wrap: anywhere;
 }
 
 .book-author {
   color: var(--text-2);
+  text-align: right;
 }
 
 .starred {
@@ -149,48 +154,19 @@ p + p {
 .book-entries-more summary {
   padding-left: 1.75em;
   color: var(--text-2);
+  text-decoration: underline;
+  text-underline-offset: 0.1em;
   cursor: pointer;
   list-style: none;
 }
 
-.book-entries-more summary::before {
-  content: "➤";
-  display: inline-block;
-  opacity: 0.7;
-  transition: transform 0.15s ease;
-}
-
-.book-entries-more summary:hover::before {
-  opacity: 1;
-}
-
-.book-entries-more[open] summary::before,
-.book-entries-more.is-open summary::before {
-  transform: rotate(90deg);
-}
-
+.book-entries-more[open] summary,
 .book-entries-more summary::-webkit-details-marker {
   display: none;
 }
 
-.book-entries-more.is-open p {
-  animation: book-entry-in 0.25s ease both;
-  animation-delay: calc(var(--i, 0) * 45ms);
-}
-
 .book-entries-more p {
   padding-left: 1.75em;
-}
-
-@keyframes book-entry-in {
-  from {
-    opacity: 0;
-    transform: translateY(0.3em);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
 }
 
 .separator {
