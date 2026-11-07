@@ -71,7 +71,7 @@ function createBookWheel(wheel) {
     }
 
     if (previousHeight && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      const timing = { duration: 200, easing: 'cubic-bezier(0.23, 1, 0.32, 1)' };
+      const timing = { duration: 600, easing: 'cubic-bezier(0.23, 1, 0.32, 1)' };
       details.animate(
         [{ height: `${previousHeight}px` }, { height: `${details.offsetHeight}px` }],
         timing,
