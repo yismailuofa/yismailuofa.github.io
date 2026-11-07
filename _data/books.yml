@@ -1,4 +1,7 @@
 listed:
+  - title: "A Clockwork Orange"
+    author: "Anthony Burgess"
+
   - title: "The Analects"
     author: "Confucius"
 
@@ -79,26 +82,6 @@ completed:
 
   - title: "The Prince"
     author: "Niccolo Machiavelli"
-
-  - title: "Acquired Podcast"
-    author: "Ben Gilbert & David Rosenthal"
-    entries:
-      - "Coca-Cola"
-      - "Sony"
-      - "Costco"
-      - "Walmart"
-      - "Amazon"
-      - "Google (I/II/III)"
-      - "TSMC"
-      - "Ikea"
-      - "Meta"
-      - "Microsoft (I/II)"
-      - "Renaissance Technologies"
-      - "Visa"
-      - "Nvidia (I/II/III)"
-      - "Amazon Web Services"
-      - "Epic Systems (MyChart)"
-    starred: true
 
   - title: "Harry Potter"
     author: "J.K. Rowling"
