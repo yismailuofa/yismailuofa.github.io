@@ -36,7 +36,6 @@ function createBookWheel(wheel) {
   let drawFrame;
   let drawnIndex;
   let selected;
-  let detailsAnimation;
 
   let drag;
   let pressTarget;
@@ -53,9 +52,8 @@ function createBookWheel(wheel) {
   function showDetails() {
     const book = books[currentIndex()];
     if (selected === book) return;
-
     const previousHeight = selected ? details.getBoundingClientRect().height : 0;
-    detailsAnimation?.cancel();
+    for (const animation of details.getAnimations()) animation.cancel();
     selected = book;
 
     const title = document.createElement('p');
@@ -72,19 +70,18 @@ function createBookWheel(wheel) {
       details.append(series);
     }
 
-    if (previousHeight) {
-      const height = details.getBoundingClientRect().height;
-      details.style.overflow = 'clip';
-      detailsAnimation = details.animate(
-        [
-          { height: `${previousHeight}px`, opacity: 0.4, filter: 'blur(3px)' },
-          { height: `${height}px`, opacity: 1, filter: 'blur(0px)' },
-        ],
-        { duration: 500, easing: 'cubic-bezier(0.23, 1, 0.32, 1)' },
+    if (previousHeight && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const timing = { duration: 200, easing: 'cubic-bezier(0.23, 1, 0.32, 1)' };
+      details.animate(
+        [{ height: `${previousHeight}px` }, { height: `${details.offsetHeight}px` }],
+        timing,
       );
-      detailsAnimation.onfinish = () => {
-        details.style.overflow = '';
-      };
+      for (const child of details.children) {
+        child.animate(
+          [{ filter: 'blur(3px)', opacity: 0.4 }, { filter: 'blur(0px)', opacity: 1 }],
+          timing,
+        );
+      }
     }
   }
 
@@ -123,6 +120,9 @@ function createBookWheel(wheel) {
   }
 
   function stop() {
+    for (const child of details.children) {
+      for (const animation of child.getAnimations()) animation.cancel();
+    }
     cancelAnimationFrame(frame);
     cancelAnimationFrame(drawFrame);
     drawFrame = null;
@@ -333,8 +333,10 @@ function createBookWheel(wheel) {
     select(index);
   }
 
-  function resize() {
-    rowHeight = books[0].offsetHeight;
+  function resize([entry]) {
+    const height = entry.borderBoxSize[0].blockSize;
+    if (height === rowHeight) return;
+    rowHeight = height;
     stage.style.perspective = `${rowHeight / Math.sin(step) * 6}px`;
     draw();
   }
@@ -349,8 +351,7 @@ function createBookWheel(wheel) {
   window.addEventListener('pointerup', onPointerUp);
   window.addEventListener('pointercancel', onPointerUp);
 
-  new ResizeObserver(resize).observe(wheel);
-  resize();
+  new ResizeObserver(resize).observe(books[0], { box: 'border-box' });
   showDetails();
 }
 

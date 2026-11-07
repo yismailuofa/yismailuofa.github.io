@@ -3,14 +3,16 @@ title: "bookshelf"
 description: What I've read and what I'm reading.
 ---
 
-<section class="bookshelf-section">
-  <h2 id="reading-list">Reading List</h2>
-  {% include book-list.html books=site.data.books.listed label="reading-list" %}
-</section>
+<div class="bookshelf">
+  <section class="bookshelf-section">
+    <h2 id="reading-list">Reading List</h2>
+    {% include book-list.html books=site.data.books.listed label="reading-list" %}
+  </section>
 
-<section class="bookshelf-section">
-  <h2 id="completed">Completed</h2>
-  {% include book-list.html books=site.data.books.completed label="completed" %}
-</section>
+  <section class="bookshelf-section">
+    <h2 id="completed">Completed</h2>
+    {% include book-list.html books=site.data.books.completed label="completed" %}
+  </section>
+</div>
 
 <script src="/assets/js/book-wheels.js?v={{ site.time | date: '%s' }}" defer></script>
