@@ -1,18 +1,18 @@
-<header>
-  <nav>
+<footer>
+  <nav aria-label="Footer">
     <span>youssef ismail</span>
-    <span>-</span>
-    <a href="mailto:yusufismailhassan+website@gmail.com">📧</a>
-    <span>-</span>
-    <a href="/" class="{% if page.url == '/' %}active{% endif %}">bookshelf</a>
+    <a href="mailto:yusufismailhassan+website@gmail.com">email</a>
+    <a href="/">bookshelf</a>
+    <label class="theme-toggle" title="Use opposite of system theme">
+      <input id="theme-toggle" type="checkbox" aria-label="Use opposite of system theme" />
+      <span aria-hidden="true"></span>
+    </label>
     <a
       id="last-modified"
-      class="badge"
       href="{{ site.github.repository_url }}/commit/{{ site.github.build_revision }}"
       target="_blank"
     >
       {{ site.github.build_revision | slice: 0, 7 }}
     </a>
   </nav>
-  <hr />
-</header>
+</footer>

@@ -7,17 +7,13 @@
     <title>{{ page.title | append: ' - youssef ismail' }}</title>
     <meta name="description" content="{{ page.description }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="theme-color"
-      media="(prefers-color-scheme: light)"
-      content="#ffffff"
+    <meta name="color-scheme" content="light dark" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap"
     />
-    <meta
-      name="theme-color"
-      media="(prefers-color-scheme: dark)"
-      content="#000000"
-    />
-    <meta name="color-scheme" content="dark light" />
     <link rel="stylesheet" href="/assets/css/theme.css" />
     <link
       rel="icon"
@@ -36,13 +32,13 @@
     />
   </head>
   <body>
-    <div class="container">
-      {% include navbar.html %}
-      <main>
+    <main>
+      <header class="page-header">
         <h1>{{ page.title }}</h1>
-        <p class="subtitle">{{ page.description }}</p>
-        {{ content }}
-      </main>
-    </div>
+        <p>{{ page.description }}</p>
+      </header>
+      {{ content }}
+    </main>
+    {% include navbar.html %}
   </body>
 </html>

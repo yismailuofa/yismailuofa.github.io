@@ -8,11 +8,9 @@ description: "A collection of reminders."
   {% assign reminders = site.data.reminders.reminders %}
   {% assign shuffled = reminders | sample: reminders.size %}
   {% for reminder in shuffled %}
-  <div class="reminder">
+  <div class="excerpt">
     <p>{{ reminder.englishText }}</p>
-    <cite class="subtitle">{{ reminder.cite }}</cite>
+    <cite>{{ reminder.cite }}</cite>
   </div>
-  {% unless forloop.last %}
-  <p class="separator">❦</p>
-  {% endunless %} {% endfor %}
+  {% endfor %}
 </section>

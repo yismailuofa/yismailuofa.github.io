@@ -1,9 +1,9 @@
-<div class="book-list">
+<div>
   {% for book in include.books %}
-  <span class="book-item">
-    <p class="book-title">
+  <div class="book">
+    <p>
       {% if book.starred -%}
-      <span class="starred">✶</span>
+      <span class="book-star">✶</span>
       {%- endif %}
       <strong>
         {% if book.link %}
@@ -15,13 +15,13 @@
     {% for entry in book.entries limit: 7 %}
     <p>{{ entry }}</p>
     {% endfor %} {% if book.entries.size > 7 %}
-    <details class="book-entries-more">
+    <details>
       <summary aria-label="Show remaining entries">…</summary>
       {% for entry in book.entries offset: 7 %}
       <p>{{ entry }}</p>
       {% endfor %}
     </details>
     {% endif %}
-  </span>
+  </div>
   {% endfor %}
 </div>
