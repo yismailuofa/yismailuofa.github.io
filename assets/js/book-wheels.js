@@ -179,7 +179,7 @@ function createBookWheel(wheel) {
 
     const origin = position;
     // Apple's scroll projection: (velocity / 1000) * rate / (1 - rate).
-    const rate = 0.998;
+    const rate = 0.99875;
     const decayTime = rate / (1000 * (1 - rate));
     const target = Math.round(origin + momentum * decayTime);
     const distance = target - origin;
@@ -187,15 +187,17 @@ function createBookWheel(wheel) {
       settle(target, momentum);
       return;
     }
-    // Match the release velocity, then ease directly into the selected row.
+    // Match the release velocity, then hand off to the snap near the selected row.
     const duration = 3 * distance / momentum;
 
     animate(elapsed => {
       const progress = Math.min(1, elapsed / duration);
       position = target - distance * (1 - progress) ** 3;
+      const velocity = momentum * (1 - progress) ** 2;
 
-      if (progress === 1) {
-        select(target);
+      if (Math.abs(target - position) < 0.5) {
+        draw();
+        settle(target, velocity);
         return true;
       }
     });
