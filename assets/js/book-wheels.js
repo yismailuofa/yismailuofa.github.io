@@ -155,7 +155,7 @@ function createBookWheel(wheel) {
     stop();
 
     const offset = position - target;
-    const frequency = 2 * Math.PI / 0.1;
+    const frequency = 2 * Math.PI / 0.25;
     const coefficient = momentum + frequency * offset;
 
     animate(elapsed => {
