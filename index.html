@@ -13,4 +13,4 @@ description: What I've read and what I'm reading.
   {% include book-list.html books=site.data.books.completed label="completed" %}
 </section>
 
-<script src="/assets/js/book-wheels.js" defer></script>
+<script src="/assets/js/book-wheels.js?v={{ site.time | date: '%s' }}" defer></script>

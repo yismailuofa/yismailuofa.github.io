@@ -32,6 +32,7 @@ for (const wheel of document.querySelectorAll('.book-wheel')) {
   let selected;
   let detailsAnimation;
   let suppressClick = false;
+  let pressTarget;
   const step = Math.PI / 9;
   const keyMoves = { ArrowDown: 1, ArrowUp: -1, PageDown: 3, PageUp: -3 };
 
@@ -125,24 +126,17 @@ for (const wheel of document.querySelectorAll('.book-wheel')) {
     showDetails();
   });
 
-  function settle(momentum = 0, destination) {
+  function settle(target = Math.round(position)) {
     stop();
 
-    const omega = Math.sqrt(120);
-    const target = destination ?? Math.round(position + momentum / omega);
     const offset = position - target;
-    const speed = momentum + omega * offset;
     const start = performance.now();
 
     function tick(now) {
-      const time = (now - start) / 1000;
-      const decay = Math.exp(-omega * time);
-      const remaining = (offset + speed * time) * decay;
+      const progress = Math.min(1, (now - start) / 240);
+      position = target + offset * (1 - progress) ** 3;
 
-      position = target + remaining;
-      velocity = (speed - omega * (offset + speed * time)) * decay;
-
-      if (Math.abs(remaining) < 0.001 && Math.abs(velocity) < 0.01) {
+      if (progress === 1) {
         position = wrap(target, books.length);
         velocity = 0;
         draw();
@@ -151,6 +145,33 @@ for (const wheel of document.querySelectorAll('.book-wheel')) {
       }
 
       draw();
+      frame = requestAnimationFrame(tick);
+    }
+
+    frame = requestAnimationFrame(tick);
+  }
+
+  function coast(momentum) {
+    stop();
+    if (Math.abs(momentum) < 1) {
+      settle();
+      return;
+    }
+
+    const origin = position;
+    const start = performance.now();
+    const decayTime = 0.325;
+
+    function tick(now) {
+      const decay = Math.exp(-(now - start) / 1000 / decayTime);
+      position = origin + momentum * decayTime * (1 - decay);
+      draw();
+
+      if (Math.abs(momentum * decay) < 1) {
+        settle();
+        return;
+      }
+
       frame = requestAnimationFrame(tick);
     }
 
@@ -177,19 +198,22 @@ for (const wheel of document.querySelectorAll('.book-wheel')) {
     stop();
     velocity = 0;
     suppressClick = false;
+    pressTarget = event.target;
     drag = { id: event.pointerId, y: event.clientY, start: event.clientY, time: event.timeStamp };
+    wheel.setPointerCapture(event.pointerId);
   });
 
-  wheel.addEventListener('pointermove', event => {
+  window.addEventListener('pointermove', event => {
     if (drag?.id !== event.pointerId) return;
 
-    if (Math.abs(event.clientY - drag.start) > 4) {
+    if (!suppressClick && Math.abs(event.clientY - drag.start) > 4) {
       suppressClick = true;
-      wheel.setPointerCapture(event.pointerId);
       wheel.classList.add('is-dragging');
     }
 
     const delta = (drag.y - event.clientY) / rowHeight;
+    if (!delta) return;
+
     const elapsed = Math.max(1, event.timeStamp - drag.time) / 1000;
     velocity = Math.max(-40, Math.min(40, velocity * 0.6 + delta / elapsed * 0.4));
     position += delta;
@@ -200,11 +224,12 @@ for (const wheel of document.querySelectorAll('.book-wheel')) {
 
   function release(event) {
     if (drag?.id !== event.pointerId) return;
+    if (event.type === 'lostpointercapture' && event.target !== wheel) return;
 
     const momentum = event.type === 'pointerup' && event.timeStamp - drag.time < 100 ? velocity : 0;
     drag = null;
     wheel.classList.remove('is-dragging');
-    settle(momentum);
+    coast(momentum);
   }
 
   window.addEventListener('pointerup', release);
@@ -218,12 +243,17 @@ for (const wheel of document.querySelectorAll('.book-wheel')) {
       return;
     }
 
-    const index = books.indexOf(event.target.closest('.book'));
+    const target = event.target === wheel ? pressTarget : event.target;
+    const index = books.indexOf(target?.closest('.book'));
     if (index < 0) return;
-    if (index === currentIndex() && event.target.closest('a')) return;
+    const link = target.closest('a');
+    if (index === currentIndex() && link) {
+      if (event.target === wheel) link.click();
+      return;
+    }
 
     event.preventDefault();
-    settle(0, position + distanceTo(index));
+    settle(position + distanceTo(index));
   });
 
   wheel.addEventListener('keydown', event => {

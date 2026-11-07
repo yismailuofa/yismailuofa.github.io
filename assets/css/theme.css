@@ -146,7 +146,9 @@ a {
   position: relative;
   height: 18rem;
   overflow: clip;
-  touch-action: pan-x pinch-zoom;
+  touch-action: pinch-zoom;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
   user-select: none;
   cursor: grab;
   mask-image: linear-gradient(transparent, black 28%, black 72%, transparent);
