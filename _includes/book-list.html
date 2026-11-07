@@ -18,18 +18,9 @@
       <i class="book-author"> {{ book.author }}</i>
     </p>
 
-    {% for entry in book.entries limit: 7 %}
+    {% for entry in book.entries %}
     <p>{{ entry }}</p>
     {% endfor %}
-
-    {% if book.entries.size > 7 %}
-    <details>
-      <summary aria-label="Show remaining entries">…</summary>
-      {% for entry in book.entries offset: 7 %}
-      <p>{{ entry }}</p>
-      {% endfor %}
-    </details>
-    {% endif %}
   </div>
   {% endfor %}
 </div>

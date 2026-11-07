@@ -308,17 +308,9 @@ cite {
 }
 
 .book > p + p,
-.book details p,
-.wheel-series > p,
-.wheel-series details p {
+.wheel-series > p {
   margin-top: 0.25rem;
   padding-left: 1rem;
-}
-
-summary {
-  width: fit-content;
-  padding: 0.25rem 0;
-  cursor: pointer;
 }
 
 .excerpt + .excerpt {
