@@ -1,4 +1,9 @@
-<div>
+<div
+  class="book-wheel"
+  role="region"
+  aria-labelledby="{{ include.label }}"
+  tabindex="0"
+>
   {% for book in include.books %}
   <div class="book">
     <p>
@@ -12,9 +17,12 @@
       </strong>
       <i class="book-author"> {{ book.author }}</i>
     </p>
+
     {% for entry in book.entries limit: 7 %}
     <p>{{ entry }}</p>
-    {% endfor %} {% if book.entries.size > 7 %}
+    {% endfor %}
+
+    {% if book.entries.size > 7 %}
     <details>
       <summary aria-label="Show remaining entries">…</summary>
       {% for entry in book.entries offset: 7 %}
