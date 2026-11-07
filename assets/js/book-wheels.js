@@ -1,12 +1,16 @@
 const wrap = (value, length) => ((value % length) + length) % length;
 
-for (const wheel of document.querySelectorAll('.book-wheel')) {
+function createBookWheel(wheel) {
   const books = [...wheel.children];
-  if (!books.length) continue;
+  if (!books.length) return;
 
   const links = books.map(book => [...book.querySelectorAll('a')]);
   const titles = books.map(book => book.querySelector('strong'));
   const supportsFind = 'onbeforematch' in document.documentElement;
+  const visibility = [];
+  const step = Math.PI / 9;
+  const keyMoves = { ArrowDown: 1, ArrowUp: -1 };
+
   if (supportsFind) {
     wheel.classList.add('supports-find');
     for (const [index, book] of books.entries()) {
@@ -24,17 +28,19 @@ for (const wheel of document.querySelectorAll('.book-wheel')) {
   wheel.after(details);
 
   let position = 0;
-  let velocity = 0;
+  let wheelTime = -Infinity;
+  let wheelTarget = null;
   let frame;
-  let timer;
-  let drag;
+
   let rowHeight;
+  let drawFrame;
+  let drawnIndex;
   let selected;
   let detailsAnimation;
-  let suppressClick = false;
+
+  let drag;
   let pressTarget;
-  const step = Math.PI / 9;
-  const keyMoves = { ArrowDown: 1, ArrowUp: -1, PageDown: 3, PageUp: -3 };
+  let suppressClick = false;
 
   function distanceTo(index) {
     return wrap(index - position + books.length / 2, books.length) - books.length / 2;
@@ -83,6 +89,8 @@ for (const wheel of document.querySelectorAll('.book-wheel')) {
   }
 
   function draw() {
+    cancelAnimationFrame(drawFrame);
+    drawFrame = null;
     const radius = rowHeight / Math.sin(step);
     const current = currentIndex();
 
@@ -91,152 +99,203 @@ for (const wheel of document.querySelectorAll('.book-wheel')) {
       const angle = distance * step;
       const visible = Math.abs(angle) < Math.PI / 2;
 
-      book.style.visibility = supportsFind || visible ? 'visible' : 'hidden';
-      book.style.pointerEvents = visible ? '' : 'none';
-      book.style.transform = `translateZ(${-radius}px) rotateX(${-angle}rad) translateZ(${radius}px)`;
-      book.style.opacity = visible ? Math.cos(angle) ** 2 : '0';
-      book.classList.toggle('is-current', index === current);
-      if (supportsFind) {
-        if (index === current) titles[index].removeAttribute('hidden');
-        else titles[index].setAttribute('hidden', 'until-found');
+      if (visibility[index] !== visible) {
+        book.style.visibility = supportsFind || visible ? 'visible' : 'hidden';
+        book.style.pointerEvents = visible ? '' : 'none';
+        if (!visible) book.style.opacity = '0';
+        visibility[index] = visible;
+      }
+      if (visible) {
+        book.style.transform = `translateZ(${-radius}px) rotateX(${-angle}rad) translateZ(${radius}px)`;
+        book.style.opacity = Math.cos(angle) ** 2;
       }
 
-      for (const link of links[index]) {
-        link.tabIndex = index === current ? 0 : -1;
+      if (drawnIndex !== current && (drawnIndex === undefined || index === drawnIndex || index === current)) {
+        book.classList.toggle('is-current', index === current);
+        if (supportsFind) {
+          if (index === current) titles[index].removeAttribute('hidden');
+          else titles[index].setAttribute('hidden', 'until-found');
+        }
+        for (const link of links[index]) link.tabIndex = index === current ? 0 : -1;
       }
     }
+    drawnIndex = current;
   }
 
   function stop() {
     cancelAnimationFrame(frame);
-    clearTimeout(timer);
+    cancelAnimationFrame(drawFrame);
+    drawFrame = null;
+    wheelTarget = null;
   }
 
-  wheel.addEventListener('beforematch', event => {
-    const index = books.indexOf(event.target.closest('.book'));
-    if (index < 0) return;
-
-    // Reveal synchronously so browser Find can highlight and scroll to the real title.
+  function select(target) {
     stop();
-    drag = null;
-    velocity = 0;
-    wheel.classList.remove('is-dragging');
-    position = index;
+    position = wrap(target, books.length);
     draw();
     showDetails();
-  });
+  }
 
-  function settle(target = Math.round(position)) {
-    stop();
-
-    const offset = position - target;
+  function animate(update) {
     const start = performance.now();
+    let previous = start;
 
     function tick(now) {
-      const progress = Math.min(1, (now - start) / 240);
-      position = target + offset * (1 - progress) ** 3;
-
-      if (progress === 1) {
-        position = wrap(target, books.length);
-        velocity = 0;
-        draw();
-        showDetails();
-        return;
-      }
-
+      const finished = update((now - start) / 1000, (now - previous) / 1000, now);
+      previous = now;
+      if (finished) return;
       draw();
       frame = requestAnimationFrame(tick);
     }
 
     frame = requestAnimationFrame(tick);
+  }
+
+  function settle(target = Math.round(position), momentum = 0) {
+    stop();
+
+    const offset = position - target;
+    const frequency = 2 * Math.PI / 0.1;
+    const coefficient = momentum + frequency * offset;
+
+    animate(elapsed => {
+      const decay = Math.exp(-frequency * elapsed);
+      position = target + (offset + coefficient * elapsed) * decay;
+      const velocity = (momentum - frequency * coefficient * elapsed) * decay;
+
+      if (Math.abs(position - target) < 0.001 && Math.abs(velocity) < 0.01) {
+        select(target);
+        return true;
+      }
+    });
   }
 
   function coast(momentum) {
     stop();
-    if (Math.abs(momentum) < 1) {
-      settle();
+    if (Math.abs(momentum) < 4) {
+      settle(Math.round(position + momentum * 0.12), momentum);
       return;
     }
 
     const origin = position;
-    const start = performance.now();
-    const decayTime = 0.325;
-
-    function tick(now) {
-      const decay = Math.exp(-(now - start) / 1000 / decayTime);
-      position = origin + momentum * decayTime * (1 - decay);
-      draw();
-
-      if (Math.abs(momentum * decay) < 1) {
-        settle();
-        return;
-      }
-
-      frame = requestAnimationFrame(tick);
+    // Apple's scroll projection: (velocity / 1000) * rate / (1 - rate).
+    const rate = 0.998;
+    const decayTime = rate / (1000 * (1 - rate));
+    const target = Math.round(origin + momentum * decayTime);
+    const distance = target - origin;
+    if (distance * momentum <= 0) {
+      settle(target, momentum);
+      return;
     }
+    // Match the release velocity, then ease directly into the selected row.
+    const duration = 3 * distance / momentum;
 
-    frame = requestAnimationFrame(tick);
+    animate(elapsed => {
+      const progress = Math.min(1, elapsed / duration);
+      position = target - distance * (1 - progress) ** 3;
+
+      if (progress === 1) {
+        select(target);
+        return true;
+      }
+    });
   }
 
-  wheel.addEventListener('wheel', event => {
-    if (event.ctrlKey || Math.abs(event.deltaX) > Math.abs(event.deltaY)) return;
+  function followWheel() {
+    animate((_elapsed, delta, now) => {
+      const response = 0.12;
+      const remaining = (wheelTarget - position) * Math.exp(-delta / response);
+      position = wheelTarget - remaining;
+      const velocity = remaining / response;
+
+      if (now - wheelTime >= 120 && Math.abs(wheelTarget - position) < 0.5) {
+        draw();
+        settle(Math.round(wheelTarget), velocity);
+        return true;
+      }
+    });
+  }
+
+  function onWheel(event) {
+    if (drag || event.ctrlKey || !event.deltaY || Math.abs(event.deltaX) > Math.abs(event.deltaY)) return;
 
     event.preventDefault();
-    stop();
-
     const unit = event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? wheel.clientHeight : 1;
-    position += event.deltaY * unit / rowHeight;
-    velocity = 0;
-    draw();
+    const delta = event.deltaY * unit / rowHeight * 1.5;
+    wheelTime = performance.now();
 
-    timer = setTimeout(() => settle(), 120);
-  }, { passive: false });
+    if (wheelTarget === null) {
+      stop();
+      wheelTarget = position;
+      followWheel();
+    }
+    // Native wheel events already include momentum; accumulate distance, not another fling.
+    if (Math.sign(delta) !== Math.sign(wheelTarget - position)) wheelTarget = position;
+    wheelTarget += delta;
+  }
 
-  wheel.addEventListener('pointerdown', event => {
+  function onPointerDown(event) {
     if (!event.isPrimary || event.button !== 0) return;
 
     stop();
-    velocity = 0;
     suppressClick = false;
     pressTarget = event.target;
-    drag = { id: event.pointerId, y: event.clientY, start: event.clientY, time: event.timeStamp };
+    drag = {
+      id: event.pointerId,
+      y: event.clientY,
+      start: event.clientY,
+      samples: [{ y: event.clientY, time: event.timeStamp }],
+    };
     wheel.setPointerCapture(event.pointerId);
-  });
+  }
 
-  window.addEventListener('pointermove', event => {
-    if (drag?.id !== event.pointerId) return;
-
+  function moveDrag(event) {
     if (!suppressClick && Math.abs(event.clientY - drag.start) > 4) {
       suppressClick = true;
       wheel.classList.add('is-dragging');
     }
 
     const delta = (drag.y - event.clientY) / rowHeight;
-    if (!delta) return;
-
-    const elapsed = Math.max(1, event.timeStamp - drag.time) / 1000;
-    velocity = Math.max(-40, Math.min(40, velocity * 0.6 + delta / elapsed * 0.4));
+    if (delta) {
+      const direction = Math.sign(delta);
+      if (drag.direction && direction !== drag.direction) drag.samples = drag.samples.slice(-1);
+      drag.direction = direction;
+    }
     position += delta;
     drag.y = event.clientY;
-    drag.time = event.timeStamp;
-    draw();
-  });
+    drag.samples.push({ y: event.clientY, time: event.timeStamp });
+    while (drag.samples.length > 2 && drag.samples[1].time <= event.timeStamp - 80) {
+      drag.samples.shift();
+    }
+  }
 
-  function release(event) {
+  function onPointerMove(event) {
+    if (drag?.id !== event.pointerId) return;
+    for (const sample of event.getCoalescedEvents?.() || []) moveDrag(sample);
+    moveDrag(event);
+    if (drawFrame == null) drawFrame = requestAnimationFrame(draw);
+  }
+
+  function onPointerUp(event) {
     if (drag?.id !== event.pointerId) return;
     if (event.type === 'lostpointercapture' && event.target !== wheel) return;
 
-    const momentum = event.type === 'pointerup' && event.timeStamp - drag.time < 100 ? velocity : 0;
+    let momentum = 0;
+    if (event.type === 'pointerup' && suppressClick) {
+      const paused = event.timeStamp - drag.samples.at(-1).time >= 80;
+      moveDrag(event);
+      const first = drag.samples[0];
+      const last = drag.samples.at(-1);
+      const elapsed = last.time - first.time;
+      if (!paused && elapsed > 0) momentum = (first.y - last.y) / rowHeight / (elapsed / 1000);
+    }
     drag = null;
     wheel.classList.remove('is-dragging');
+    draw();
     coast(momentum);
   }
 
-  window.addEventListener('pointerup', release);
-  window.addEventListener('pointercancel', release);
-  wheel.addEventListener('lostpointercapture', release);
-
-  wheel.addEventListener('click', event => {
+  function onClick(event) {
     if (suppressClick) {
       event.preventDefault();
       suppressClick = false;
@@ -254,21 +313,23 @@ for (const wheel of document.querySelectorAll('.book-wheel')) {
 
     event.preventDefault();
     settle(position + distanceTo(index));
-  });
+  }
 
-  wheel.addEventListener('keydown', event => {
-    if (!(event.key in keyMoves) && event.key !== 'Home' && event.key !== 'End') return;
-
+  function onKeyDown(event) {
+    if (!(event.key in keyMoves)) return;
     event.preventDefault();
-    stop();
+    select(Math.round(position) + keyMoves[event.key]);
+  }
 
-    if (event.key === 'Home') position = 0;
-    else if (event.key === 'End') position = books.length - 1;
-    else position = wrap(Math.round(position) + keyMoves[event.key], books.length);
+  function onFind(event) {
+    const index = books.indexOf(event.target.closest('.book'));
+    if (index < 0) return;
 
-    draw();
-    showDetails();
-  });
+    // Reveal synchronously so browser Find can highlight and scroll to the real title.
+    drag = null;
+    wheel.classList.remove('is-dragging');
+    select(index);
+  }
 
   function resize() {
     rowHeight = books[0].offsetHeight;
@@ -276,7 +337,19 @@ for (const wheel of document.querySelectorAll('.book-wheel')) {
     draw();
   }
 
+  wheel.addEventListener('wheel', onWheel, { passive: false });
+  wheel.addEventListener('pointerdown', onPointerDown);
+  wheel.addEventListener('lostpointercapture', onPointerUp);
+  wheel.addEventListener('click', onClick);
+  wheel.addEventListener('keydown', onKeyDown);
+  wheel.addEventListener('beforematch', onFind);
+  window.addEventListener('pointermove', onPointerMove);
+  window.addEventListener('pointerup', onPointerUp);
+  window.addEventListener('pointercancel', onPointerUp);
+
   new ResizeObserver(resize).observe(wheel);
   resize();
   showDetails();
 }
+
+for (const wheel of document.querySelectorAll('.book-wheel')) createBookWheel(wheel);

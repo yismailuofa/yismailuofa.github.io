@@ -1,12 +1,18 @@
 :root {
+  --text: light-dark(#3e342c, #f2e8dc);
+  --background: light-dark(#f9f3eb, #211a14);
+  --muted: light-dark(#746354, #bba895);
+  --border: light-dark(#ded0c0, #493b2e);
+  --accent: light-dark(#65391f, #e4ac82);
+  --selection: light-dark(#e4d4c3b3, #3a2c2080);
+  --focus: light-dark(#a87950, #bc946e);
+
   color-scheme: light dark;
-  color: light-dark(#3e342c, #f2e8dc);
-  background: light-dark(#f9f3eb, #211a14);
+  color: var(--text);
+  background: var(--background);
   font-family: "DM Sans", sans-serif;
   font-size: 16px;
   line-height: 1.6;
-  --muted: light-dark(#746354, #bba895);
-  --border: light-dark(#ded0c0, #493b2e);
 }
 
 :root:has(#theme-toggle:checked) {
@@ -50,11 +56,6 @@
   --moon-display: none;
 }
 
-.theme-toggle:has(:focus-visible) {
-  outline: 2px solid currentColor;
-  outline-offset: 4px;
-}
-
 @media (prefers-color-scheme: dark) {
   :root:has(#theme-toggle:checked) {
     color-scheme: light;
@@ -92,13 +93,13 @@ p {
 
 h1,
 h2 {
-  font-weight: 700;
   line-height: 1.2;
   text-wrap: balance;
 }
 
 h1 {
   font-size: 3rem;
+  font-weight: 700;
   letter-spacing: -0.04em;
 }
 
@@ -132,7 +133,8 @@ a {
   text-underline-offset: 0.18em;
 }
 
-:focus-visible {
+:focus-visible,
+.theme-toggle:has(:focus-visible) {
   outline: 2px solid currentColor;
   outline-offset: 4px;
 }
@@ -178,7 +180,7 @@ a {
 }
 
 .is-cylinder .book.is-current {
-  color: light-dark(#65391f, #e4ac82);
+  color: var(--accent);
 }
 
 .book-wheel.is-cylinder::before {
@@ -188,8 +190,13 @@ a {
   inset-inline: 0;
   height: var(--row-height);
   border-radius: 0.75rem;
-  background: light-dark(#e4d4c3b3, #3a2c2080);
+  background: var(--selection);
   pointer-events: none;
+}
+
+.book-wheel.is-cylinder:focus-visible::before,
+.book-wheel.is-cylinder:has(:focus-visible)::before {
+  box-shadow: inset 0 0 0 1px var(--focus);
 }
 
 .is-cylinder .book > :not(:first-child) {
@@ -206,10 +213,14 @@ a {
 
 .is-cylinder .book strong {
   display: block;
+  font-weight: 400;
+}
+
+.is-cylinder .book strong,
+.supports-find .book:not(.is-current) > p:first-child::after {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-weight: 400;
 }
 
 .supports-find strong[hidden="until-found"] {
@@ -220,9 +231,6 @@ a {
   content: attr(data-title);
   position: absolute;
   inset: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
   pointer-events: none;
 }
 
