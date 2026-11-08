@@ -48,6 +48,7 @@
   font-family: "DM Sans", sans-serif;
   font-size: 16px;
   line-height: 1.6;
+  scrollbar-gutter: stable;
 }
 
 :root:has(#theme-toggle:checked) {
@@ -116,7 +117,7 @@
 body {
   max-width: 44rem;
   margin: 0 auto;
-  padding: clamp(2rem, 7vw, 5rem) clamp(1.25rem, 5vw, 3rem) 2rem;
+  padding: 1.5rem clamp(1.25rem, 5vw, 3rem) 2rem;
   overflow-wrap: anywhere;
 }
 
@@ -163,7 +164,7 @@ h2 {
 }
 
 @media (min-width: 64rem) {
-  body:has(.bookshelf) {
+  body {
     max-width: 80rem;
   }
 
@@ -348,7 +349,7 @@ a {
 .page-header p,
 .book-author,
 cite,
-footer {
+.site-header {
   color: var(--muted);
 }
 
@@ -379,22 +380,29 @@ cite {
   font-size: 0.9rem;
 }
 
-footer {
-  margin-top: 4rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--border);
+.site-header {
+  margin-bottom: 2rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
   font-size: 0.85rem;
 }
 
-footer nav {
+.site-header nav,
+.header-actions {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   gap: 0.5rem 1rem;
 }
 
-#last-modified {
+.site-header nav {
+  flex-wrap: wrap;
+}
+
+.header-actions {
   margin-left: auto;
+}
+
+#last-modified {
   font-family: monospace;
   font-size: 0.8em;
 }
