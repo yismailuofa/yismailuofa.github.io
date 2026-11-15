@@ -117,7 +117,7 @@
 body {
   max-width: 44rem;
   margin: 0 auto;
-  padding: 1.5rem clamp(1.25rem, 5vw, 3rem) 2rem;
+  padding: 1.5rem clamp(1.25rem, 5vw, 3rem) 10rem;
   overflow-wrap: anywhere;
 }
 
@@ -210,6 +210,12 @@ a {
   user-select: none;
   cursor: grab;
   mask-image: linear-gradient(transparent, black 28%, black 72%, transparent);
+}
+
+@media (max-width: 63.99rem) {
+  .book-wheel.is-cylinder {
+    margin-right: 2rem;
+  }
 }
 
 .book-wheel.is-cylinder .book {
