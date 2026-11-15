@@ -1,54 +1,38 @@
 /* latin-ext */
 @font-face {
-  font-family: 'DM Sans';
-  font-style: italic;
-  font-weight: 400 700;
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 300 700;
   font-display: swap;
-  src: url(/assets/fonts/dm-sans-italic-latin-ext.woff2) format('woff2');
+  src: url(/assets/fonts/bricolage-grotesque-latin-ext.woff2) format('woff2');
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
-  font-family: 'DM Sans';
-  font-style: italic;
-  font-weight: 400 700;
-  font-display: swap;
-  src: url(/assets/fonts/dm-sans-italic-latin.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'DM Sans';
+  font-family: 'Bricolage Grotesque';
   font-style: normal;
   font-weight: 300 700;
   font-display: swap;
-  src: url(/assets/fonts/dm-sans-normal-latin-ext.woff2) format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 300 700;
-  font-display: swap;
-  src: url(/assets/fonts/dm-sans-normal-latin.woff2) format('woff2');
+  src: url(/assets/fonts/bricolage-grotesque-latin.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 :root {
-  --text: light-dark(#3e342c, #f2e8dc);
-  --background: light-dark(#f9f3eb, #211a14);
+  --text: light-dark(#573b2a, #f2e8dc);
+  --background: light-dark(#faf7f0, #211a14);
   --muted: light-dark(#746354, #bba895);
   --border: light-dark(#ded0c0, #493b2e);
   --accent: light-dark(#70462e, #d4b18e);
+  --theme-duration: 200ms;
 
   color-scheme: light dark;
   color: var(--text);
   background: var(--background);
-  font-family: "DM Sans", sans-serif;
+  font-family: "Bricolage Grotesque", sans-serif;
   font-size: 16px;
   line-height: 1.6;
   scrollbar-gutter: stable;
+  transition: background-color var(--theme-duration) ease, color var(--theme-duration) ease;
 }
 
 :root:has(#theme-toggle:checked) {
@@ -56,8 +40,8 @@
 }
 
 .theme-toggle {
-  --sun-display: none;
-  --moon-display: block;
+  --sun-opacity: 0;
+  --moon-opacity: 1;
   position: relative;
   display: inline-grid;
   place-items: center;
@@ -74,22 +58,24 @@
 }
 
 .theme-toggle svg {
+  grid-area: 1 / 1;
+  transition: opacity var(--theme-duration) ease;
   width: 18px;
   height: 18px;
   pointer-events: none;
 }
 
 .theme-sun {
-  display: var(--sun-display);
+  opacity: var(--sun-opacity);
 }
 
 .theme-moon {
-  display: var(--moon-display);
+  opacity: var(--moon-opacity);
 }
 
 .theme-toggle:has(:checked) {
-  --sun-display: block;
-  --moon-display: none;
+  --sun-opacity: 1;
+  --moon-opacity: 0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -98,13 +84,13 @@
   }
 
   .theme-toggle {
-    --sun-display: block;
-    --moon-display: none;
+    --sun-opacity: 1;
+    --moon-opacity: 0;
   }
 
   .theme-toggle:has(:checked) {
-    --sun-display: none;
-    --moon-display: block;
+    --sun-opacity: 0;
+    --moon-opacity: 1;
   }
 }
 
@@ -119,6 +105,7 @@ body {
   margin: 0 auto;
   padding: 0.75rem clamp(1.25rem, 5vw, 3rem) 3rem;
   overflow-wrap: anywhere;
+  font-size: 1.125rem;
 }
 
 h1,
@@ -136,13 +123,12 @@ h2 {
 h1 {
   font-size: 3rem;
   font-weight: 700;
-  letter-spacing: -0.04em;
 }
 
 h2 {
   margin-bottom: 1.25rem;
-  font-size: 1.5rem;
-  font-weight: 300;
+  font-size: 1.875rem;
+  font-weight: 650;
 }
 
 .page-header {
@@ -150,7 +136,8 @@ h2 {
 }
 
 .page-header p {
-  margin-top: 0.5rem;
+  margin-top: 0.125rem;
+  line-height: 1.4;
 }
 
 .bookshelf-section + .bookshelf-section {
@@ -182,7 +169,7 @@ h2 {
 a {
   color: inherit;
   text-decoration-thickness: 1px;
-  text-underline-offset: 0.18em;
+  text-underline-offset: 0.3em;
 }
 
 :focus-visible,
@@ -196,14 +183,14 @@ a {
   padding-left: 1.1rem;
 }
 
+.book strong {
+  font-weight: 550;
+}
+
 .book-star {
   position: absolute;
   left: 0;
   top: 0;
-}
-
-.book > p:first-child {
-  font-size: 1.125rem;
 }
 
 .book + .book {
@@ -223,13 +210,17 @@ cite {
 }
 
 .book-author {
-  margin-top: 0.125rem;
-  font-size: 1rem;
+  margin-top: 0.25rem;
 }
 
 .book > p + p {
   margin-top: 0.25rem;
   padding-left: 1rem;
+  line-height: 1.4;
+}
+
+.book > p:first-child + p {
+  margin-top: 0.5rem;
 }
 
 .excerpt + .excerpt {
@@ -247,7 +238,7 @@ cite {
   margin-bottom: 2rem;
   padding-bottom: 0.75rem;
   border-bottom: 1px solid var(--border);
-  font-size: 0.85rem;
+  font-size: 1.125rem;
 }
 
 .site-header nav,
@@ -268,4 +259,19 @@ cite {
 #last-modified {
   font-family: monospace;
   font-size: 0.8em;
+}
+
+.page-header p,
+.book-author,
+cite,
+.site-header,
+.bookshelf-section,
+.excerpt {
+  transition: color var(--theme-duration) ease, border-color var(--theme-duration) ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --theme-duration: 100ms;
+  }
 }
