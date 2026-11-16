@@ -209,10 +209,6 @@ cite {
   display: block;
 }
 
-.book-author {
-  margin-top: 0.25rem;
-}
-
 .book > p + p {
   margin-top: 0.25rem;
   padding-left: 1rem;
