@@ -32,9 +32,6 @@ listed:
   - title: "Billy Summers"
     author: "Stephen King"
 
-  - title: "The Postman Always Rings Twice"
-    author: "James M. Cain"
-
   - title: "Pedro Páramo"
     author: "Juan Rulfo"
 
@@ -52,6 +49,9 @@ listed:
       - "Wind and Truth"
 
 completed:
+  - title: "The Postman Always Rings Twice"
+    author: "James M. Cain"
+
   - title: "Invisible Cities"
     author: "Italo Calvino"
     starred: true
